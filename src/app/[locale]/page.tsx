@@ -25,15 +25,15 @@ export default function Home() {
             >
               <div className="space-y-2">
                 <Badge className="inline-flex mb-2">
-                  New Release - April 2025
+                  Released - March 2024
                 </Badge>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Words That Transcend Time
+                  In Absentia
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Award-winning author crafting stories that capture the essence
-                  of human experience through vivid characters and compelling
-                  narratives.
+                <p className="max-w-[800px] text-balance text-muted-foreground md:text-xl">
+                  Imprévisible et subtilement engagé, Raphaël Jerusalmy
+                  orchestre brève la rencontre cruciale de deux destins et
+                  accomplit un tour de force romanesque stupéfiant.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">

@@ -1,7 +1,6 @@
 "use client";
 
-import type React from "react";
-
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -12,6 +11,8 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
+  const t = useTranslations("HomePage");
+
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -37,7 +38,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Book className="h-6 w-6" />
-          <span className="font-bold">Autheor Name</span>
+          <span className="font-bold">{t("title")}</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-testRed">
           <NavLink href="/">Home</NavLink>
