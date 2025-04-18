@@ -54,10 +54,10 @@ export default function Home() {
               className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
             >
               <Image
-                src="/placeholder.svg?height=600&width=400"
+                src="/in1.png?height=600&width=400"
                 alt="Author with books"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </motion.div>
@@ -93,7 +93,7 @@ export default function Home() {
             >
               <BookCard
                 title="The Silent Echo"
-                coverImage="/placeholder.svg?height=400&width=250"
+                coverImage="/evac.webp?height=400&width=250"
                 genre="Literary Fiction"
                 year="2023"
                 description="A haunting tale of memory and loss in post-war Europe."
@@ -108,7 +108,7 @@ export default function Home() {
             >
               <BookCard
                 title="Midnight Whispers"
-                coverImage="/placeholder.svg?height=400&width=250"
+                coverImage="/confrerie.jpg?height=400&width=250"
                 genre="Mystery"
                 year="2021"
                 description="A gripping mystery set in a small coastal town with dark secrets."
@@ -123,7 +123,7 @@ export default function Home() {
             >
               <BookCard
                 title="Beyond the Horizon"
-                coverImage="/placeholder.svg?height=400&width=250"
+                coverImage="/evac.webp?height=400&width=250"
                 genre="Historical Fiction"
                 year="2019"
                 description="An epic journey across continents during the Age of Exploration."
