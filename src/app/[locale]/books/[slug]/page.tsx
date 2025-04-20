@@ -16,6 +16,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import { use } from "react";
+
+type Params = Promise<{ slug: string }>;
 
 // This would typically come from a database or CMS
 const books = [
@@ -55,9 +58,12 @@ const books = [
   // Other books would be defined here
 ];
 
-export default function BookPage({ params }: { params: { slug: string } }) {
-  // In a real application, you would fetch the book data based on the slug
-  const book = books.find((b) => b.slug === params.slug) || books[0];
+export default function BookPage(props: { params: Params }) {
+  // unwrap the async params
+  const { slug } = use(props.params);
+
+  // In a real app you’d fetch; here we read from the local array
+  const book = books.find((b) => b.slug === slug) ?? books[0];
 
   return (
     <div className="flex flex-col min-h-screen">
