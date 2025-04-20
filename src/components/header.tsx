@@ -9,11 +9,12 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
+import LocaleSwitcher from "./locale-switcher";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations("HomePage");
+  const t = useTranslations("navigation");
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
@@ -33,36 +34,37 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-0 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Book className="h-6 w-6" />
-          <span className="font-bold">{t("title")}</span>
+          <span className="font-bold">Raphaël Jerusalmy</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/books">Books</NavLink>
-          <NavLink href="/events">Events</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+        <nav className="hidden lg:flex items-center gap-6">
+          <NavLink href="/">{t("home")}</NavLink>
+          <NavLink href="/about">{t("about")}</NavLink>
+          <NavLink href="/books">{t("books")}</NavLink>
+          <NavLink href="/events">{t("events")}</NavLink>
+          <NavLink href="/blog">{t("blog")}</NavLink>
+          <NavLink href="/contact">{t("contact")}</NavLink>
         </nav>
         <div className="flex items-center gap-2">
+          <LocaleSwitcher />
           <ThemeToggle />
           <Button
             variant="outline"
             size="sm"
-            className="hidden md:flex"
+            className="hidden lg:flex"
             asChild
           >
-            <Link href="/newsletter">Newsletter</Link>
+            <Link href="/newsletter">{t("newsletter")}</Link>
           </Button>
-          <Button className="hidden md:flex" size="sm" asChild>
-            <Link href="/books">Explore Books</Link>
+          <Button className="hidden lg:flex" size="sm" asChild>
+            <Link href="/books">{t("explore")}</Link>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden border-2 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             <Menu className="h-6 w-6" />
@@ -75,7 +77,7 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 md:hidden"
+            className="fixed inset-0 z-50 lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -92,13 +94,13 @@ export default function Header() {
 
             {/* Menu Content */}
             <motion.div
-              className="absolute top-0 left-0 right-0 bottom-0 h-[100dvh] w-full overflow-y-auto bg-background shadow-xl"
+              className="absolute top-0 left-0 right-0 bottom-0 h-[100dvh] w-full overflow-y-auto bg-background shadow-xl "
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <div className="container flex flex-col py-6 h-full">
+              <div className="container w-[80%] mx-auto flex flex-col  py-6 h-full">
                 <div className="flex items-center justify-between mb-8">
                   <Link
                     href="/"
@@ -106,7 +108,7 @@ export default function Header() {
                     onClick={() => setIsOpen(false)}
                   >
                     <Book className="h-6 w-6" />
-                    <span className="font-bold">Author Name</span>
+                    <span className="font-bold">Raphaël Jerusalmy</span>
                   </Link>
                   <Button
                     variant="ghost"
@@ -118,19 +120,19 @@ export default function Header() {
                   </Button>
                 </div>
                 <nav className="flex flex-col gap-4 mt-4">
-                  <MobileNavLink href="/">Home</MobileNavLink>
-                  <MobileNavLink href="/about">About</MobileNavLink>
-                  <MobileNavLink href="/books">Books</MobileNavLink>
-                  <MobileNavLink href="/events">Events</MobileNavLink>
-                  <MobileNavLink href="/blog">Blog</MobileNavLink>
-                  <MobileNavLink href="/contact">Contact</MobileNavLink>
+                  <MobileNavLink href="/">{t("home")}</MobileNavLink>
+                  <MobileNavLink href="/about">{t("about")}</MobileNavLink>
+                  <MobileNavLink href="/books">{t("books")}</MobileNavLink>
+                  <MobileNavLink href="/events">{t("events")}</MobileNavLink>
+                  <MobileNavLink href="/blog">{t("blog")}</MobileNavLink>
+                  <MobileNavLink href="/contact">{t("contact")}</MobileNavLink>
                 </nav>
                 <div className="mt-auto space-y-4 pt-8">
                   <Button className="w-full" asChild>
-                    <Link href="/books">Explore Books</Link>
+                    <Link href="/books">{t("explore")}</Link>
                   </Button>
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="/newsletter">Subscribe to Newsletter</Link>
+                    <Link href="/newsletter">{t("newsletter")}</Link>
                   </Button>
                 </div>
               </div>

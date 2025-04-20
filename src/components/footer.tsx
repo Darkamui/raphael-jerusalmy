@@ -1,11 +1,11 @@
-import Link from "next/link";
-import { Book, Facebook, Instagram, Mail, Twitter } from "lucide-react";
+// import Link from "next/link";
+// import { Book, Facebook, Instagram, Mail, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-muted">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+      <div className="container mx-auto px-4 md:px-6 py-8">
+        {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Book className="h-6 w-6" />
@@ -181,9 +181,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Author Name. All rights reserved.</p>
+        </div> */}
+        <div className="mt-0 pt-8 border-t text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} Raphaël Jerusalmy</p>
         </div>
       </div>
     </footer>

@@ -6,6 +6,7 @@ import { Calendar, MapPin, Clock, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 // Sample event data
 const events = [
@@ -68,6 +69,7 @@ const events = [
 
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState<number | null>(null);
+  const t = useTranslations("HomePage");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -81,7 +83,7 @@ export default function EventsPage() {
           >
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                Upcoming Events
+                {t("title")}
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
                 Join the author at these upcoming events, book signings, and
@@ -147,7 +149,7 @@ function TimelineEvent({
       viewport={{ once: true, margin: "-100px" }}
       className={`flex flex-col ${
         isEven ? "md:flex-row" : "md:flex-row-reverse"
-      } items-center gap-8`}
+      } items-center gap-16`}
     >
       {/* Timeline Dot */}
       <motion.div

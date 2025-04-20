@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
@@ -29,24 +30,23 @@ export default function NewsletterSignup() {
     }, 1000);
   };
 
+  const t = useTranslations("homepage");
+
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-2">
       <div className="flex flex-col sm:flex-row gap-2">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder={t("newsletterCta.placeholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           className="bg-primary-foreground"
         />
         <Button type="submit" variant="secondary" disabled={isLoading}>
-          {isLoading ? "Subscribing..." : "Subscribe"}
+          {isLoading ? "Subscribing..." : t("newsletterCta.button")}
         </Button>
       </div>
-      <p className="text-sm text-primary-foreground/80">
-        Get updates on new releases, events, and exclusive content.
-      </p>
     </form>
   );
 }

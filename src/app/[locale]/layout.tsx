@@ -15,6 +15,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   generator: "Next.js 15 – next-intl",
+  title: "Raphaël Jerusalmy",
 };
 
 export default async function RootLayout({
