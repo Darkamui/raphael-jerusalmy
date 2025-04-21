@@ -1,13 +1,21 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Award, BookOpen, Mail, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+// import Link from "next/link";
+// import { ArrowRight, Award, BookOpen, Mail, MapPin } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+type Timeline = {
+  year: string;
+  title: string;
+  subtitle: string;
+};
 
 export default function AboutPage() {
+  const t = useTranslations("aboutpage");
+  const timeline = t.raw("timeline") as Timeline[];
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
@@ -21,11 +29,10 @@ export default function AboutPage() {
             >
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  About the Author
+                  {t("title")}
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Award-winning novelist with a passion for storytelling and
-                  exploring the depths of human experience.
+                  {t("subtitle")}
                 </p>
               </div>
             </motion.div>
@@ -36,7 +43,7 @@ export default function AboutPage() {
               className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
             >
               <Image
-                src="/placeholder.svg?height=600&width=400"
+                src="/bio2.jfif?height=600&width=400"
                 alt="Author portrait"
                 fill
                 className="object-cover"
@@ -57,46 +64,11 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold tracking-tighter">Biography</h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Born in a small coastal town, I developed a love for
-                storytelling at an early age. My grandmother, a librarian, would
-                read to me for hours, transporting me to worlds far beyond our
-                quiet village. This early exposure to literature sparked a
-                lifelong passion for the written word.
-              </p>
-              <p>
-                After studying English Literature at Oxford University, I spent
-                several years traveling across Europe, Asia, and South America,
-                collecting experiences and stories that would later influence my
-                writing. During this time, I worked various jobs – from teaching
-                English in Tokyo to working on a vineyard in Tuscany – all while
-                filling notebooks with observations, character sketches, and
-                plot ideas.
-              </p>
-              <p>
-                My debut novel, "Whispers in the Wind," was published in 2010
-                and received critical acclaim, winning the National Book Award
-                for Fiction. Since then, I've published eight more novels, each
-                exploring different aspects of the human condition through
-                diverse settings and characters.
-              </p>
-              <p>
-                When not writing, I divide my time between a cottage in the
-                English countryside and an apartment in New York City. I teach
-                creative writing workshops at various universities and literary
-                festivals around the world, sharing my passion for storytelling
-                with aspiring writers.
-              </p>
-              <p>
-                My writing process typically involves extensive research,
-                followed by months of drafting and revision. I believe in the
-                power of stories to bridge divides, foster empathy, and
-                illuminate the complexities of human experience. Through my
-                work, I aim to create narratives that resonate with readers long
-                after they've turned the final page.
-              </p>
+            <h2 className="text-3xl font-bold tracking-tighter">
+              {t("biographyTitle")}
+            </h2>
+            <div className="space-y-4 tracking-wide leading-7 text-muted-foreground">
+              <p>{t("biography")}</p>
             </div>
           </motion.div>
         </div>
@@ -113,39 +85,17 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold tracking-tighter">
-              Career Highlights
+              {t("timelineTitle")}
             </h2>
             <div className="relative border-l border-primary/20 pl-6 space-y-10">
-              <TimelineItem
-                year="2010"
-                title="Literary Debut"
-                description="Published debut novel 'Whispers in the Wind' to critical acclaim, winning the National Book Award for Fiction."
-              />
-              <TimelineItem
-                year="2013"
-                title="International Recognition"
-                description="'The Forgotten Path' translated into 28 languages and adapted into an award-winning film."
-              />
-              <TimelineItem
-                year="2016"
-                title="Academic Appointment"
-                description="Appointed as Visiting Professor of Creative Writing at Columbia University."
-              />
-              <TimelineItem
-                year="2019"
-                title="Literary Prize"
-                description="Received the Pulitzer Prize for Fiction for 'Beyond the Horizon'."
-              />
-              <TimelineItem
-                year="2022"
-                title="Bestseller Success"
-                description="'Midnight Whispers' spent 52 weeks on the New York Times Bestseller list."
-              />
-              <TimelineItem
-                year="2024"
-                title="Latest Achievement"
-                description="'The Silent Echo' named Book of the Year by multiple literary publications."
-              />
+              {timeline.map((item, id) => (
+                <TimelineItem
+                  key={id}
+                  year={item.year}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                />
+              ))}
             </div>
           </motion.div>
         </div>
@@ -153,7 +103,7 @@ export default function AboutPage() {
 
       {/* Writing Philosophy */}
       <section className="w-full py-12 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 xl:px-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <motion.div
               className="space-y-4"
@@ -163,28 +113,10 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold tracking-tighter">
-                Writing Philosophy
+                {t("writingTitle")}
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  I believe that great fiction should do more than entertain—it
-                  should illuminate the human experience, challenge
-                  perspectives, and foster empathy. My approach to writing is
-                  character-driven, focusing on the complexities and
-                  contradictions that make us human.
-                </p>
-                <p>
-                  Research is fundamental to my process. Whether I'm writing
-                  historical fiction or contemporary drama, I immerse myself in
-                  the world of my characters, studying everything from
-                  historical events to regional dialects to ensure authenticity.
-                </p>
-                <p>
-                  I view writing as a form of exploration—both of the world
-                  around us and the landscapes within. Through storytelling, I
-                  aim to bridge divides and create connections, reminding
-                  readers of our shared humanity despite our differences.
-                </p>
+                <p>{t("writingPhilosophy")}</p>
               </div>
             </motion.div>
             <motion.div
@@ -198,27 +130,7 @@ export default function AboutPage() {
                 Influences & Inspiration
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  My writing has been shaped by a diverse range of literary
-                  influences, from the psychological depth of Virginia Woolf to
-                  the narrative precision of Gabriel García Márquez. I'm drawn
-                  to writers who blend beautiful prose with profound insights
-                  into the human condition.
-                </p>
-                <p>
-                  Beyond literature, I find inspiration in art, music, and
-                  travel. Exploring new cultures and landscapes often sparks
-                  ideas for settings and characters. The paintings of Edward
-                  Hopper, with their sense of isolation and quiet contemplation,
-                  have particularly influenced my approach to atmosphere and
-                  mood.
-                </p>
-                <p>
-                  Ultimately, my greatest inspiration comes from people—their
-                  stories, struggles, and triumphs. I'm endlessly fascinated by
-                  the complexity of human relationships and the ways in which we
-                  navigate life's challenges, both ordinary and extraordinary.
-                </p>
+                <p>{t("influences")}</p>
               </div>
             </motion.div>
           </div>
@@ -226,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="w-full py-12 md:py-24 bg-muted">
+      {/* <section className="w-full py-12 md:py-24 bg-muted">
         <div className="container px-4 md:px-6">
           <motion.div
             className="max-w-3xl mx-auto space-y-6"
@@ -305,7 +217,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
@@ -313,11 +225,11 @@ export default function AboutPage() {
 function TimelineItem({
   year,
   title,
-  description,
+  subtitle,
 }: {
   year: string;
   title: string;
-  description: string;
+  subtitle: string;
 }) {
   return (
     <motion.div
@@ -330,7 +242,7 @@ function TimelineItem({
       <div className="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border border-primary bg-primary"></div>
       <div className="mb-1 text-lg font-bold">{year}</div>
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-muted-foreground">{description}</p>
+      <p className="mt-2 text-muted-foreground">{subtitle}</p>
     </motion.div>
   );
 }

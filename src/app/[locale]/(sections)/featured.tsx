@@ -6,18 +6,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-type Book = {
-  title: string;
-  coverImage: string;
-  type: string;
-  year: number;
-  blurb: string;
-};
+import { Book } from "../books/[slug]/page";
 
 const Featured = () => {
   const t = useTranslations("homepage");
-  const featured = t.raw("featuredBooks") as Book[];
+  const featured = (useTranslations().raw("booksDetails") as Book[]).slice(
+    0,
+    3
+  );
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -48,11 +44,11 @@ const Featured = () => {
             >
               <BookCard
                 title={book.title}
-                coverImage={book.coverImage}
+                coverImg={book.coverImg}
                 type={book.type}
                 year={book.year.toString()}
-                description={book.blurb}
-                slug="the-silent-echo"
+                subtitle={book.subtitle}
+                slug={book.slug}
               />
             </motion.div>
           ))}

@@ -182,7 +182,7 @@ export default function Footer() {
             </ul>
           </div>
         </div> */}
-        <div className="mt-0 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-0 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Raphaël Jerusalmy</p>
         </div>
       </div>

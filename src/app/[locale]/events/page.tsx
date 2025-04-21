@@ -2,74 +2,29 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock, Users, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import {
+  Calendar,
+  MapPin,
+  // Clock,
+  // Users,
+  // ExternalLink,
+} from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { Badge } from "@/components/ui/badge";
+// import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-// Sample event data
-const events = [
-  {
-    id: 1,
-    title: "Book Signing - New York",
-    date: "May 15, 2025",
-    time: "6:00 PM - 8:00 PM",
-    location: "Barnes & Noble, 5th Avenue",
-    description:
-      "Join us for an evening of conversation and book signing. The author will read excerpts from the latest novel, answer questions, and sign copies of all books.",
-    type: "Signing",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Literary Festival - London",
-    date: "June 8, 2025",
-    time: "2:00 PM - 5:00 PM",
-    location: "Southbank Centre",
-    description:
-      "A special appearance at the annual London Literary Festival. The author will participate in a panel discussion on 'The Future of Historical Fiction' followed by a Q&A session.",
-    type: "Festival",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Writing Workshop - Online",
-    date: "July 22, 2025",
-    time: "10:00 AM - 12:00 PM",
-    location: "Virtual Event (Zoom)",
-    description:
-      "A virtual workshop on character development and narrative structure. Limited spots available. Participants will receive feedback on a short writing sample.",
-    type: "Workshop",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Book Launch - San Francisco",
-    date: "August 30, 2025",
-    time: "7:00 PM - 9:00 PM",
-    location: "City Lights Bookstore",
-    description:
-      "The official launch of the newest novel. Join us for readings, refreshments, and a special Q&A about the inspiration and research behind the book.",
-    type: "Launch",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Literary Retreat - Tuscany",
-    date: "September 15-20, 2025",
-    time: "All Day",
-    location: "Villa Medicea, Florence, Italy",
-    description:
-      "An immersive five-day retreat for aspiring writers. Daily workshops, one-on-one consultations, and evening readings in a beautiful Tuscan villa.",
-    type: "Retreat",
-    link: "#",
-  },
-];
+type Event = {
+  title: string;
+  subtitle: string;
+  location: string;
+  date: string;
+  id: number;
+};
 
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState<number | null>(null);
-  const t = useTranslations("HomePage");
+  const events = useTranslations().raw("events") as Event[];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -83,7 +38,7 @@ export default function EventsPage() {
           >
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                {t("title")}
+                yo
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
                 Join the author at these upcoming events, book signings, and
@@ -122,11 +77,8 @@ interface TimelineEventProps {
     id: number;
     title: string;
     date: string;
-    time: string;
     location: string;
-    description: string;
-    type: string;
-    link: string;
+    subtitle: string;
   };
   index: number;
   isActive: boolean;
@@ -191,16 +143,16 @@ function TimelineEvent({
           <div className="p-6">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-bold gradient-text">{event.title}</h3>
-              <Badge className="bg-accent text-accent-foreground">
+              {/* <Badge className="bg-accent text-accent-foreground">
                 {event.type}
-              </Badge>
+              </Badge> */}
             </div>
 
             <div className="space-y-3">
-              <div className="flex items-center text-muted-foreground">
+              {/* <div className="flex items-center text-muted-foreground">
                 <Clock className="mr-2 h-4 w-4 text-primary" />
                 {event.time}
-              </div>
+              </div> */}
               <div className="flex items-center text-muted-foreground">
                 <MapPin className="mr-2 h-4 w-4 text-primary" />
                 {event.location}
@@ -215,10 +167,8 @@ function TimelineEvent({
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <p className="mt-4 text-muted-foreground">
-                  {event.description}
-                </p>
-                <div className="mt-4 flex justify-between items-center">
+                <p className="mt-4 text-muted-foreground">{event.subtitle}</p>
+                {/* <div className="mt-4 flex justify-between items-center">
                   <Button
                     variant="outline"
                     size="sm"
@@ -232,7 +182,7 @@ function TimelineEvent({
                   <div className="text-sm text-muted-foreground flex items-center">
                     <Users className="mr-1 h-3 w-3" /> Limited Seats
                   </div>
-                </div>
+                </div> */}
               </motion.div>
             </div>
           </div>

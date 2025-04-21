@@ -10,27 +10,27 @@ import { useTranslations } from "next-intl";
 
 interface BookCardProps {
   title: string;
-  coverImage: string;
+  coverImg: string;
   type: string;
   year: string;
-  description: string;
+  subtitle: string;
   slug: string;
 }
 
 export default function BookCard({
   title,
-  coverImage,
+  coverImg,
   type,
   year,
-  description,
+  subtitle,
   slug,
 }: BookCardProps) {
   const t = useTranslations("homepage");
   return (
-    <Card className="overflow-hidden h-full flex flex-col">
-      <div className="relative aspect-[2/3] overflow-hidden">
+    <Card className="overflow-hidden h-[full] flex flex-col">
+      <div className="relative aspect-[2/3] overflow-hidden bg-white">
         <Image
-          src={coverImage || "/placeholder.svg"}
+          src={coverImg || "/placeholder.svg"}
           alt={title}
           fill
           className="object-cover transition-transform hover:scale-105 duration-500"
@@ -44,7 +44,7 @@ export default function BookCard({
         <h3 className="text-xl flex-grow font-bold mb-2 break-words text-pretty">
           {title}
         </h3>
-        <p className="text-muted-foreground mb-4 flex-grow">{description}</p>
+        <p className="text-muted-foreground mb-4 flex-grow">{subtitle}</p>
         <Button variant="outline" size="sm" className="w-full" asChild>
           <Link href={`/books/${slug}`}>
             {t("featuredBooksHeader.details")}{" "}

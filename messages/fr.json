@@ -13,29 +13,6 @@
       "cta": "Voir tous les livres",
       "details": "En savoir plus"
     },
-    "featuredBooks": [
-      {
-        "title": "Sauver Mozart",
-        "type": "Roman",
-        "year": 2012,
-        "coverImage": "/confrerie.jpg?height=400&width=250",
-        "blurb": "Le journal d’un critique musical qui conspire contre un festival nazi."
-      },
-      {
-        "title": "La Confrérie des chasseurs de livres",
-        "type": "Roman historique",
-        "coverImage": "/confrerie.jpg?height=400&width=250",
-        "year": 2013,
-        "blurb": "Les tribulations érudites de François Villon mandaté par Louis XI."
-      },
-      {
-        "title": "Évacuation",
-        "type": "Novella",
-        "coverImage": "/evac.webp?height=400&width=250",
-        "year": 2017,
-        "blurb": "Tel‑Aviv désertée devient terrain de jeux pour des enfants rescapés."
-      }
-    ],
     "testimonialsHeader": {
       "title": "Témoignages de lecteurs",
       "subtitle": "Ce que les critiques et les lecteurs disent des livres."
@@ -85,10 +62,13 @@
     }
   },
 
-  "about": {
+  "aboutpage": {
     "title": "À propos de Raphaël Jerusalmy",
     "subtitle": "Du renseignement militaire à la littérature",
-    "biography": "Né à Montmartre en 1954, Raphaël Jerusalmy est diplômé de l’ENS et de la Sorbonne. Après quinze ans au sein du renseignement militaire israélien, il se consacre à l’humanitaire puis aux livres anciens à Tel‑Aviv avant de publier, dès 2002, des récits où se mêlent érudition, engagement et souffle romanesque. :contentReference[oaicite:17]{index=17}",
+    "biographyTitle": "Biographie",
+    "timelineTitle": "Parcours",
+    "writingTitle": "Philosophie",
+    "biography": "Né à Montmartre en 1954, Raphaël Jerusalmy est diplômé de l’ENS et de la Sorbonne. Après quinze ans au sein du renseignement militaire israélien, il se consacre à l’humanitaire puis aux livres anciens à Tel‑Aviv avant de publier, dès 2002, des récits où se mêlent érudition, engagement et souffle romanesque.",
     "timeline": [
       { "year": 1954, "title": "Naissance", "subtitle": "Paris" },
       { "year": 1978, "title": "Diplômes", "subtitle": "ENS & Sorbonne" },
@@ -123,149 +103,148 @@
     "writingPhilosophy": "« Écrire, c’est donner chair aux zones d’ombre de l’Histoire. »",
     "influences": "Villon, Zweig, le reportage contemporain et la poésie hébraïque nourrissent son imaginaire."
   },
+  "booksListHeader": {
+    "title": "Oeuvres Litérraires",
+    "subtitle": "Explorez la collection complète de romans couvrant divers genres et périodes."
+  },
 
-  "booksList": [
+  "booksDetails": [
     {
-      "title": "Shalom Tsahal",
-      "type": "Essai‑mémoire",
-      "year": 2002,
-      "subtitle": "Confessions d’un lieutenant‑colonel du renseignement"
-    },
-    {
-      "title": "Sauver Mozart",
-      "type": "Roman",
-      "year": 2012,
-      "subtitle": "Le journal d’Otto J. Steiner"
-    },
-    {
-      "title": "La Confrérie des chasseurs de livres",
-      "type": "Roman historique",
-      "year": 2013,
-      "subtitle": "François Villon en mission"
-    },
-    {
-      "title": "Les obus jouaient à pigeon vole",
-      "type": "Roman",
-      "year": 2016,
-      "subtitle": "Apollinaire et la Grande Guerre"
-    },
-    {
-      "title": "Évacuation",
-      "type": "Novella",
-      "year": 2017,
-      "subtitle": "Des enfants dans Tel‑Aviv désertée"
-    },
-    {
-      "title": "La Rose de Saragosse",
-      "type": "Roman",
-      "year": 2018,
-      "subtitle": "Amour et inquisition"
-    },
-    {
-      "title": "In Absentia",
-      "type": "Roman",
-      "year": 2022,
-      "subtitle": "Le projet macabre du Dr Hirt"
-    }
-  ],
-
-  "booksDetails": {
-    "Shalom Tsahal": {
       "publisher": "NM7 Éditeur",
       "pages": 394,
       "year": 2002,
       "isbn": "2‑913973‑27‑2",
-      "synopsis": "Un regard de l’intérieur sur Tsahal, mêlant récit personnel et analyse stratégique.",
+      "subtitle": "Un regard de l’intérieur sur Tsahal, mêlant récit personnel et analyse stratégique.",
       "excerpt": "« Le renseignement n’est jamais affaire de faits ; c’est un pari sur la nature humaine. »",
-      "quotes": []
+      "quotes": [],
+      "reviews": [],
+      "title": "Shalom Tsahal",
+      "coverImg": "/tsahal.jpg?height=400&width=250",
+      "slug": "shalom-tsahal",
+      "type": "Essai‑mémoire"
     },
-    "Sauver Mozart": {
+    {
       "publisher": "Actes Sud",
       "pages": 148,
       "year": 2012,
       "isbn": "978‑2‑330‑00516‑0",
-      "synopsis": "Otto J. Steiner ourdit une vengeance musicale contre le nazisme.",
+      "subtitle": "Otto J. Steiner ourdit une vengeance musicale contre le nazisme.",
       "excerpt": "« La musique, seul poumon qui me reste, emplit les cavités qu’a creusées la maladie. »",
-      "quotes": []
+      "quotes": [],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "Sauver Mozart",
+      "slug": "sauver-mozart",
+      "coverImg": "/mozart.png?height=400&width=250",
+      "type": "Roman"
     },
-    "La Confrérie des chasseurs de livres": {
+    {
       "publisher": "Actes Sud",
       "pages": 320,
       "year": 2013,
       "isbn": "978‑2‑330‑02261‑7",
-      "synopsis": "Pour sauver un incunable subversif, Villon traverse une Europe en crise.",
+      "subtitle": "Pour sauver un incunable subversif, Villon traverse une Europe en crise.",
       "excerpt": "« Le parfum de l’encre est celui de la révolte. »",
       "quotes": [
         "« Un roman d’aventures emballant, plein d’énergie et d’érudition. » – L’Express :contentReference[oaicite:19]{index=19}"
-      ]
+      ],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "La Confrérie des chasseurs de livres",
+      "slug": "confrerie",
+      "coverImg": "/confrerie.jpg?height=400&width=250",
+      "type": "Roman historique"
     },
-    "Les obus jouaient à pigeon vole": {
+    {
       "publisher": "Éditions Bruno Doucey",
       "pages": 177,
       "year": 2016,
       "isbn": "978‑2362290947",
-      "synopsis": "Une recréation poétique de la blessure d’Apollinaire en 1916.",
+      "subtitle": "Une recréation poétique de la blessure d’Apollinaire en 1916.",
       "excerpt": "« Les obus traçaient dans le ciel une calligraphie invisible. »",
-      "quotes": []
+      "quotes": [],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "Les obus jouaient à pigeon vole",
+      "slug": "obus",
+      "coverImg": "/obus.jpg?height=400&width=250",
+      "type": "Roman"
     },
-    "Évacuation": {
+    {
       "publisher": "Actes Sud",
       "pages": 128,
       "year": 2017,
       "isbn": "978‑2‑330‑07572‑9",
-      "synopsis": "Sous les roquettes, Tel‑Aviv se vide ; des enfants réinventent la ville.",
+      "subtitle": "Sous les roquettes, Tel‑Aviv se vide ; des enfants réinventent la ville.",
       "excerpt": "« Dans le silence après les sirènes, l’imagination devint notre unique architecture. »",
-      "quotes": []
+      "quotes": [],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "Évacuation",
+      "slug": "evacuation",
+      "coverImg": "/evac.jpg?height=400&width=250",
+      "type": "Novella"
     },
-    "La Rose de Saragosse": {
+    {
       "publisher": "Actes Sud",
       "pages": 192,
       "year": 2018,
       "isbn": "978‑2‑330‑09054‑8",
-      "synopsis": "Saragosse, XVe siècle : la passion se joue de l’Inquisition.",
+      "subtitle": "Saragosse, XVe siècle : la passion se joue de l’Inquisition.",
       "excerpt": "« L’amour, comme l’hérésie, se propage par chuchotement. »",
-      "quotes": []
+      "quotes": [],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "La Rose de Saragosse",
+      "slug": "rose-de-saragosse",
+      "coverImg": "/rose.jpg?height=400&width=250",
+      "type": "Roman"
     },
-    "In Absentia": {
+    {
       "publisher": "Actes Sud",
       "pages": 176,
       "year": 2022,
       "isbn": "978‑2330164362",
-      "synopsis": "Dans le camp du Struthof, un collectionneur d’art et un écrivain communiste se croisent au cœur d’un projet scientifique monstrueux.",
+      "subtitle": "Dans le camp du Struthof, un collectionneur d’art et un écrivain communiste se croisent au cœur d’un projet scientifique monstrueux.",
       "excerpt": "« Saül Bernstein respirait l’art comme de l’oxygène, sans voir que l’horreur respirait déjà derrière lui. »",
       "quotes": [
         "« Sombre et bouleversant. » – Le Monde :contentReference[oaicite:20]{index=20}",
         "« Une puissance d’évocation rare. » – Livres Hebdo :contentReference[oaicite:21]{index=21}"
-      ]
+      ],
+      "reviews": [{ "text": "nani", "author": "nani" }],
+      "title": "In Absentia",
+      "slug": "in-absentia",
+      "coverImg": "/in3.jpg?height=400&width=250",
+      "type": "Roman"
     }
-  },
+  ],
 
   "events": [
     {
+      "id": 1,
       "date": "12 octobre 2024",
       "title": "Point de situation et perspectives d’avenir du Proche‑Orient",
       "location": "En ligne / Monsieur Légionnaire",
       "subtitle": "Keynote géopolitique"
     },
     {
+      "id": 2,
       "date": "16 octobre 2023",
       "title": "Débat avec Benjamin Petrover",
       "location": "B’nai B’rith France",
       "subtitle": "Dialogue sur les récits géopolitiques"
     },
     {
+      "id": 3,
       "date": "11 juin 2023",
       "title": "Salon du Livre du Mémorial de la Shoah",
       "location": "Paris",
       "subtitle": "Rencontre autour de *In Absentia*"
     },
     {
+      "id": 4,
       "date": "28 avril 2023",
       "title": "Rencontre avec un auteur : *In Absentia*",
       "location": "Institut français d’Israël, Tel‑Aviv",
       "subtitle": "Présentation et questions‑réponses"
     },
     {
+      "id": 5,
       "date": "2‑5 octobre 2014",
       "title": "Cafés littéraires de Montélimar",
       "location": "Montélimar",
