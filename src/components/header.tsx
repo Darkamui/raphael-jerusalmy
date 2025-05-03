@@ -50,16 +50,16 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <LocaleSwitcher />
           <ThemeToggle />
-          <Button
+          {/* <Button
             variant="outline"
             size="sm"
             className="hidden lg:flex"
             asChild
           >
             <Link href="/newsletter">{t("newsletter")}</Link>
-          </Button>
+          </Button>*/}
           <Button className="hidden lg:flex" size="sm" asChild>
-            <Link href="/books">{t("explore")}</Link>
+            <Link href="/books">Le Manuel Bleu</Link>
           </Button>
           <Button
             variant="ghost"
@@ -129,11 +129,11 @@ export default function Header() {
                 </nav>
                 <div className="mt-auto space-y-4 pt-8">
                   <Button className="w-full" asChild>
-                    <Link href="/books">{t("explore")}</Link>
+                    <Link href="/books">Le Manuel Bleu</Link>
                   </Button>
-                  <Button variant="outline" className="w-full" asChild>
+                  {/* <Button variant="outline" className="w-full" asChild>
                     <Link href="/newsletter">{t("newsletter")}</Link>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </motion.div>

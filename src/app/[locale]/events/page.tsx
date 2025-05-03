@@ -25,10 +25,11 @@ type Event = {
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState<number | null>(null);
   const events = useTranslations().raw("events") as Event[];
+  const t = useTranslations("eventsHeader");
 
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="w-full py-12 md:py-24 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
+      <section className="w-full py-12 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
@@ -38,11 +39,10 @@ export default function EventsPage() {
           >
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                yo
+                {t("eventsTitle")}
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Join the author at these upcoming events, book signings, and
-                literary festivals around the world.
+                {t("eventsSubtitle")}
               </p>
             </div>
           </motion.div>

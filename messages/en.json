@@ -274,8 +274,46 @@
       "subtitle": "Panel discussion on literary creation"
     }
   ],
+  "blogComingSoon": {
+    "title": "Blog Coming Soon",
+    "subtitle": "We're crafting thoughtful articles about writing, literature, and the creative process.",
+    "ctaTitle": "Be the First to Know",
+    "ctaDescription": "Subscribe to be notified when we launch our blog with writing tips, behind-the-scenes insights, and literary discussions.",
+    "emailPlaceholder": "Enter your email",
+    "buttonLabel": "Notify Me"
+  },
   "LocaleSwitcher": {
     "label": "Choose language",
-    "locale": "{locale, select, fr {French} en {English} other {Unknown}}"
+    "locale": "{locale, select, fr {Français} en {Anglais} other {Unknown}}"
+  },
+  "eventsHeader": {
+    "eventsTitle": "Upcoming Events & Appearances",
+    "eventsSubtitle": "Join Raphaël Jerusalmy at literary festivals, book signings, and special engagements around the world."
+  },
+  "contactPage": {
+    "title": "Send a Message",
+    "fields": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "inquiryType": "Inquiry Type",
+      "inquiryTypePlaceholder": "Select inquiry type",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Your Message",
+      "messagePlaceholder": "Write your message here..."
+    },
+    "button": "Send Message",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "agency": "Literary Agency",
+      "agencyName": "Literary Representation Inc.",
+      "agencyAddress": "123 Book Street, Suite 456\nNew York, NY 10001"
+    },
+    "responseTime": {
+      "title": "Response Time",
+      "text": "We aim to respond to all inquiries within 2-3 business days. For urgent matters, please indicate this in your subject line."
+    }
   }
 }

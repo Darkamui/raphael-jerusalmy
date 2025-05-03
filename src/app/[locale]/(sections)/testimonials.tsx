@@ -13,7 +13,7 @@ const Testimonials = () => {
   const t = useTranslations("homepage");
   const testimonials = t.raw("testimonials") as Testimonial[];
   return (
-    <section className="w-full py-12 md:py-24 bg-muted">
+    <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"

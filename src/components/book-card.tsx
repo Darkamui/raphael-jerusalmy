@@ -29,12 +29,14 @@ export default function BookCard({
   return (
     <Card className="overflow-hidden h-[full] flex flex-col">
       <div className="relative aspect-[2/3] overflow-hidden bg-white">
-        <Image
-          src={coverImg || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover transition-transform hover:scale-105 duration-500"
-        />
+        <Link href={`/books/${slug}`}>
+          <Image
+            src={coverImg || "/placeholder.svg"}
+            alt={title}
+            fill
+            className="object-cover transition-transform hover:scale-105 duration-500"
+          />
+        </Link>
       </div>
       <CardContent className="p-6 flex-grow flex flex-col">
         <div className="flex items-center justify-between mb-2">

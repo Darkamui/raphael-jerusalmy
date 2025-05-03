@@ -26,7 +26,7 @@ export default function BooksPage() {
   const t = useTranslations("booksListHeader");
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
+      <section className="w-full py-12 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center"

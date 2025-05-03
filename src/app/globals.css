@@ -236,11 +236,19 @@
 .gradient-text {
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(
     to right,
     hsl(var(--primary)),
     hsl(var(--accent))
   );
+  /* Adjust line height to create more space */
+  line-height: 1.3;
+  /* Ensure the background extends beyond the text */
+  display: inline-block;
+  /* Fix for Safari */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .gradient-bg {

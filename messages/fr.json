@@ -251,10 +251,24 @@
       "subtitle": "Table ronde sur la création littéraire"
     }
   ],
+  "eventsHeader": {
+    "eventsTitle": "Événements à Venir et Présences",
+    "eventsSubtitle": "Retrouvez Raphaël Jerusalmy lors de festivals littéraires, séances de dédicaces et événements spéciaux à travers le monde."
+  },
   "LocaleSwitcher": {
     "label": "Choisissez votre langue",
-    "locale": "{locale, select, fr {Français} en {Anglais} other {Unknown}}"
+    "locale": "{locale, select, fr {French} en {English} other {Unknown}}"
   },
+
+  "blogComingSoon": {
+    "title": "Blog Bientôt Disponible",
+    "subtitle": "Nous préparons des articles inspirants sur l’écriture, la littérature et le processus créatif.",
+    "ctaTitle": "Soyez le Premier Informé",
+    "ctaDescription": "Abonnez-vous pour être averti du lancement de notre blog avec des conseils d’écriture, des coulisses exclusives et des discussions littéraires.",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "buttonLabel": "Prévenez-moi"
+  },
+
   "navigation": {
     "home": "Accueil",
     "about": "Biographie",
@@ -266,5 +280,32 @@
     "dark": "Sombre",
     "explore": "Consultez oeuvres",
     "newsletter": "Bulletin"
+  },
+
+  "contactPage": {
+    "title": "Envoyer un message",
+    "fields": {
+      "name": "Votre nom",
+      "email": "Adresse e-mail",
+      "inquiryType": "Type de demande",
+      "inquiryTypePlaceholder": "Sélectionnez le type de demande",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sujet de votre message",
+      "message": "Votre message",
+      "messagePlaceholder": "Écrivez votre message ici..."
+    },
+    "button": "Envoyer le message",
+    "info": {
+      "title": "Informations de contact",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "agency": "Agence littéraire",
+      "agencyName": "Représentation Littéraire Inc.",
+      "agencyAddress": "123 rue des Livres, bureau 456\nNew York, NY 10001"
+    },
+    "responseTime": {
+      "title": "Délai de réponse",
+      "text": "Nous nous efforçons de répondre à toutes les demandes sous 2 à 3 jours ouvrables. Pour les questions urgentes, veuillez le préciser dans l’objet du message."
+    }
   }
 }

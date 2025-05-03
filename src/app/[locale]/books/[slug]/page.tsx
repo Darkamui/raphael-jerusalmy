@@ -6,8 +6,8 @@ import {
   ArrowLeft,
   Star,
   ShoppingCart,
-  BookOpen,
-  Download,
+  // BookOpen,
+  // Download,
   // Share2,
   // Bookmark,
 } from "lucide-react";
@@ -62,7 +62,7 @@ export default function BookPage(props: { params: Params }) {
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 z-10"></div>
+                  <div className="absolute inset-0 z-10"></div>
                   <Image
                     src={book.coverImg || "/placeholder.svg"}
                     alt={book.title}
@@ -76,11 +76,12 @@ export default function BookPage(props: { params: Params }) {
                   <Button
                     className="w-full glass group transition-all duration-300 water-drop"
                     size="lg"
+                    variant="outline"
                   >
                     <ShoppingCart className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                     <span>Purchase Book</span>
                   </Button>
-                  <div className="flex gap-2">
+                  {/* <div className="flex gap-2">
                     <Button
                       variant="outline"
                       className="flex-1 glass water-drop"
@@ -95,7 +96,7 @@ export default function BookPage(props: { params: Params }) {
                       <Download className="mr-2 h-4 w-4" />
                       eBook
                     </Button>
-                  </div>
+                  </div> */}
                   <Button
                     variant="outline"
                     className="w-full glass water-drop"
@@ -129,21 +130,21 @@ export default function BookPage(props: { params: Params }) {
               </div>
 
               <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="flex flex-col glass-card p-4 wave-bg">
+                <div className="flex flex-col glass-card p-4">
                   <span className="text-sm text-muted-foreground">
                     Publisher
                   </span>
                   <span className="font-medium">{book.publisher}</span>
                 </div>
-                <div className="flex flex-col glass-card p-4 wave-bg">
+                <div className="flex flex-col glass-card p-4">
                   <span className="text-sm text-muted-foreground">Pages</span>
                   <span className="font-medium">{book.pages}</span>
                 </div>
-                <div className="flex flex-col glass-card p-4 wave-bg">
+                <div className="flex flex-col glass-card p-4">
                   <span className="text-sm text-muted-foreground">Year</span>
                   <span className="font-medium">{book.year}</span>
                 </div>
-                <div className="flex flex-col glass-card p-4 wave-bg">
+                <div className="flex flex-col glass-card p-4">
                   <span className="text-sm text-muted-foreground">ISBN</span>
                   <span className="font-medium">{book.isbn}</span>
                 </div>
