@@ -86,7 +86,7 @@ COPY --from=deps /apps/raphael-jerusalmy/node_modules ./node_modules
 
 
 # Expose the port that the application listens on.
-EXPOSE 3001
+EXPOSE 3002
 
 # Run the application.
 CMD ["npm", "start"]
