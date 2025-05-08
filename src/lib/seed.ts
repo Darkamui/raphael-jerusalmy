@@ -1,7 +1,8 @@
-import { db } from "./db";
+import { getDb } from "./db";
 import { books } from "./schema";
 
 async function seed() {
+  const db = getDb();
   await db.insert(books).values([
     {
       title: "The Light and the Silence",
