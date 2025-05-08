@@ -82,7 +82,7 @@ COPY package.json .
 # Copy the production dependencies from the deps stage and also
 # the built application from the build stage into the image.
 COPY --from=deps /apps/raphael-jerusalmy/node_modules ./node_modules
-COPY --from=build /apps/raphael-jerusalmy/app ./raphael-jerusalmy
+# COPY --from=build /apps/raphael-jerusalmy/app ./raphael-jerusalmy
 
 
 # Expose the port that the application listens on.
