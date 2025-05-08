@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { db } from "./db";
 import { books } from "./schema";
 
