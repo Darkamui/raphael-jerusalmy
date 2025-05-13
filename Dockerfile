@@ -1,6 +1,10 @@
 # ----- STEP 1: Build stage -----
+    ARG DATABASE_URL
+
     FROM node:18-alpine AS builder
     WORKDIR /app
+
+    ENV DATABASE_URL=${DATABASE_URL}
     
     # Install deps
     COPY package.json package-lock.json ./
@@ -15,6 +19,9 @@
     # ----- STEP 2: Production image -----
     FROM node:18-alpine AS runner
     WORKDIR /app
+
+    ARG DATABASE_URL
+    ENV DATABASE_URL=${DATABASE_URL}
     
     # Install only production deps
     COPY package.json package-lock.json ./
