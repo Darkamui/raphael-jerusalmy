@@ -1,4 +1,4 @@
-// import Link from "next/link";
+// import { Link } from "@/i18n/navigation";
 // import { Book, Facebook, Instagram, Mail, Twitter } from "lucide-react";
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 // import { Badge } from "@/components/ui/badge";

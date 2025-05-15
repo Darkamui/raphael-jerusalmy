@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 const BlogPreview = () => {
   return (
     <section className="w-full py-12 md:py-24 bg-background">

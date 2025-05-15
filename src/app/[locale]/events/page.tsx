@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 // import { Badge } from "@/components/ui/badge";
-// import Link from "next/link";
+// import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type Event = {
