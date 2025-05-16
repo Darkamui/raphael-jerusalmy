@@ -10,8 +10,8 @@ type Testimonial = {
 };
 
 const Testimonials = () => {
-  const t = useTranslations("homepage");
-  const testimonials = t.raw("testimonials") as Testimonial[];
+  const t = useTranslations("homepage.testimonials");
+  const testimonials = t.raw("items") as Testimonial[];
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -24,10 +24,10 @@ const Testimonials = () => {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {t("testimonialsHeader.title")}
+              {t("header.title")}
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              {t("testimonialsHeader.subtitle")}
+              {t("header.subtitle")}
             </p>
           </div>
         </motion.div>

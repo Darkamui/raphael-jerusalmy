@@ -10,12 +10,12 @@ import { useTranslations } from "next-intl";
 type Timeline = {
   year: string;
   title: string;
-  subtitle: string;
+  location: string;
 };
 
 export default function AboutPage() {
-  const t = useTranslations("aboutpage");
-  const timeline = t.raw("timeline") as Timeline[];
+  const t = useTranslations("aboutPage");
+  const timeline = t.raw("timeline.items") as Timeline[];
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
@@ -29,10 +29,10 @@ export default function AboutPage() {
             >
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  {t("title")}
+                  {t("header.title")}
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  {t("subtitle")}
+                  {t("header.subtitle")}
                 </p>
               </div>
             </motion.div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
       </section>
 
       {/* Biography */}
-      <section className="w-full py-12 md:py-24 bg-background">
+      <section className="w-full px-6 md:px-0 py-12 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div
             className="max-w-3xl mx-auto space-y-6"
@@ -65,10 +65,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold tracking-tighter">
-              {t("biographyTitle")}
+              {t("biography.title")}
             </h2>
             <div className="space-y-4 tracking-wide leading-7 text-muted-foreground">
-              <p>{t("biography")}</p>
+              <p>{t("biography.text")}</p>
             </div>
           </motion.div>
         </div>
@@ -78,14 +78,14 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 bg-muted">
         <div className="container px-4 md:px-6">
           <motion.div
-            className="max-w-3xl mx-auto space-y-6"
+            className="max-w-3xl mx-auto space-y-6 pl-6 md:pl-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold tracking-tighter">
-              {t("timelineTitle")}
+              {t("timeline.title")}
             </h2>
             <div className="relative border-l border-primary/20 pl-6 space-y-10">
               {timeline.map((item, id) => (
@@ -93,7 +93,7 @@ export default function AboutPage() {
                   key={id}
                   year={item.year}
                   title={item.title}
-                  subtitle={item.subtitle}
+                  location={item.location}
                 />
               ))}
             </div>
@@ -113,10 +113,10 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold tracking-tighter">
-                {t("writingTitle")}
+                {t("writingPhilosophy.title")}
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>{t("writingPhilosophy")}</p>
+                <p>{t("writingPhilosophy.text")}</p>
               </div>
             </motion.div>
             <motion.div
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 Influences & Inspiration
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>{t("influences")}</p>
+                <p>{t("influences.text")}</p>
               </div>
             </motion.div>
           </div>
@@ -225,11 +225,11 @@ export default function AboutPage() {
 function TimelineItem({
   year,
   title,
-  subtitle,
+  location,
 }: {
   year: string;
   title: string;
-  subtitle: string;
+  location: string;
 }) {
   return (
     <motion.div
@@ -242,7 +242,7 @@ function TimelineItem({
       <div className="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border border-primary bg-primary"></div>
       <div className="mb-1 text-lg font-bold">{year}</div>
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-muted-foreground">{subtitle}</p>
+      <p className="mt-2 text-muted-foreground">{location}</p>
     </motion.div>
   );
 }

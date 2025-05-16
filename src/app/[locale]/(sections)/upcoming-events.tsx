@@ -14,8 +14,9 @@ type Event = {
 };
 
 const UpcomingEvents = () => {
-  const t = useTranslations("homepage");
-  const events = t.raw("latestEvents") as Event[];
+  const t = useTranslations("homepage.upcomingEvents");
+  const y = useTranslations("eventsPage");
+  const events = y.raw("items") as Event[];
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,10 +29,10 @@ const UpcomingEvents = () => {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {t("latestEventsHeader.title")}
+              {t("header.title")}
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl text-balance">
-              {t("latestEventsHeader.subtitle")}
+              {t("header.subtitle")}
             </p>
           </div>
         </motion.div>
@@ -60,7 +61,7 @@ const UpcomingEvents = () => {
                         asChild
                       >
                         <Link href="#">
-                          {t("latestEventsHeader.cta")}{" "}
+                          {t("header.ctaLabel")}{" "}
                           <ArrowRight className="ml-1 h-4 w-4" />
                         </Link>
                       </Button>

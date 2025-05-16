@@ -24,8 +24,8 @@ type Event = {
 
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState<number | null>(null);
-  const events = useTranslations().raw("events") as Event[];
-  const t = useTranslations("eventsHeader");
+  const t = useTranslations("eventsPage");
+  const events = t.raw("items") as Event[];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -39,10 +39,10 @@ export default function EventsPage() {
           >
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                {t("eventsTitle")}
+                {t("header.title")}
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                {t("eventsSubtitle")}
+                {t("header.subtitle")}
               </p>
             </div>
           </motion.div>

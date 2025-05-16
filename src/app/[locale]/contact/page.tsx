@@ -82,13 +82,15 @@ export default function ContactPage() {
                 <CardContent className="p-6 md:p-8">
                   <div className="flex items-center mb-6">
                     <MessageSquare className="h-6 w-6 mr-3 text-primary" />
-                    <h2 className="text-2xl font-semibold">{t("title")}</h2>
+                    <h2 className="text-2xl font-semibold">
+                      {t("header.title")}
+                    </h2>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">{t("fields.name")}</Label>
+                        <Label htmlFor="name">{t("form.fields.name")}</Label>
                         <Input
                           id="name"
                           name="name"
@@ -100,7 +102,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">{t("fields.email")}</Label>
+                        <Label htmlFor="email">{t("form.fields.email")}</Label>
                         <Input
                           id="email"
                           name="email"
@@ -116,7 +118,7 @@ export default function ContactPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="inquiryType">
-                        {t("fields.inquiryType")}
+                        {t("form.fields.inquiryType.label")}
                       </Label>
                       <Select
                         value={formData.inquiryType}
@@ -125,7 +127,9 @@ export default function ContactPage() {
                       >
                         <SelectTrigger className="glass w-full">
                           <SelectValue
-                            placeholder={t("fields.inquiryTypePlaceholder")}
+                            placeholder={t(
+                              "form.fields.inquiryType.placeholder"
+                            )}
                           />
                         </SelectTrigger>
                         <SelectContent>
@@ -147,11 +151,13 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject">{t("fields.subject")}</Label>
+                      <Label htmlFor="subject">
+                        {t("form.fields.subject.label")}
+                      </Label>
                       <Input
                         id="subject"
                         name="subject"
-                        placeholder={t("fields.subjectPlaceholder")}
+                        placeholder={t("form.fields.subject.placeholder")}
                         className="glass"
                         value={formData.subject}
                         onChange={handleChange}
@@ -160,11 +166,13 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">{t("fields.message")}</Label>
+                      <Label htmlFor="message">
+                        {t("form.fields.message.label")}
+                      </Label>
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder={t("fields.messagePlaceholder")}
+                        placeholder={t("form.fields.message.placeholder")}
                         className="glass min-h-[150px]"
                         value={formData.message}
                         onChange={handleChange}
@@ -181,7 +189,8 @@ export default function ContactPage() {
                         <>Sending Message...</>
                       ) : (
                         <>
-                          <Send className="mr-2 h-4 w-4" /> {t("button")}
+                          <Send className="mr-2 h-4 w-4" />{" "}
+                          {t("form.buttonLabel")}
                         </>
                       )}
                     </Button>
@@ -235,10 +244,8 @@ export default function ContactPage() {
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 mr-3 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">{t("info.agency")}</p>
+                        <p className="font-medium">{t("info.agency.name")}</p>
                         <p className="text-muted-foreground">
-                          Literary Representation Inc.
-                          <br />
                           123 Book Street, Suite 456
                           <br />
                           New York, NY 10001

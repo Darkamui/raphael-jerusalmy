@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
 export default function BlogPage() {
-  const t = useTranslations("blogComingSoon");
+  const t = useTranslations("blog.comingSoon");
 
   const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

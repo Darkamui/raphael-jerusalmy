@@ -183,7 +183,7 @@ export default function Footer() {
           </div>
         </div> */}
         <div className="mt-0 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Raphaël Jerusalmy</p>
+          <p className="w-full">© {new Date().getFullYear()} J-Web</p>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import NewsletterSignup from "@/components/newsletter-signup";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 const Newsletter = () => {
-  const t = useTranslations("homepage");
+  const t = useTranslations("homepage.newsletter");
   return (
     <section className="w-full py-12 md:py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
@@ -16,11 +16,9 @@ const Newsletter = () => {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {t("newsletterCta.title")}
+              {t("header.title")}
             </h2>
-            <p className="max-w-[700px] md:text-xl">
-              {t("newsletterCta.subtitle")}
-            </p>
+            <p className="max-w-[700px] md:text-xl">{t("header.subtitle")}</p>
           </div>
           <div className="w-full max-w-md">
             <NewsletterSignup />

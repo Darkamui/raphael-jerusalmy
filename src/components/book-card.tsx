@@ -25,7 +25,7 @@ export default function BookCard({
   subtitle,
   slug,
 }: BookCardProps) {
-  const t = useTranslations("homepage");
+  const t = useTranslations("homepage.featuredBooks");
   return (
     <Card className="overflow-hidden h-[full] flex flex-col">
       <div className="relative aspect-[2/3] overflow-hidden bg-white">
@@ -49,8 +49,7 @@ export default function BookCard({
         <p className="text-muted-foreground mb-4 flex-grow">{subtitle}</p>
         <Button variant="outline" size="sm" className="w-full" asChild>
           <Link href={`/books/${slug}`}>
-            {t("featuredBooksHeader.details")}{" "}
-            <ArrowRight className="ml-2 h-4 w-4" />
+            {t("header.detailsLabel")} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

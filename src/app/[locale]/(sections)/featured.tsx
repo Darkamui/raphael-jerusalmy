@@ -10,7 +10,7 @@ import { Book } from "../books/[slug]/page";
 
 const Featured = () => {
   const t = useTranslations("homepage");
-  const featured = (useTranslations().raw("booksDetails") as Book[]).slice(
+  const featured = (useTranslations().raw("booksPage.items") as Book[]).slice(
     0,
     3
   );
@@ -26,10 +26,10 @@ const Featured = () => {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {t("featuredBooksHeader.title")}
+              {t("featuredBooks.header.title")}
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              {t("featuredBooksHeader.subtitle")}
+              {t("featuredBooks.header.subtitle")}
             </p>
           </div>
         </motion.div>
@@ -56,7 +56,7 @@ const Featured = () => {
         <div className="flex justify-center mt-10">
           <Button variant="outline" size="lg" asChild>
             <Link href="/books">
-              {t("featuredBooksHeader.cta")}{" "}
+              {t("featuredBooks.header.ctaLabel")}{" "}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

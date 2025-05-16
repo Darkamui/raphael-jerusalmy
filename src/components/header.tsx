@@ -37,7 +37,10 @@ export default function Header() {
       <div className="container mx-auto px-6  flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Book className="h-6 w-6" />
-          <span className="font-bold">Raphaël Jerusalmy</span>
+          <span className="font-bold hidden md:inline-block">
+            Raphaël Jerusalmy
+          </span>
+          <span className="font-bold md:hidden ">RJ</span>
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
           <NavLink href="/">{t("home")}</NavLink>
@@ -48,7 +51,6 @@ export default function Header() {
           <NavLink href="/contact">{t("contact")}</NavLink>
         </nav>
         <div className="flex items-center gap-2">
-          <LocaleSwitcher />
           <ThemeToggle />
           {/* <Button
             variant="outline"
@@ -70,6 +72,7 @@ export default function Header() {
             <Menu className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
           </Button>
+          <LocaleSwitcher />
         </div>
       </div>
 

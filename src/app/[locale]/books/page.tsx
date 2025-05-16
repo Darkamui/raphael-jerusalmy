@@ -22,8 +22,8 @@ type Book = {
 };
 
 export default function BooksPage() {
-  const books = useTranslations().raw("booksDetails") as Book[];
-  const t = useTranslations("booksListHeader");
+  const t = useTranslations("booksPage");
+  const books = t.raw("items") as Book[];
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
@@ -36,10 +36,10 @@ export default function BooksPage() {
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                {t("title")}
+                {t("header.title")}
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                {t("subtitle")}
+                {t("header.subtitle")}
               </p>
             </div>
           </motion.div>

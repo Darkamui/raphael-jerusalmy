@@ -40,7 +40,7 @@ export default function BookPage(props: { params: Params }) {
   // unwrap the async params
   const { slug } = use(props.params);
 
-  const books = useTranslations().raw("booksDetails") as Book[];
+  const books = useTranslations().raw("booksPage.items") as Book[];
 
   // In a real app you’d fetch; here we read from the local array
   const book = books.find((b) => b.slug === slug) ?? books[0];

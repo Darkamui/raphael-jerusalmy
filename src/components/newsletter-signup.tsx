@@ -30,21 +30,21 @@ export default function NewsletterSignup() {
     }, 1000);
   };
 
-  const t = useTranslations("homepage");
+  const t = useTranslations("homepage.newsletter");
 
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-2">
       <div className="flex flex-col sm:flex-row gap-2">
         <Input
           type="email"
-          placeholder={t("newsletterCta.placeholder")}
+          placeholder={t("form.emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           className="bg-primary-foreground"
         />
         <Button type="submit" variant="secondary" disabled={isLoading}>
-          {isLoading ? "Subscribing..." : t("newsletterCta.button")}
+          {isLoading ? "Subscribing..." : t("form.buttonLabel")}
         </Button>
       </div>
     </form>

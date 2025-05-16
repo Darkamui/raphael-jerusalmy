@@ -3,8 +3,8 @@
     FROM node:18-alpine AS builder
     WORKDIR /app
 
-    ARG DATABASE_URL
-    ENV DATABASE_URL=${DATABASE_URL}
+    #ARG DATABASE_URL
+    #ENV DATABASE_URL=${DATABASE_URL}
     
     # Install deps
     COPY package.json package-lock.json ./
@@ -20,8 +20,8 @@
     FROM node:18-alpine AS runner
     WORKDIR /app
 
-    ARG DATABASE_URL
-    ENV DATABASE_URL=${DATABASE_URL}
+    #ARG DATABASE_URL
+    #ENV DATABASE_URL=${DATABASE_URL}
     
     # Install only production deps
     COPY package.json package-lock.json ./

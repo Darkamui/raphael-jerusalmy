@@ -30,11 +30,11 @@ const Hero = () => {
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button size="lg" asChild>
                 <Link href="/books">
-                  {t("hero.ctaLabel")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("hero.ctaPrimary")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/about">{t("hero.ctaLabel2")}</Link>
+                <Link href="/about">{t("hero.ctaSecondary")}</Link>
               </Button>
             </div>
           </motion.div>

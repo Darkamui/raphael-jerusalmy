@@ -1,67 +1,4 @@
 {
-  "homepage": {
-    "hero": {
-      "title": "In Absentia",
-      "tagline": "Raphael Jerusalmy’s haunting new novel unearthing a forgotten Holocaust episode",
-      "description": "Art, memory and horror collide in a 176‑page tour de force set between Paris and the Struthof camp. Discover why the press calls it “somber and heart‑rending” – Le Monde",
-      "ctaLabel": "Explore Books",
-      "ctaLabel2": "About the Author"
-    },
-    "featuredBooksHeader": {
-      "title": "Featured Books",
-      "subtitle": "Discover the stories that have captivated readers worldwide.",
-      "cta": "View All Books",
-      "details": "View Details"
-    },
-    "testimonialsHeader": {
-      "title": "Reader Testimonials",
-      "subtitle": "What critics and readers are saying about the books."
-    },
-    "testimonials": [
-      {
-        "quote": "“In Absentia is sombre and heart‑rending.”",
-        "source": "Le Monde"
-      },
-      {
-        "quote": "“An exuberant adventure novel brimming with energy, mischief and erudition.”",
-        "source": "L’Express"
-      },
-      {
-        "quote": "“Jerusalmy resurrects one of the Shoah’s most atrocious episodes with raw emotion and narrative power.”",
-        "source": "Livres Hebdo"
-      }
-    ],
-    "latestEventsHeader": {
-      "title": "Upcoming Events",
-      "subtitle": "Meet the author and join the conversation at these upcoming events",
-      "cta": "Learn more"
-    },
-    "latestEvents": [
-      {
-        "title": "Middle‑East Outlook",
-        "date": "2024‑10‑12",
-        "location": "Online (Paris)",
-        "description": "Keynote analysis on future scenarios in the region."
-      },
-      {
-        "title": "Memorial de la Shoah",
-        "date": "2023‑06‑11",
-        "location": "Paris Book Salon",
-        "description": "Literary talk around *In Absentia* during the Memorial’s annual book fair."
-      }
-    ],
-    "newsletterCta": {
-      "title": "Stay Updated",
-      "subtitle": "Subscribe to the newsletter for updates on events and exclusive content",
-      "button": "Join the newsletter",
-      "placeholder": "Enter your email"
-    },
-    "footer": {
-      "copyright": "© 2025 Raphael Jerusalmy. All rights reserved.",
-      "contact": "rights@raphael‑jerusalmy.com"
-    }
-  },
-
   "navigation": {
     "home": "Home",
     "about": "About",
@@ -69,251 +6,400 @@
     "events": "Events",
     "blog": "Blog",
     "contact": "Contact",
-    "light": "Light",
-    "dark": "Dark",
     "explore": "Explore Books",
-    "newsletter": "Newsletter"
-  },
-  "aboutpage": {
-    "title": "About Raphael Jerusalmy",
-    "subtitle": "From intelligence officer to award‑winning novelist",
-    "biographyTitle": "Biography",
-    "timelineTitle": "Life Timeline",
-    "writingTitle": "Writing Philosophy",
-    "biography": "Raphael Jerusalmy was born in Montmartre in 1954. After graduating from both the École Normale Supérieure and the Sorbonne, he served fifteen years in Israeli military intelligence before turning to humanitarian work and, eventually, to the trade of rare books in Tel Aviv. Writing, however, became the through‑line of his life: since his explosive 2002 debut *Shalom Tsahal*, he has produced a body of fiction that blends erudition, moral urgency and narrative daring.",
-    "timeline": [
-      { "year": 1954, "title": "Birth", "subtitle": "Paris, France" },
-      {
-        "year": 1978,
-        "title": "Degrees in Classics",
-        "subtitle": "École Normale Supérieure & Sorbonne"
-      },
-      {
-        "year": 1980,
-        "title": "Israeli Military Intelligence",
-        "subtitle": "Begins 15‑year career"
-      },
-      {
-        "year": 1995,
-        "title": "Antiquarian bookseller",
-        "subtitle": "Opens shop in Tel Aviv"
-      },
-      {
-        "year": 2002,
-        "title": "First book published",
-        "subtitle": "*Shalom Tsahal*"
-      },
-      {
-        "year": 2012,
-        "title": "Breakthrough novel",
-        "subtitle": "*Saving Mozart* wins Emmanuel‑Roblès Prize"
-      },
-      {
-        "year": 2017,
-        "title": "*Evacuation*",
-        "subtitle": "Short‑listed for Jewish Quarterly‑Wingate Prize :contentReference[oaicite:5]{index=5}"
-      },
-      {
-        "year": 2022,
-        "title": "*In Absentia*",
-        "subtitle": "Latest novel released"
-      },
-      {
-        "year": 2024,
-        "title": "Global keynotes",
-        "subtitle": "Middle‑East outlook videoconference"
-      }
-    ],
-    "writingPhilosophy": "“I write to illuminate the blind spots of history – the places where official archives fall silent and only the imagination can testify.”",
-    "influences": "Jerusalmy cites François Villon, Stefan Zweig and modern reportage as touchstones, blending poetic risk with journalistic precision."
-  },
-  "booksListHeader": {
-    "title": "Books",
-    "subtitle": "Explore the complete collection of novels spanning various genres and time periods."
-  },
-  "booksDetails": [
-    {
-      "publisher": "NM7 Éditeur",
-      "pages": 394,
-      "year": 2002,
-      "isbn": "2‑913973‑27‑2",
-      "subtitle": "Part memoir, part strategic essay, this debut pulls back the curtain on Israeli intelligence operations.",
-      "excerpt": "\"Intelligence is never a matter of facts alone; it is a wager on human nature.\"",
-      "quotes": [],
-      "reviews": [],
-      "title": "Shalom Tsahal",
-      "slug": "shalom-tsahal",
-      "coverImg": "/tsahal.jpg?height=400&width=250",
-      "type": "Memoir/Essay"
-    },
-    {
-      "publisher": "Actes Sud",
-      "pages": 148,
-      "year": 2012,
-      "isbn": "978‑2‑330‑00516‑0",
-      "subtitle": "Otto J. Steiner, dying of tuberculosis, plots to sabotage a Nazi‑controlled Mozart festival.",
-      "excerpt": "\"Music, my only remaining lung, fills the cavities that disease hollowed out.\"",
-      "quotes": [],
-      "reviews": [],
-      "title": "Saving Mozart",
-      "slug": "sauver-mozart",
-      "coverImg": "/mozart.png?height=400&width=250",
-      "type": "Novel"
-    },
-    {
-      "publisher": "Actes Sud",
-      "pages": 320,
-      "year": 2013,
-      "isbn": "978‑2‑330‑02261‑7",
-      "subtitle": "Poet‑thief François Villon is enlisted to secure a subversive Gutenberg print before it reshapes Europe.",
-      "excerpt": "\"The scent of ink is the scent of revolt.\"",
-      "quotes": [
-        "“An exuberant adventure novel brimming with energy, mischief and erudition.” – L’Express :contentReference[oaicite:6]{index=6}"
-      ],
-      "reviews": [],
-      "title": "The Brotherhood of Book Hunters",
-      "slug": "confrerie",
-      "coverImg": "/confrerie.jpg?height=400&width=250",
-      "type": "Historical Novel"
-    },
-    {
-      "publisher": "Éditions Bruno Doucey",
-      "pages": 177,
-      "year": 2016,
-      "isbn": "978‑2362290947",
-      "subtitle": "A lyrical reconstruction of the day Apollinaire was wounded on the Western Front.",
-      "excerpt": "\"Shells drew invisible calligraphy above the trench‑line.\"",
-      "quotes": [],
-      "reviews": [],
-      "title": "Les obus jouaient à pigeon vole",
-      "slug": "obus",
-      "coverImg": "/obus.jpg?height=400&width=250",
-      "type": "Novel"
-    },
-    {
-      "publisher": "Actes Sud",
-      "pages": 128,
-      "year": 2017,
-      "isbn": "978‑2‑330‑07572‑9",
-      "subtitle": "Under relentless rocket fire, Tel Aviv is abandoned – except for the children who reclaim its ruins.",
-      "excerpt": "\"In the silence after the sirens, imagination became our only architecture.\"",
-      "quotes": [],
-      "reviews": [],
-      "title": "Evacuation",
-      "slug": "evacuation",
-      "coverImg": "/evac.jpg?height=400&width=250",
-      "type": "Novella"
-    },
-    {
-      "publisher": "Actes Sud",
-      "pages": 192,
-      "year": 2018,
-      "isbn": "978‑2‑330‑09054‑8",
-      "subtitle": "A secret Judeo‑Christian romance blooms against the terror of the Inquisition.",
-      "excerpt": "\"Love, like heresy, spreads by whispered syllables.\"",
-      "quotes": [],
-      "reviews": [],
-      "title": "The Rose of Zaragoza",
-      "slug": "rose-de-saragosse",
-      "coverImg": "/rose.jpg?height=400&width=250",
-      "type": "Novel"
-    },
-    {
-      "publisher": "Actes Sud",
-      "pages": 176,
-      "year": 2022,
-      "isbn": "978‑2330164362",
-      "subtitle": "Two doomed prisoners – a Parisian art collector and a communist writer – cross paths inside the Struthof camp’s sinister ‘Jewish skeleton’ project.",
-      "excerpt": "\"Saül Bernstein inhaled art like oxygen, unaware that horror was already breathing down his neck.\"",
-      "quotes": [
-        "“Somber and heart‑rending.” – Le Monde :contentReference[oaicite:7]{index=7}",
-        "“Resurrects a forgotten atrocity with relentless grace.” – Livres Hebdo :contentReference[oaicite:8]{index=8}"
-      ],
-      "reviews": [],
-      "title": "In Absentia",
-      "slug": "in-absentia",
-      "coverImg": "/in3.png?height=400&width=250",
-      "type": "Novel"
+    "newsletter": "Newsletter",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
     }
-  ],
-
-  "events": [
-    {
-      "id": 1,
-      "date": "2024‑10‑12",
-      "title": "Point de situation et perspectives d’avenir du Proche‑Orient",
-      "location": "Online / Monsieur Légionnaire (Paris)",
-      "subtitle": "Videoconference keynote on regional security"
-    },
-    {
-      "id": 2,
-      "date": "2023‑10‑16",
-      "title": "Debate with Benjamin Petrover",
-      "location": "B’nai B’rith France (online)",
-      "subtitle": "Dialogue on geopolitical narratives"
-    },
-    {
-      "id": 3,
-      "date": "2023‑06‑11",
-      "title": "Salon du Livre du Mémorial de la Shoah",
-      "location": "Paris – Memorial courtyard",
-      "subtitle": "Literary meeting on *In Absentia*"
-    },
-    {
-      "id": 4,
-      "date": "2023‑04‑28",
-      "title": "Rencontre avec un auteur : *In Absentia*",
-      "location": "Institut français d’Israël, Tel Aviv",
-      "subtitle": "Book presentation and Q&A"
-    },
-    {
-      "id": 5,
-      "date": "2014‑10‑02",
-      "title": "Cafés littéraires de Montélimar",
-      "location": "Montélimar, France",
-      "subtitle": "Panel discussion on literary creation"
-    }
-  ],
-  "blogComingSoon": {
-    "title": "Blog Coming Soon",
-    "subtitle": "We're crafting thoughtful articles about writing, literature, and the creative process.",
-    "ctaTitle": "Be the First to Know",
-    "ctaDescription": "Subscribe to be notified when we launch our blog with writing tips, behind-the-scenes insights, and literary discussions.",
-    "emailPlaceholder": "Enter your email",
-    "buttonLabel": "Notify Me"
   },
-  "LocaleSwitcher": {
+  "localeSwitcher": {
     "label": "Choose language",
-    "locale": "{locale, select, fr {Français} en {Anglais} other {Unknown}}"
+    "locale": "{locale, select, fr {FR} en {EN} other {Unknown}}"
   },
-  "eventsHeader": {
-    "eventsTitle": "Upcoming Events & Appearances",
-    "eventsSubtitle": "Join Raphaël Jerusalmy at literary festivals, book signings, and special engagements around the world."
+  "homepage": {
+    "hero": {
+      "title": "In Absentia",
+      "tagline": "Raphael Jerusalmy’s haunting new novel unearthing a forgotten Holocaust episode",
+      "description": "Art, memory and horror collide in a 176-page tour de force set between Paris and the Struthof camp. Discover why the press calls it “somber and heart-rending” – Le Monde",
+      "ctaPrimary": "Explore Books",
+      "ctaSecondary": "About the Author"
+    },
+    "featuredBooks": {
+      "header": {
+        "title": "Featured Books",
+        "subtitle": "Discover the stories that have captivated readers worldwide.",
+        "ctaLabel": "View All Books",
+        "detailsLabel": "View Details"
+      }
+    },
+    "testimonials": {
+      "header": {
+        "title": "Reader Testimonials",
+        "subtitle": "What critics and readers are saying about the books."
+      },
+      "items": [
+        {
+          "quote": "“In Absentia is sombre and heart-rending.”",
+          "source": "Le Monde"
+        },
+        {
+          "quote": "“An exuberant adventure novel brimming with energy, mischief and erudition.”",
+          "source": "L’Express"
+        },
+        {
+          "quote": "“Jerusalmy resurrects one of the Shoah’s most atrocious episodes with raw emotion and narrative power.”",
+          "source": "Livres Hebdo"
+        }
+      ]
+    },
+    "upcomingEvents": {
+      "header": {
+        "title": "Upcoming Events",
+        "subtitle": "Meet the author and join the conversation at these upcoming events",
+        "ctaLabel": "Learn more"
+      },
+      "items": [
+        {
+          "title": "Middle-East Outlook",
+          "date": "2024-10-12",
+          "location": "Online (Paris)",
+          "description": "Keynote analysis on future scenarios in the region."
+        },
+        {
+          "title": "Memorial de la Shoah",
+          "date": "2023-06-11",
+          "location": "Paris Book Salon",
+          "description": "Literary talk around *In Absentia* during the Memorial’s annual book fair."
+        }
+      ]
+    },
+    "newsletter": {
+      "header": {
+        "title": "Stay Updated",
+        "subtitle": "Subscribe to the newsletter for updates on events and exclusive content"
+      },
+      "form": {
+        "emailPlaceholder": "Enter your email",
+        "buttonLabel": "Join the newsletter"
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 Raphael Jerusalmy. All rights reserved.",
+      "contactEmail": "rights@raphael-jerusalmy.com"
+    }
+  },
+  "aboutPage": {
+    "header": {
+      "title": "About Raphael Jerusalmy",
+      "subtitle": "From intelligence officer to award-winning novelist"
+    },
+    "biography": {
+      "title": "Biography",
+      "text": "Raphael Jerusalmy was born in Montmartre in 1954. After graduating from both the École Normale Supérieure and the Sorbonne, he served fifteen years in Israeli military intelligence before turning to humanitarian work and, eventually, to the trade of rare books in Tel Aviv. Writing, however, became the through-line of his life: since his explosive 2002 debut *Shalom Tsahal*, he has produced a body of fiction that blends erudition, moral urgency and narrative daring."
+    },
+    "timeline": {
+      "title": "Life Timeline",
+      "items": [
+        { "year": 1954, "title": "Birth", "location": "Paris, France" },
+        {
+          "year": 1978,
+          "title": "Degrees in Classics",
+          "location": "École Normale Supérieure & Sorbonne"
+        },
+        {
+          "year": 1980,
+          "title": "Israeli Military Intelligence",
+          "location": "Begins 15-year career"
+        },
+        {
+          "year": 1995,
+          "title": "Antiquarian bookseller",
+          "location": "Opens shop in Tel Aviv"
+        },
+        {
+          "year": 2002,
+          "title": "First book published",
+          "location": "*Shalom Tsahal*"
+        },
+        {
+          "year": 2012,
+          "title": "Breakthrough novel",
+          "location": "*Saving Mozart* wins Emmanuel-Roblès Prize"
+        },
+        {
+          "year": 2017,
+          "title": "*Evacuation*",
+          "location": "Short-listed for Jewish Quarterly-Wingate Prize"
+        },
+        {
+          "year": 2022,
+          "title": "*In Absentia*",
+          "location": "Latest novel released"
+        },
+        {
+          "year": 2024,
+          "title": "Global keynotes",
+          "location": "Middle-East outlook videoconference"
+        }
+      ]
+    },
+    "writingPhilosophy": {
+      "title": "Writing Philosophy",
+      "text": "“I write to illuminate the blind spots of history – the places where official archives fall silent and only the imagination can testify.”"
+    },
+    "influences": {
+      "text": "Jerusalmy cites François Villon, Stefan Zweig and modern reportage as touchstones, blending poetic risk with journalistic precision."
+    }
+  },
+  "booksPage": {
+    "header": {
+      "title": "Books",
+      "subtitle": "Explore the complete collection of novels spanning various genres and time periods."
+    },
+    "items": [
+      {
+        "slug": "shalom-tsahal",
+        "title": "Shalom Tsahal",
+        "type": "Memoir/Essay",
+        "publisher": "NM7 Éditeur",
+        "year": 2002,
+        "pages": 394,
+        "isbn": "2-913973-27-2",
+        "subtitle": "Part memoir, part strategic essay, this debut pulls back the curtain on Israeli intelligence operations.",
+        "excerpt": "“Intelligence is never a matter of facts alone; it is a wager on human nature.”",
+        "coverImg": "/tsahal.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/shalom-tsahal/purchase",
+        "quotes": [],
+        "reviews": []
+      },
+      {
+        "slug": "sauver-mozart",
+        "title": "Saving Mozart",
+        "type": "Novel",
+        "publisher": "Actes Sud",
+        "year": 2012,
+        "pages": 148,
+        "isbn": "978-2-330-00516-0",
+        "subtitle": "Otto J. Steiner, dying of tuberculosis, plots to sabotage a Nazi-controlled Mozart festival.",
+        "excerpt": "“Music, my only remaining lung, fills the cavities that disease hollowed out.”",
+        "coverImg": "/mozart.png?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/sauver-mozart/purchase",
+        "quotes": [],
+        "reviews": [],
+        "awards": [
+          "Prix Emmanuel-Roblès (2013)",
+          "Prix littéraire de l’ENS Cachan (2013)"
+        ]
+      },
+      {
+        "slug": "confrerie",
+        "title": "The Brotherhood of Book Hunters",
+        "type": "Historical Novel",
+        "publisher": "Actes Sud",
+        "year": 2013,
+        "pages": 320,
+        "isbn": "978-2-330-02261-7",
+        "subtitle": "Poet-thief François Villon is enlisted to secure a subversive Gutenberg print before it reshapes Europe.",
+        "excerpt": "“The scent of ink is the scent of revolt.”",
+        "coverImg": "/confrerie.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/confrerie/purchase",
+        "quotes": [
+          "“An exuberant adventure novel brimming with energy, mischief and erudition.” – L’Express"
+        ],
+        "reviews": []
+      },
+      {
+        "slug": "obus",
+        "title": "Les obus jouaient à pigeon vole",
+        "type": "Novel",
+        "publisher": "Éditions Bruno Doucey",
+        "year": 2016,
+        "pages": 177,
+        "isbn": "978-2362290947",
+        "subtitle": "A lyrical reconstruction of the day Apollinaire was wounded on the Western Front.",
+        "excerpt": "“Shells drew invisible calligraphy above the trench-line.”",
+        "coverImg": "/obus.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/obus/purchase",
+        "quotes": [],
+        "reviews": []
+      },
+      {
+        "slug": "evacuation",
+        "title": "Evacuation",
+        "type": "Novella",
+        "publisher": "Actes Sud",
+        "year": 2017,
+        "pages": 128,
+        "isbn": "978-2-330-07572-9",
+        "subtitle": "Under relentless rocket fire, Tel Aviv is abandoned – except for the children who reclaim its ruins.",
+        "excerpt": "“In the silence after the sirens, imagination became our only architecture.”",
+        "coverImg": "/evac.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/evacuation/purchase",
+        "quotes": [],
+        "reviews": [],
+        "awards": ["Prix Amerigo-Vespucci (2017)"]
+      },
+      {
+        "slug": "rose-de-saragosse",
+        "title": "The Rose of Zaragoza",
+        "type": "Novel",
+        "publisher": "Actes Sud",
+        "year": 2018,
+        "pages": 192,
+        "isbn": "978-2-330-09054-8",
+        "subtitle": "A secret Judeo-Christian romance blooms against the terror of the Inquisition.",
+        "excerpt": "“Love, like heresy, spreads by whispered syllables.”",
+        "coverImg": "/rose.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/rose-de-saragosse/purchase",
+        "quotes": [],
+        "reviews": []
+      },
+      {
+        "slug": "manuel-bleu-contre-lantisemitisme-et-la-desinformation",
+        "title": "Manuel bleu contre l’antisémitisme et la désinformation",
+        "type": "Essay",
+        "publisher": "Éditions Valensin",
+        "year": 2019,
+        "pages": null,
+        "isbn": "978-2374260389",
+        "subtitle": "",
+        "excerpt": "",
+        "coverImg": null,
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/manuel-bleu-contre-lantisemitisme-et-la-desinformation/purchase",
+        "quotes": [],
+        "reviews": []
+      },
+      {
+        "slug": "des-sex-pistols-a-lintifada",
+        "title": "Des Sex Pistols à l’Intifada : Confidences d’un officier israélien du renseignement",
+        "type": "Memoir/Essay",
+        "publisher": "Balland",
+        "year": 2021,
+        "pages": 258,
+        "isbn": "978-2940632640",
+        "subtitle": "",
+        "excerpt": "",
+        "coverImg": null,
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/des-sex-pistols-a-lintifada/purchase",
+        "quotes": [],
+        "reviews": []
+      },
+      {
+        "slug": "in-absentia",
+        "title": "In Absentia",
+        "type": "Novel",
+        "publisher": "Actes Sud",
+        "year": 2022,
+        "pages": 176,
+        "isbn": "978-2330164362",
+        "subtitle": "Two doomed prisoners – a Parisian art collector and a communist writer – cross paths inside the Struthof camp’s sinister ‘Jewish skeleton’ project.",
+        "excerpt": "“Saül Bernstein inhaled art like oxygen, unaware that horror was already breathing down his neck.”",
+        "coverImg": "/in3.png?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/in-absentia/purchase",
+        "quotes": [
+          "“Somber and heart-rending.” – Le Monde",
+          "“Resurrects a forgotten atrocity with relentless grace.” – Livres Hebdo"
+        ],
+        "reviews": []
+      }
+    ]
+  },
+  "eventsPage": {
+    "header": {
+      "title": "Upcoming Events & Appearances",
+      "subtitle": "Join Raphaël Jerusalmy at literary festivals, book signings, and special engagements around the world."
+    },
+    "items": [
+      {
+        "id": 1,
+        "date": "2024-10-12",
+        "title": "Point de situation et perspectives d’avenir du Proche-Orient",
+        "location": "Online / Monsieur Légionnaire (Paris)",
+        "subtitle": "Videoconference keynote on regional security"
+      },
+      {
+        "id": 2,
+        "date": "2023-10-16",
+        "title": "Debate with Benjamin Petrover",
+        "location": "B’nai B’rith France (online)",
+        "subtitle": "Dialogue on geopolitical narratives"
+      },
+      {
+        "id": 3,
+        "date": "2023-06-11",
+        "title": "Salon du Livre du Mémorial de la Shoah",
+        "location": "Paris – Memorial courtyard",
+        "subtitle": "Literary meeting on *In Absentia*"
+      },
+      {
+        "id": 4,
+        "date": "2023-04-28",
+        "title": "Rencontre avec un auteur : *In Absentia*",
+        "location": "Institut français d’Israël, Tel Aviv",
+        "subtitle": "Book presentation and Q&A"
+      },
+      {
+        "id": 5,
+        "date": "2014-10-02",
+        "title": "Cafés littéraires de Montélimar",
+        "location": "Montélimar, France",
+        "subtitle": "Panel discussion on literary creation"
+      },
+      {
+        "id": 6,
+        "date": "2017-09-30",
+        "title": "Festival international de géographie – Prix Amerigo-Vespucci",
+        "location": "Saint-Dié-des-Vosges, France",
+        "subtitle": "Awarded the Prix Amerigo-Vespucci for *Evacuation*"
+      }
+    ]
+  },
+  "blog": {
+    "comingSoon": {
+      "title": "Blog Coming Soon",
+      "subtitle": "We're crafting thoughtful articles about writing, literature, and the creative process.",
+      "ctaTitle": "Be the First to Know",
+      "ctaDescription": "Subscribe to be notified when we launch our blog with writing tips, behind-the-scenes insights, and literary discussions.",
+      "emailPlaceholder": "Enter your email",
+      "buttonLabel": "Notify Me"
+    }
   },
   "contactPage": {
-    "title": "Send a Message",
-    "fields": {
-      "name": "Your Name",
-      "email": "Email Address",
-      "inquiryType": "Inquiry Type",
-      "inquiryTypePlaceholder": "Select inquiry type",
-      "subject": "Subject",
-      "subjectPlaceholder": "Subject of your message",
-      "message": "Your Message",
-      "messagePlaceholder": "Write your message here..."
+    "header": {
+      "title": "Send a Message"
     },
-    "button": "Send Message",
+    "form": {
+      "fields": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "inquiryType": {
+          "label": "Inquiry Type",
+          "placeholder": "Select inquiry type"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Subject of your message"
+        },
+        "message": {
+          "label": "Your Message",
+          "placeholder": "Write your message here..."
+        }
+      },
+      "buttonLabel": "Send Message"
+    },
     "info": {
       "title": "Contact Information",
-      "email": "Email",
-      "phone": "Phone",
-      "agency": "Literary Agency",
-      "agencyName": "Literary Representation Inc.",
-      "agencyAddress": "123 Book Street, Suite 456\nNew York, NY 10001"
+      "email": "E-mail",
+      "phone": "Phone number",
+      "agency": {
+        "name": "Literary Representation Inc.",
+        "address": "123 Book Street, Suite 456\nNew York, NY 10001"
+      }
     },
     "responseTime": {
       "title": "Response Time",
-      "text": "We aim to respond to all inquiries within 2-3 business days. For urgent matters, please indicate this in your subject line."
+      "text": "We aim to respond to all inquiries within 2–3 business days. For urgent matters, please indicate this in your subject line."
     }
   }
 }
