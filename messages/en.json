@@ -173,13 +173,13 @@
         "subtitle": "Part memoir, part strategic essay, this debut pulls back the curtain on Israeli intelligence operations.",
         "excerpt": "Intelligence is never a matter of facts alone; it is a wager on human nature.",
         "coverImg": "/tsahal.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/shalom-tsahal/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/books/shalom-tsahal-confessions-d-un-lieutenant-raphael-jerusalmy-9782913973275.html",
         "quotes": [],
         "reviews": []
       },
       {
         "slug": "sauver-mozart",
-        "title": "Saving Mozart",
+        "title": "Sauver Mozart",
         "type": "Novel",
         "publisher": "Actes Sud",
         "year": 2012,
@@ -188,7 +188,7 @@
         "subtitle": "Otto J. Steiner, dying of tuberculosis, plots to sabotage a Nazi-controlled Mozart festival.",
         "excerpt": "Music, my only remaining lung, fills the cavities that disease hollowed out.",
         "coverImg": "/mozart.png?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/sauver-mozart/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/sauver-mozart-le-journal-d-otto-raphael-jerusalmy-9782330005160.html",
         "quotes": [],
         "reviews": [],
         "awards": [
@@ -198,7 +198,7 @@
       },
       {
         "slug": "confrerie",
-        "title": "The Brotherhood of Book Hunters",
+        "title": "La Confrérie des chasseurs de livres",
         "type": "Historical Novel",
         "publisher": "Actes Sud",
         "year": 2013,
@@ -207,7 +207,7 @@
         "subtitle": "Poet-thief François Villon is enlisted to secure a subversive Gutenberg print before it reshapes Europe.",
         "excerpt": "The scent of ink is the scent of revolt.",
         "coverImg": "/confrerie.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/confrerie/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/la-confrerie-des-chasseurs-de-livres-raphael-jerusalmy-9782330051181.html",
         "quotes": [
           "An exuberant adventure novel brimming with energy, mischief and erudition. – L'Express"
         ],
@@ -215,7 +215,7 @@
       },
       {
         "slug": "diderot-non-a-lignorance",
-        "title": "Denis Diderot, No to Ignorance",
+        "title": "Denis Diderot, non à l'ignorance",
         "type": "Young Adult",
         "publisher": "Actes Sud Junior",
         "year": 2015,
@@ -224,13 +224,13 @@
         "subtitle": "Portrait of the Enlightenment philosopher for young readers.",
         "excerpt": "Diderot teaches us that knowledge is the most beautiful of adventures.",
         "coverImg": "/diderot.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/diderot/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/denis-diderot-non-a-l-ignorance-raphael-jerusalmy-9782330039264.html",
         "quotes": [],
         "reviews": []
       },
       {
         "slug": "obus",
-        "title": "The Shells Played Pigeon Fly",
+        "title": "Les obus jouaient à pigeon vole",
         "type": "Novel",
         "publisher": "Éditions Bruno Doucey",
         "year": 2016,
@@ -239,7 +239,7 @@
         "subtitle": "A lyrical reconstruction of the day Apollinaire was wounded on the Western Front.",
         "excerpt": "Shells drew invisible calligraphy above the trench-line.",
         "coverImg": "/obus.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/obus/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/les-obus-jouaient-a-pigeon-vole-raphael-jerusalmy-9782362290947.html",
         "quotes": [],
         "reviews": [],
         "awards": ["Prix du Salon du Livre de Chaumont (2016)"]
@@ -255,14 +255,14 @@
         "subtitle": "Under relentless rocket fire, Tel Aviv is abandoned – except for the children who reclaim its ruins.",
         "excerpt": "In the silence after the sirens, imagination became our only architecture.",
         "coverImg": "/evac.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/evacuation/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/evacuation-raphael-jerusalmy-9782330075729.html",
         "quotes": [],
         "reviews": [],
         "awards": ["Prix Amerigo-Vespucci (2017)"]
       },
       {
         "slug": "rose-de-saragosse",
-        "title": "The Rose of Zaragoza",
+        "title": "La Rose de Saragosse",
         "type": "Novel",
         "publisher": "Actes Sud",
         "year": 2018,
@@ -271,13 +271,13 @@
         "subtitle": "A secret Judeo-Christian romance blooms against the terror of the Inquisition.",
         "excerpt": "Love, like heresy, spreads by whispered syllables.",
         "coverImg": "/rose.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/rose-de-saragosse/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/la-rose-de-saragosse-raphael-jerusalmy-9782330119966.html",
         "quotes": [],
         "reviews": []
       },
       {
         "slug": "manuel-bleu-contre-lantisemitisme-et-la-desinformation",
-        "title": "Blue Manual Against Antisemitism and Disinformation",
+        "title": "Manuel bleu contre l'antisémitisme et la désinformation",
         "type": "Essay",
         "publisher": "Éditions Valensin",
         "year": 2019,
@@ -286,13 +286,13 @@
         "subtitle": "A practical guide to understanding and combating contemporary antisemitism.",
         "excerpt": "In the face of disinformation, historical truth remains our best weapon.",
         "coverImg": "/bleu.png?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/manuel-bleu/purchase",
+        "purchaseUrl": "https://manuelbleu.com",
         "quotes": [],
         "reviews": []
       },
       {
         "slug": "des-sex-pistols-a-lintifada",
-        "title": "From Sex Pistols to the Intifada: Confidences of an Israeli Intelligence Officer",
+        "title": "Des Sex Pistols à l'Intifada : Confidences d'un officier israélien du renseignement",
         "type": "Memoir/Essay",
         "publisher": "Balland",
         "year": 2021,
@@ -301,7 +301,7 @@
         "subtitle": "Personal memoirs of a unique journey through the secret services.",
         "excerpt": "Between punk rock and geopolitics, my generation navigated between two worlds.",
         "coverImg": "/sex-pistols.jpg?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/sex-pistols/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/des-sex-pistols-a-l-intifada-raphael-jerusalmy-9782940632640.html",
         "quotes": [],
         "reviews": []
       },
@@ -316,7 +316,7 @@
         "subtitle": "Two doomed prisoners – a Parisian art collector and a communist writer – cross paths inside the Struthof camp's sinister 'Jewish skeleton' project.",
         "excerpt": "Saül Bernstein inhaled art like oxygen, unaware that horror was already breathing down his neck.",
         "coverImg": "/inabsentia.png?height=400&width=250",
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/in-absentia/purchase",
+        "purchaseUrl": "https://www.leslibraires.ca/livres/in-absentia-raphael-jerusalmy-9782330164362.html",
         "quotes": [
           "Somber and heart-rending. – Le Monde",
           "Resurrects a forgotten atrocity with relentless grace. – Livres Hebdo"

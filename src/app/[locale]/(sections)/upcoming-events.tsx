@@ -60,7 +60,7 @@ const UpcomingEvents = () => {
                         className="p-0 h-auto mt-2"
                         asChild
                       >
-                        <Link href="#">
+                        <Link href="/events">
                           {t("header.ctaLabel")}{" "}
                           <ArrowRight className="ml-1 h-4 w-4" />
                         </Link>

@@ -38,7 +38,7 @@ export default function BookCard({
           />
         </Link>
       </div>
-      <CardContent className="p-6 flex-grow flex flex-col">
+      <CardContent className="p-6 flex-grow flex flex-col lg:min-h-[250px]">
         <div className="flex items-center justify-between mb-2">
           <Badge variant="outline">{type}</Badge>
           <span className="text-sm text-muted-foreground">{year}</span>
