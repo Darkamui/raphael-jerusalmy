@@ -19,11 +19,12 @@
   },
   "homepage": {
     "hero": {
-      "title": "In Absentia",
+      "title": "Tribunes de Guerre",
       "tagline": "Raphael Jerusalmy's haunting new novel unearthing a forgotten Holocaust episode",
-      "description": "Art, memory and horror collide in a 176-page tour de force set between Paris and the Struthof camp. Discover why the press calls it 'somber and heart-rending' – Le Monde",
+      "description": "Through a series of incisive opinion columns, Raphaël Jerusalmy gives a voice to those who seek to understand, to defend themselves intellectually, and to resist hatred.",
       "ctaPrimary": "Explore Books",
-      "ctaSecondary": "About the Author"
+      "ctaSecondary": "About the Author",
+      "comingSoon": "New Release - June 2025"
     },
     "featuredBooks": {
       "header": {
@@ -333,52 +334,67 @@
     "items": [
       {
         "id": 1,
+        "date": "2025-07-19",
+        "title": "Conférence Tribunes de guerre",
+        "location": "24 rue Copernic, 75116 Paris",
+        "subtitle": "JEM is organizing a conference that will bring Raphaël Jerusalmy and Mohamed Sifaoui into dialogue about the issues raised by their new book.",
+        "link": "https://judaismeenmouvement.org/agenda/les-rencontres-de-jem-conference-tribunes-de-guerre/"
+      },
+      {
+        "id": 8,
         "date": "2025-06-15",
         "title": "Middle East Geopolitical Outlook",
         "location": "Online / International Conference",
-        "subtitle": "Videoconference keynote on regional geopolitical analysis"
+        "subtitle": "Videoconference keynote on regional geopolitical analysis",
+        "link": ""
       },
       {
         "id": 2,
         "date": "2025-09-20",
         "title": "Franco-Israeli Book Fair",
         "location": "French Institute of Israel, Tel Aviv",
-        "subtitle": "Literary meeting and discussion on the author's work"
+        "subtitle": "Literary meeting and discussion on the author's work",
+        "link": ""
       },
       {
         "id": 3,
         "date": "2024-10-12",
         "title": "Middle East Situation and Future Perspectives",
         "location": "Online / Monsieur Légionnaire (Paris)",
-        "subtitle": "Videoconference keynote on regional security"
+        "subtitle": "Videoconference keynote on regional security",
+        "link": ""
       },
       {
         "id": 4,
         "date": "2023-10-16",
         "title": "Debate with Benjamin Petrover",
         "location": "B'nai B'rith France (online)",
-        "subtitle": "Dialogue on geopolitical narratives"
+        "subtitle": "Dialogue on geopolitical narratives",
+        "link": ""
       },
       {
         "id": 5,
         "date": "2023-06-11",
         "title": "Salon du Livre du Mémorial de la Shoah",
         "location": "Paris – Memorial courtyard",
-        "subtitle": "Literary meeting on *In Absentia*"
+        "subtitle": "Literary meeting on *In Absentia*",
+        "link": ""
       },
       {
         "id": 6,
         "date": "2023-04-28",
         "title": "Meet the Author: *In Absentia*",
         "location": "Institut français d'Israël, Tel Aviv",
-        "subtitle": "Book presentation and Q&A"
+        "subtitle": "Book presentation and Q&A",
+        "link": ""
       },
       {
         "id": 7,
         "date": "2017-09-30",
         "title": "Festival international de géographie – Prix Amerigo-Vespucci",
         "location": "Saint-Dié-des-Vosges, France",
-        "subtitle": "Awarded the Prix Amerigo-Vespucci for *Evacuation*"
+        "subtitle": "Awarded the Prix Amerigo-Vespucci for *Evacuation*",
+        "link": ""
       }
     ]
   },

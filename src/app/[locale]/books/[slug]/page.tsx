@@ -34,6 +34,7 @@ export type Book = {
   type: string;
   title: string;
   reviews: string[];
+  purchaseUrl: string;
 };
 
 export default function BookPage(props: { params: Params }) {
@@ -77,9 +78,12 @@ export default function BookPage(props: { params: Params }) {
                     className="w-full glass group transition-all duration-300 water-drop  cursor-pointer"
                     size="lg"
                     variant="outline"
+                    asChild
                   >
-                    <ShoppingCart className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
-                    <span>Purchase Book</span>
+                    <Link href={book.purchaseUrl} target="_blank">
+                      <ShoppingCart className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                      <span>Purchase Book</span>
+                    </Link>
                   </Button>
                   {/* <div className="flex gap-2">
                     <Button

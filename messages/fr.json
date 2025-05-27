@@ -19,11 +19,12 @@
   },
   "homepage": {
     "hero": {
-      "title": "In Absentia",
+      "title": "Tribunes de Guerre",
       "tagline": "Le nouveau roman bouleversant de Raphaël Jerusalmy révélant un épisode oublié de la Shoah",
-      "description": "Art, mémoire et horreur se heurtent dans un tour de force de 176 pages situé entre Paris et le camp du Struthof. Découvrez pourquoi la presse l'appelle « sombre et déchirant » – Le Monde",
+      "description": "À travers une série de tribunes incisives, Raphaël Jerusalmy donne une voix à ceux qui cherchent à comprendre, à se défendre intellectuellement et à résister à la haine.",
       "ctaPrimary": "Explorer les livres",
-      "ctaSecondary": "À propos de l'auteur"
+      "ctaSecondary": "À propos de l'auteur",
+      "comingSoon": "Nouvelle Parution - Juin 2025"
     },
     "featuredBooks": {
       "header": {
@@ -62,21 +63,7 @@
         "title": "Événements à venir",
         "subtitle": "Rencontrez l'auteur et rejoignez la conversation lors de ces événements à venir",
         "ctaLabel": "En savoir plus"
-      },
-      "items": [
-        {
-          "title": "Analyses géopolitiques du Proche-Orient",
-          "date": "2025-06-15",
-          "location": "En ligne (Paris)",
-          "description": "Conférence d'analyse prospective sur les scénarios d'avenir dans la région."
-        },
-        {
-          "title": "Salon du livre franco-israélien",
-          "date": "2025-09-20",
-          "location": "Institut français d'Israël, Tel Aviv",
-          "description": "Rencontre littéraire autour de l'œuvre de Raphaël Jerusalmy."
-        }
-      ]
+      }
     },
     "newsletter": {
       "header": {
@@ -333,52 +320,68 @@
     "items": [
       {
         "id": 1,
+        "date": "2025-07-19",
+        "title": "Conférence Tribunes de guerre",
+        "location": "24 rue Copernic, 75116 Paris",
+        "subtitle": "JEM organise une conférence qui mettra en dialogue Raphaël Jerusalmy et Mohamed Sifaoui autour des enjeux soulevés par leur nouvel ouvrage.",
+        "link": "https://judaismeenmouvement.org/agenda/les-rencontres-de-jem-conference-tribunes-de-guerre/"
+      },
+      {
+        "id": 8,
         "date": "2025-06-15",
         "title": "Analyses prospectives du Proche-Orient",
         "location": "En ligne / Conférence internationale",
-        "subtitle": "Visioconférence d'analyse géopolitique régionale"
+        "subtitle": "Visioconférence d'analyse géopolitique régionale",
+        "link": ""
       },
+
       {
         "id": 2,
         "date": "2025-09-20",
         "title": "Salon du livre franco-israélien",
         "location": "Institut français d'Israël, Tel Aviv",
-        "subtitle": "Rencontre littéraire et discussion sur l'œuvre de l'auteur"
+        "subtitle": "Rencontre littéraire et discussion sur l'œuvre de l'auteur",
+        "link": ""
       },
       {
         "id": 3,
         "date": "2024-10-12",
         "title": "Point de situation et perspectives d'avenir du Proche-Orient",
         "location": "En ligne / Monsieur Légionnaire (Paris)",
-        "subtitle": "Visioconférence d'analyse sur la sécurité régionale"
+        "subtitle": "Visioconférence d'analyse sur la sécurité régionale",
+        "link": ""
       },
       {
         "id": 4,
         "date": "2023-10-16",
         "title": "Débat avec Benjamin Petrover",
         "location": "B'nai B'rith France (en ligne)",
-        "subtitle": "Dialogue sur les narratifs géopolitiques"
+        "subtitle": "Dialogue sur les narratifs géopolitiques",
+        "link": ""
       },
       {
         "id": 5,
         "date": "2023-06-11",
         "title": "Salon du Livre du Mémorial de la Shoah",
         "location": "Paris – Cour du Mémorial",
-        "subtitle": "Rencontre littéraire autour d'*In Absentia*"
+        "subtitle": "Rencontre littéraire autour d'*In Absentia*",
+        "link": ""
       },
       {
         "id": 6,
         "date": "2023-04-28",
         "title": "Rencontre avec un auteur : *In Absentia*",
         "location": "Institut français d'Israël, Tel Aviv",
-        "subtitle": "Présentation du livre et séance de questions-réponses"
+        "subtitle": "Présentation du livre et séance de questions-réponses",
+        "link": ""
       },
       {
         "id": 7,
         "date": "2017-09-30",
         "title": "Festival international de géographie – Prix Amerigo-Vespucci",
         "location": "Saint-Dié-des-Vosges, France",
-        "subtitle": "Récompensé du Prix Amerigo-Vespucci pour *Évacuation*"
+        "subtitle": "Récompensé du Prix Amerigo-Vespucci pour *Évacuation*",
+        "link": ""
       }
     ]
   },

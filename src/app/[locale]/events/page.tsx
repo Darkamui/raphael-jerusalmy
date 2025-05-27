@@ -4,7 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Calendar,
+  ExternalLink,
   MapPin,
+  Users,
   // Clock,
   // Users,
   // ExternalLink,
@@ -13,6 +15,8 @@ import {
 // import { Badge } from "@/components/ui/badge";
 // import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 
 type Event = {
   title: string;
@@ -20,6 +24,7 @@ type Event = {
   location: string;
   date: string;
   id: number;
+  link: string;
 };
 
 export default function EventsPage() {
@@ -55,7 +60,7 @@ export default function EventsPage() {
             <div className="space-y-12 relative">
               {events.map((event, index) => (
                 <TimelineEvent
-                  key={event.id}
+                  key={index}
                   event={event}
                   index={index}
                   isActive={activeEvent === event.id}
@@ -79,6 +84,7 @@ interface TimelineEventProps {
     date: string;
     location: string;
     subtitle: string;
+    link: string;
   };
   index: number;
   isActive: boolean;
@@ -140,7 +146,7 @@ function TimelineEvent({
           transition={{ type: "spring", stiffness: 300 }}
           onClick={onToggle}
         >
-          <div className="p-6">
+          <div className="p-6 cursor-pointer">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-bold gradient-text">{event.title}</h3>
               {/* <Badge className="bg-accent text-accent-foreground">
@@ -168,21 +174,21 @@ function TimelineEvent({
                 className="overflow-hidden"
               >
                 <p className="mt-4 text-muted-foreground">{event.subtitle}</p>
-                {/* <div className="mt-4 flex justify-between items-center">
+                <div className="mt-4 flex justify-between items-center">
                   <Button
                     variant="outline"
                     size="sm"
                     className="glass water-drop"
                     asChild
                   >
-                    <Link href={event.link}>
+                    <Link href={event.link} target="_blank">
                       Learn More <ExternalLink className="ml-2 h-3 w-3" />
                     </Link>
                   </Button>
                   <div className="text-sm text-muted-foreground flex items-center">
                     <Users className="mr-1 h-3 w-3" /> Limited Seats
                   </div>
-                </div> */}
+                </div>
               </motion.div>
             </div>
           </div>

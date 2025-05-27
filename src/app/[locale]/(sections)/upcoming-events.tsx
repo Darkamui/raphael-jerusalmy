@@ -10,7 +10,8 @@ type Event = {
   title: string;
   location: string;
   date: string;
-  description: string;
+  subtitle: string;
+  link: string;
 };
 
 const UpcomingEvents = () => {
@@ -45,22 +46,23 @@ const UpcomingEvents = () => {
               viewport={{ once: true }}
               key={id}
             >
-              <Card className="min-h-[225px]">
+              <Card className="lg:min-h-[300px]">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <Calendar className="h-10 w-10 text-primary flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-bold">
-                        {event.title} - {event.location}
-                      </h3>
+                      <h3 className="text-xl font-bold">{event.title}</h3>
+                      <p className="text-muted-foreground mt-1">
+                        {event.location}
+                      </p>
                       <p className="text-muted-foreground mt-1">{event.date}</p>
-                      <p className="mt-2">{event.description}</p>
+                      <p className="mt-6">{event.subtitle}</p>
                       <Button
                         variant="link"
-                        className="p-0 h-auto mt-2"
+                        className="p-0 h-auto mt-6"
                         asChild
                       >
-                        <Link href="/events">
+                        <Link href={event.link} target="_blank">
                           {t("header.ctaLabel")}{" "}
                           <ArrowRight className="ml-1 h-4 w-4" />
                         </Link>

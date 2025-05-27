@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-// import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { useTranslations } from "next-intl";
 const Hero = () => {
   const t = useTranslations("homepage");
@@ -19,11 +19,11 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="space-y-2">
-              {/* <Badge className="inline-flex mb-2">Released - March 2024</Badge> */}
+              <Badge className="inline-flex mb-2">{t("hero.comingSoon")}</Badge>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 {t("hero.title")}
               </h1>
-              <p className="max-w-[800px] text-balance text-muted-foreground md:text-xl">
+              <p className="lg:max-w-[800px] text-balance text-muted-foreground md:text-xl">
                 {t("hero.description")}
               </p>
             </div>
@@ -45,7 +45,7 @@ const Hero = () => {
             className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
           >
             <Image
-              src="/in2.webp?height=600&width=400"
+              src="/about.jpeg?height=600&width=400"
               alt="Author with books"
               fill
               className="object-cover"
