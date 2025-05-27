@@ -6,7 +6,7 @@
     "events": "Événements",
     "blog": "Blog",
     "contact": "Contact",
-    "explore": "Découvrir les livres",
+    "explore": "Explorer les livres",
     "newsletter": "Newsletter",
     "theme": {
       "light": "Clair",
@@ -20,14 +20,14 @@
   "homepage": {
     "hero": {
       "title": "In Absentia",
-      "tagline": "Le nouveau roman saisissant de Raphaël Jerusalmy dévoilant un épisode oublié de l’Holocauste",
-      "description": "Art, mémoire et horreur se heurtent dans un tour de force de 176 pages entre Paris et le camp du Struthof. Découvrez pourquoi la presse l’appelle « sombre et déchirant » – Le Monde",
-      "ctaPrimary": "Découvrir les livres",
-      "ctaSecondary": "À propos de l’auteur"
+      "tagline": "Le nouveau roman bouleversant de Raphaël Jerusalmy révélant un épisode oublié de la Shoah",
+      "description": "Art, mémoire et horreur se heurtent dans un tour de force de 176 pages situé entre Paris et le camp du Struthof. Découvrez pourquoi la presse l'appelle « sombre et déchirant » – Le Monde",
+      "ctaPrimary": "Explorer les livres",
+      "ctaSecondary": "À propos de l'auteur"
     },
     "featuredBooks": {
       "header": {
-        "title": "Livres à l’honneur",
+        "title": "Livres en vedette",
         "subtitle": "Découvrez les histoires qui ont captivé les lecteurs du monde entier.",
         "ctaLabel": "Voir tous les livres",
         "detailsLabel": "Voir les détails"
@@ -36,7 +36,7 @@
     "testimonials": {
       "header": {
         "title": "Témoignages de lecteurs",
-        "subtitle": "Ce que les critiques et les lecteurs disent des livres."
+        "subtitle": "Ce que disent les critiques et les lecteurs des livres."
       },
       "items": [
         {
@@ -44,118 +44,122 @@
           "source": "Le Monde"
         },
         {
-          "quote": "« Un roman d’aventure foisonnant d’énergie, de malice et d’érudition. »",
-          "source": "L’Express"
+          "quote": "« Un roman d'aventure exubérant débordant d'énergie, de malice et d'érudition. »",
+          "source": "L'Express"
         },
         {
-          "quote": "« Jerusalmy ressuscite l’un des épisodes les plus atroces de la Shoah avec une émotion brute et une puissance narrative. »",
+          "quote": "« Jerusalmy ressuscite l'un des épisodes les plus atroces de la Shoah avec une émotion brute et une puissance narrative. »",
           "source": "Livres Hebdo"
+        },
+        {
+          "quote": "« Dans ce court roman complexe et grave, Raphaël Jerusalmy ressuscite un des épisodes les plus atroces de la Shoah, avec autant d'émotion que de puissance d'évocation. »",
+          "source": "Actes Sud"
         }
       ]
     },
     "upcomingEvents": {
       "header": {
         "title": "Événements à venir",
-        "subtitle": "Rencontrez l’auteur et participez aux discussions lors de ces événements",
+        "subtitle": "Rencontrez l'auteur et rejoignez la conversation lors de ces événements à venir",
         "ctaLabel": "En savoir plus"
       },
       "items": [
         {
-          "title": "Point de situation et perspectives d’avenir du Proche-Orient",
-          "date": "2024-10-12",
+          "title": "Analyses géopolitiques du Proche-Orient",
+          "date": "2025-06-15",
           "location": "En ligne (Paris)",
-          "description": "Analyse en keynote des scénarios futurs dans la région."
+          "description": "Conférence d'analyse prospective sur les scénarios d'avenir dans la région."
         },
         {
-          "title": "Memorial de la Shoah",
-          "date": "2023-06-11",
-          "location": "Salon du Livre de Paris",
-          "description": "Conférence littéraire autour d’*In Absentia* lors du salon annuel."
+          "title": "Salon du livre franco-israélien",
+          "date": "2025-09-20",
+          "location": "Institut français d'Israël, Tel Aviv",
+          "description": "Rencontre littéraire autour de l'œuvre de Raphaël Jerusalmy."
         }
       ]
     },
     "newsletter": {
       "header": {
         "title": "Restez informé",
-        "subtitle": "Abonnez-vous à la newsletter pour recevoir les dernières actualités et du contenu exclusif"
+        "subtitle": "Abonnez-vous à la newsletter pour des mises à jour sur les événements et du contenu exclusif"
       },
       "form": {
         "emailPlaceholder": "Entrez votre email",
-        "buttonLabel": "S’abonner"
+        "buttonLabel": "Rejoindre la newsletter"
       }
     },
     "footer": {
       "copyright": "© 2025 Raphaël Jerusalmy. Tous droits réservés.",
-      "contactEmail": "rights@raphael-jerusalmy.com"
+      "contactEmail": "contact@raphael-jerusalmy.com"
     }
   },
   "aboutPage": {
     "header": {
       "title": "À propos de Raphaël Jerusalmy",
-      "subtitle": "D’officier du renseignement à romancier primé"
+      "subtitle": "D'officier du renseignement à romancier primé"
     },
     "biography": {
       "title": "Biographie",
-      "text": "Raphaël Jerusalmy est né à Montmartre en 1954. Diplômé de l’École Normale Supérieure et de la Sorbonne, il a servi quinze ans dans le renseignement militaire israélien avant de se tourner vers l’humanitaire, puis vers le commerce de livres anciens à Tel Aviv. L’écriture est toutefois restée le fil conducteur de sa vie : depuis son explosive première publication en 2002, *Shalom Tsahal*, il a créé un corpus de fiction mêlant érudition, urgence morale et audace narrative."
+      "text": "Raphaël Jerusalmy est né à Montmartre en 1954. Diplômé de l'École Normale Supérieure et de la Sorbonne, il a servi quinze ans dans les renseignements militaires israéliens avant de se tourner vers le travail humanitaire et, finalement, vers le commerce de livres rares à Tel Aviv. L'écriture est cependant devenue le fil conducteur de sa vie : depuis ses débuts explosifs en 2002 avec *Shalom Tsahal*, il a produit une œuvre littéraire qui mélange érudition, urgence morale et audace narrative. D'origine séfarade par sa grand-mère paternelle Sultana, dont les membres de la famille ont, pour la plupart, été exterminés à Auschwitz, il est aussi russe ashkénaze par son père, brocanteur, artisan, relieur et doreur."
     },
     "timeline": {
-      "title": "Chronologie",
+      "title": "Chronologie de vie",
       "items": [
         { "year": 1954, "title": "Naissance", "location": "Paris, France" },
         {
           "year": 1978,
-          "title": "Études de lettres classiques",
+          "title": "Diplômes de lettres classiques",
           "location": "École Normale Supérieure & Sorbonne"
         },
         {
           "year": 1980,
-          "title": "Renseignement militaire israélien",
-          "location": "Début de 15 ans de carrière"
+          "title": "Renseignements militaires israéliens",
+          "location": "Début d'une carrière de 15 ans"
         },
         {
           "year": 1995,
           "title": "Libraire antiquaire",
-          "location": "Ouverture de sa boutique à Tel Aviv"
+          "location": "Ouvre sa boutique à Tel Aviv"
         },
         {
           "year": 2002,
           "title": "Premier livre publié",
-          "location": "*Shalom Tsahal*"
+          "location": "Shalom Tsahal"
         },
         {
           "year": 2012,
-          "title": "Roman à succès",
-          "location": "*Saving Mozart* reçoit le prix Emmanuel-Roblès"
+          "title": "Roman révolutionnaire",
+          "location": "Sauver Mozart remporte le Prix Emmanuel-Roblès"
         },
         {
           "year": 2017,
-          "title": "*Evacuation*",
-          "location": "Sélectionné pour le Jewish Quarterly-Wingate Prize"
+          "title": "Évacuation",
+          "location": "Finaliste du Prix Littéraire Jewish Quarterly-Wingate"
         },
         {
           "year": 2022,
-          "title": "*In Absentia*",
-          "location": "Dernier roman paru"
+          "title": "In Absentia",
+          "location": "Dernier roman publié"
         },
         {
           "year": 2024,
-          "title": "Keynotes mondiaux",
-          "location": "Conférence Proche-Orient en vidéoconférence"
+          "title": "Conférences mondiales",
+          "location": "Visioconférence sur les perspectives du Proche-Orient"
         }
       ]
     },
     "writingPhilosophy": {
-      "title": "Philosophie d’écriture",
-      "text": "« J’écris pour éclairer les zones d’ombre de l’histoire – là où les archives officielles se taisent et seule l’imagination témoigne. »"
+      "title": "Philosophie d'écriture",
+      "text": "« J'écris pour illuminer les angles morts de l'histoire – les endroits où les archives officielles se taisent et où seule l'imagination peut témoigner. »"
     },
     "influences": {
-      "text": "Jerusalmy cite François Villon, Stefan Zweig et le reportage moderne comme sources d’inspiration, alliant risque poétique et précision journalistique."
+      "text": "Jerusalmy cite François Villon, Stefan Zweig et le grand reportage moderne comme références, mêlant risque poétique et précision journalistique."
     }
   },
   "booksPage": {
     "header": {
       "title": "Livres",
-      "subtitle": "Explorez l’ensemble des romans couvrant divers genres et époques."
+      "subtitle": "Explorez la collection complète de romans couvrant divers genres et périodes historiques."
     },
     "items": [
       {
@@ -166,8 +170,8 @@
         "year": 2002,
         "pages": 394,
         "isbn": "2-913973-27-2",
-        "subtitle": "Mémoires et essai stratégique dévoilant les opérations de renseignement israélien.",
-        "excerpt": "« Le renseignement n’est jamais qu’une question de faits ; c’est un pari sur la nature humaine. »",
+        "subtitle": "Part mémoires, part essai stratégique, ce premier livre lève le voile sur les opérations du renseignement israélien.",
+        "excerpt": "« Le renseignement n'est jamais une affaire de faits seulement ; c'est un pari sur la nature humaine. »",
         "coverImg": "/tsahal.jpg?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/shalom-tsahal/purchase",
         "quotes": [],
@@ -181,15 +185,15 @@
         "year": 2012,
         "pages": 148,
         "isbn": "978-2-330-00516-0",
-        "subtitle": "Otto J. Steiner, mourant de tuberculose, prévoit de saboter un festival Mozart sous contrôle nazi.",
-        "excerpt": "« La musique, mon seul poumon restant, emplit les cavités que la maladie a creusées. »",
+        "subtitle": "Otto J. Steiner, mourant de tuberculose, complote pour saboter un festival Mozart contrôlé par les nazis.",
+        "excerpt": "« La musique, mon seul poumon restant, remplit les cavités que la maladie a creusées. »",
         "coverImg": "/mozart.png?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/sauver-mozart/purchase",
         "quotes": [],
         "reviews": [],
         "awards": [
           "Prix Emmanuel-Roblès (2013)",
-          "Prix littéraire de l’ENS Cachan (2013)"
+          "Prix littéraire de l'ENS Cachan (2013)"
         ]
       },
       {
@@ -200,13 +204,28 @@
         "year": 2013,
         "pages": 320,
         "isbn": "978-2-330-02261-7",
-        "subtitle": "Le poète-voleur François Villon est engagé pour sécuriser un imprimé Gutenberg subversif avant qu’il ne bouleverse l’Europe.",
-        "excerpt": "« L’odeur de l’encre est l’odeur de la révolte. »",
+        "subtitle": "Le poète-voleur François Villon est enrôlé pour sécuriser une impression Gutenberg subversive avant qu'elle ne remodèle l'Europe.",
+        "excerpt": "« L'odeur de l'encre est l'odeur de la révolte. »",
         "coverImg": "/confrerie.jpg?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/confrerie/purchase",
         "quotes": [
-          "« Un roman d’aventure foisonnant d’énergie, de malice et d’érudition. » – L’Express"
+          "« Un roman d'aventure exubérant débordant d'énergie, de malice et d'érudition. » – L'Express"
         ],
+        "reviews": []
+      },
+      {
+        "slug": "diderot-non-a-lignorance",
+        "title": "Denis Diderot, non à l'ignorance",
+        "type": "Jeunesse",
+        "publisher": "Actes Sud Junior",
+        "year": 2015,
+        "pages": 96,
+        "isbn": "978-2-330-04885-3",
+        "subtitle": "Portrait du philosophe des Lumières pour le jeune public.",
+        "excerpt": "« Diderot nous enseigne que le savoir est la plus belle des aventures. »",
+        "coverImg": "/diderot.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/diderot/purchase",
+        "quotes": [],
         "reviews": []
       },
       {
@@ -217,23 +236,24 @@
         "year": 2016,
         "pages": 177,
         "isbn": "978-2362290947",
-        "subtitle": "Reconstitution lyrique du jour où Apollinaire a été blessé sur le front occidental.",
-        "excerpt": "« Les obus dessinaient une calligraphie invisible au-dessus de la tranchée. »",
+        "subtitle": "Une reconstruction lyrique du jour où Apollinaire fut blessé sur le Front occidental.",
+        "excerpt": "« Les obus dessinaient une calligraphie invisible au-dessus de la ligne de tranchée. »",
         "coverImg": "/obus.jpg?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/obus/purchase",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "awards": ["Prix du Salon du Livre de Chaumont (2016)"]
       },
       {
         "slug": "evacuation",
-        "title": "Evacuation",
+        "title": "Évacuation",
         "type": "Nouvelle",
         "publisher": "Actes Sud",
         "year": 2017,
         "pages": 128,
         "isbn": "978-2-330-07572-9",
-        "subtitle": "Sous un bombardement de roquettes, Tel Aviv est abandonnée – sauf les enfants qui reprennent ses ruines.",
-        "excerpt": "« Dans le silence après les sirènes, l’imagination devint notre seule architecture. »",
+        "subtitle": "Sous un feu de roquettes incessant, Tel Aviv est abandonnée – sauf par les enfants qui reprennent possession de ses ruines.",
+        "excerpt": "« Dans le silence après les sirènes, l'imagination est devenue notre seule architecture. »",
         "coverImg": "/evac.jpg?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/evacuation/purchase",
         "quotes": [],
@@ -248,8 +268,8 @@
         "year": 2018,
         "pages": 192,
         "isbn": "978-2-330-09054-8",
-        "subtitle": "Une romance judéo-chrétienne secrète fleurit sous la terreur de l’Inquisition.",
-        "excerpt": "« L’amour, comme l’hérésie, se répand par des syllabes murmurées. »",
+        "subtitle": "Une romance judéo-chrétienne secrète s'épanouit contre la terreur de l'Inquisition.",
+        "excerpt": "« L'amour, comme l'hérésie, se propage par syllabes murmurées. »",
         "coverImg": "/rose.jpg?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/rose-de-saragosse/purchase",
         "quotes": [],
@@ -257,31 +277,31 @@
       },
       {
         "slug": "manuel-bleu-contre-lantisemitisme-et-la-desinformation",
-        "title": "Manuel bleu contre l’antisémitisme et la désinformation",
+        "title": "Manuel bleu contre l'antisémitisme et la désinformation",
         "type": "Essai",
         "publisher": "Éditions Valensin",
         "year": 2019,
-        "pages": null,
+        "pages": 180,
         "isbn": "978-2374260389",
-        "subtitle": "",
-        "excerpt": "",
-        "coverImg": null,
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/manuel-bleu-contre-lantisemitisme-et-la-desinformation/purchase",
+        "subtitle": "Un guide pratique pour comprendre et combattre l'antisémitisme contemporain.",
+        "excerpt": "« Face à la désinformation, la vérité historique reste notre meilleure arme. »",
+        "coverImg": "/bleu.png?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/manuel-bleu/purchase",
         "quotes": [],
         "reviews": []
       },
       {
         "slug": "des-sex-pistols-a-lintifada",
-        "title": "Des Sex Pistols à l’Intifada : Confidences d’un officier israélien du renseignement",
+        "title": "Des Sex Pistols à l'Intifada : Confidences d'un officier israélien du renseignement",
         "type": "Mémoires/Essai",
         "publisher": "Balland",
         "year": 2021,
         "pages": 258,
         "isbn": "978-2940632640",
-        "subtitle": "",
-        "excerpt": "",
-        "coverImg": null,
-        "purchaseUrl": "https://raphael-jerusalmy.com/books/des-sex-pistols-a-lintifada/purchase",
+        "subtitle": "Mémoires personnelles d'un parcours singulier dans les services secrets.",
+        "excerpt": "« Entre punk rock et géopolitique, ma génération a navigué entre deux mondes. »",
+        "coverImg": "/sex-pistols.jpg?height=400&width=250",
+        "purchaseUrl": "https://raphael-jerusalmy.com/books/sex-pistols/purchase",
         "quotes": [],
         "reviews": []
       },
@@ -293,13 +313,13 @@
         "year": 2022,
         "pages": 176,
         "isbn": "978-2330164362",
-        "subtitle": "Deux prisonniers condamnés – un collectionneur d’art parisien et un écrivain communiste – se croisent dans le sinistre projet du « squelette juif » du camp de Struthof.",
-        "excerpt": "« Saül Bernstein inhalait l’art comme de l’oxygène, sans se douter que l’horreur respirait déjà dans son dos. »",
-        "coverImg": "/in3.png?height=400&width=250",
+        "subtitle": "Deux prisonniers condamnés – un collectionneur d'art parisien et un écrivain communiste – se croisent dans le sinistre projet de « squelettes juifs » du camp du Struthof.",
+        "excerpt": "« Saül Bernstein respirait l'art comme de l'oxygène, ignorant que l'horreur lui respirait déjà dans le cou. »",
+        "coverImg": "/inabsentia.png?height=400&width=250",
         "purchaseUrl": "https://raphael-jerusalmy.com/books/in-absentia/purchase",
         "quotes": [
           "« Sombre et déchirant. » – Le Monde",
-          "« Ressuscite une atrocité oubliée avec une grâce implacable. » – Livres Hebdo"
+          "« Ressuscite un épisode oublié d'atrocité avec une grâce implacable. » – Livres Hebdo"
         ],
         "reviews": []
       }
@@ -307,67 +327,184 @@
   },
   "eventsPage": {
     "header": {
-      "title": "Événements et apparitions à venir",
-      "subtitle": "Rejoignez Raphaël Jerusalmy dans des festivals littéraires, des séances de dédicaces et des engagements spéciaux à travers le monde."
+      "title": "Événements à venir et apparitions",
+      "subtitle": "Rejoignez Raphaël Jerusalmy lors de festivals littéraires, séances de dédicaces et événements spéciaux à travers le monde."
     },
     "items": [
       {
         "id": 1,
-        "date": "2024-10-12",
-        "title": "Point de situation et perspectives d’avenir du Proche-Orient",
-        "location": "En ligne / Monsieur Légionnaire (Paris)",
-        "subtitle": "Conférence vidéo sur la sécurité régionale"
+        "date": "2025-06-15",
+        "title": "Analyses prospectives du Proche-Orient",
+        "location": "En ligne / Conférence internationale",
+        "subtitle": "Visioconférence d'analyse géopolitique régionale"
       },
       {
         "id": 2,
-        "date": "2023-10-16",
-        "title": "Débat avec Benjamin Petrover",
-        "location": "B’nai B’rith France (en ligne)",
-        "subtitle": "Dialogue sur les récits géopolitiques"
+        "date": "2025-09-20",
+        "title": "Salon du livre franco-israélien",
+        "location": "Institut français d'Israël, Tel Aviv",
+        "subtitle": "Rencontre littéraire et discussion sur l'œuvre de l'auteur"
       },
       {
         "id": 3,
-        "date": "2023-06-11",
-        "title": "Salon du Livre du Mémorial de la Shoah",
-        "location": "Paris – Cour du Mémorial",
-        "subtitle": "Rencontre littéraire autour d’In Absentia"
+        "date": "2024-10-12",
+        "title": "Point de situation et perspectives d'avenir du Proche-Orient",
+        "location": "En ligne / Monsieur Légionnaire (Paris)",
+        "subtitle": "Visioconférence d'analyse sur la sécurité régionale"
       },
       {
         "id": 4,
-        "date": "2023-04-28",
-        "title": "Rencontre avec un auteur : In Absentia",
-        "location": "Institut français d’Israël, Tel Aviv",
-        "subtitle": "Présentation du livre et Q&R"
+        "date": "2023-10-16",
+        "title": "Débat avec Benjamin Petrover",
+        "location": "B'nai B'rith France (en ligne)",
+        "subtitle": "Dialogue sur les narratifs géopolitiques"
       },
       {
         "id": 5,
-        "date": "2014-10-02",
-        "title": "Cafés littéraires de Montélimar",
-        "location": "Montélimar, France",
-        "subtitle": "Table ronde sur la création littéraire"
+        "date": "2023-06-11",
+        "title": "Salon du Livre du Mémorial de la Shoah",
+        "location": "Paris – Cour du Mémorial",
+        "subtitle": "Rencontre littéraire autour d'*In Absentia*"
       },
       {
         "id": 6,
+        "date": "2023-04-28",
+        "title": "Rencontre avec un auteur : *In Absentia*",
+        "location": "Institut français d'Israël, Tel Aviv",
+        "subtitle": "Présentation du livre et séance de questions-réponses"
+      },
+      {
+        "id": 7,
         "date": "2017-09-30",
         "title": "Festival international de géographie – Prix Amerigo-Vespucci",
         "location": "Saint-Dié-des-Vosges, France",
-        "subtitle": "Décerné le Prix Amerigo-Vespucci pour *Evacuation*"
+        "subtitle": "Récompensé du Prix Amerigo-Vespucci pour *Évacuation*"
       }
     ]
   },
   "blog": {
-    "comingSoon": {
-      "title": "Blog bientôt disponible",
-      "subtitle": "Nous préparons des articles réfléchis sur l’écriture, la littérature et le processus créatif.",
-      "ctaTitle": "Soyez informé en premier",
-      "ctaDescription": "Abonnez-vous pour être notifié au lancement de notre blog avec des astuces d’écriture, des coulisses et des discussions littéraires.",
-      "emailPlaceholder": "Entrez votre email",
-      "buttonLabel": "Prévenez-moi"
-    }
+    "header": {
+      "title": "Articles et analyses",
+      "subtitle": "Réflexions sur l'écriture, la géopolitique et l'actualité"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Une maîtrise de soi incroyable",
+        "date": "2025-02-09",
+        "excerpt": "Face à l'adversité et aux horreurs du 7 octobre 2023, Israël a fait preuve d'une résilience exceptionnelle. Ni le désespoir ni la barbarie ne l'ont détourné de sa dignité morale.",
+        "url": "https://www.tribunejuive.info/2025/02/09/analyse-une-incroyable-maitrise-de-soi-par-raphael-jerusalmy/",
+        "category": "Géopolitique",
+        "subtitle": "Analyse de la force morale d’Israël après le 7 octobre 2023",
+        "description": "Dans cet article pour Tribune Juive, Raphaël Jerusalmy examine comment Israël a conservé son intégrité morale après les événements du 7 octobre 2023, soulignant la détermination inébranlable de ses citoyens face à la terreur.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2025/02/Image-19-2.jpeg",
+        "readTime": "5 min de lecture",
+        "slug": "une-maitrise-de-soi-incroyable",
+        "content": "L’aspect le plus impressionnant de la réaction israélienne aux massacres du 7 octobre 2023 est la manière dont la population israélienne a su garder une parfaite maîtrise d’elle-même. Malgré la violence du choc initial et la durée prolongée des combats, elle n’a à aucun moment sombré dans le désespoir. Elle n’a à aucun moment versé dans la sauvagerie barbare de ses ennemis, gardant sa dignité morale tout au long de ces mois difficiles.\n\nLe peuple juif, en Israël et partout dans le monde, traverse des heures difficiles, entachées des réminiscences d’un passé qui n’est pas si lointain. Des heures sombres qui mettent une fois de plus sa foi en l’homme à l’épreuve. Plus immondes sont les actions des antisémites, plus admirable est le cran avec lequel le juif y fait face. Les déclarations répugnantes émanant de l’ONU, de certains médias et de politiciens abjects se heurtent comme des vagues contre le rocher de la pérennité juive. Ceux qui haïssent ce peuple passent et succombent, de siècle en siècle. Tandis qu’Israël persiste et demeure.\n\nLes pathétiques mises en scène du Hamas lors de la libération d’otages, les non moins piteuses manifestations de soutien au djihadisme dans les démocraties, les accusations mensongères, les boycotts en tous genres, et les insultes à la probité intellectuelle proférées par des vedettes d’Hollywood ou des responsables politiques ternissent avant tout ceux qui les prononcent. Elles souillent l’image des institutions qui les tolèrent. Tant et si bien que le peuple juif en sort grandi, élevé, ennobli, fier de ne pas céder à la haine et de garder son identité intacte.\n\nQu’on ne s’y méprenne pas : les Israéliens souffrent, pleurent, vivent d’immenses chagrins. Chaque jour, la liste des soldats tombés ou blessés s’allonge. Chaque matin, il faut tenter d’expliquer aux enfants un nouveau drame, une nouvelle alerte, sans les effrayer. Pourtant, chaque jour, Israël relève ces défis, sans faillir.\n\nOui, nous sommes meurtris dans nos âmes et notre chair. Oui, vous nous nuisez. Et non, nous ne perdons pas courage. Non, nous ne cédons pas d’un pouce. Nous nous renforçons et gardons la parfaite liberté de nos choix. Nous comptons sur ceux, amis et sympathisants, qui nous soutiennent. NousPersistons dans notre foi en l’avenir. Jamais nous n’avons autant créé, inventé, produit—in art, en sciences, en ingénierie. Nous allons de l’avant, tandis que d’autres pays semblent revenir à des époques que l’on croyait révolues.\n\nIl faut sans cesse résister à la colère et à la rancune. Il faut soutenir les familles endeuillées, les proches des otages et des combattants, les victimes d’agressions racistes. Tout cela exige une force de caractère exceptionnelle. C’est pourquoi j’admire mes frères et sœurs en Israël et dans le monde. Je suis fier d’appartenir à ce peuple. Grâce à votre résilience, nous avons remporté la seule victoire qui compte : celle de notre droiture, de notre détermination et de notre ténacité."
+      },
+      {
+        "id": 2,
+        "title": "La vraie victoire d'Israël",
+        "date": "2025-01-19",
+        "excerpt": "En négociant avec le Hamas pour ses otages, Israël remporte une victoire morale qui transcende les enjeux militaires du conflit.",
+        "url": "https://www.tribunejuive.info/2025/01/19/la-vraie-victoire-disrael-par-raphael-jerusalmy/",
+        "category": "Géopolitique",
+        "subtitle": "Éditorial sur les implications morales de la négociation pour les otages",
+        "description": "Dans cet éditorial pour Tribune Juive, Raphaël Jerusalmy soutient que les négociations d’Israël avec le Hamas pour la libération de ses otages constituent un triomphe moral, élevant la valeur de la vie au-dessus des considérations militaires.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2025/01/Image-12-7.jpeg",
+        "readTime": "5 min de lecture",
+        "slug": "la-vraie-victoire-disrael",
+        "content": "Négocier avec une organisation terroriste entraîne toujours un lourd coût politique et psychologique : et pourtant, les récents échanges d’otages entre Israël et le Hamas ont permis une réussite bien plus grande que tout gain territorial. En plaçant la valeur de chaque vie humaine au-dessus de toute autre considération, Israël a prouvé que le courage moral peut surpasser la force militaire.\n\nDès le départ, les autorités ont affirmé que tous les efforts seraient déployés pour ramener chaque personne enlevée. Cette détermination, même sous la pression internationale la plus intense, a envoyé un message fort : aucun objectif stratégique ne justifie l’abandon de nos compatriotes.\n\nCertains dénoncent des « concessions », mais ils négligent la victoire plus profonde : redonner espoir aux familles des otages, renforcer l’unité nationale, et rappeler au monde que la véritable force d’Israël réside aussi dans sa compassion. Chaque libération a érodé le pouvoir du Hamas et renforcé sa légitimité morale.\n\nLes répercussions vont bien au-delà des seuls otages. En associant dialogue et capacité de réponse rapide, Israël montre la voie d’une démocratie qui peut faire face au terrorisme sans se renier. Cette victoire morale pourrait bien s’avérer plus durable que n’importe quelle conquête militaire."
+      },
+      {
+        "id": 3,
+        "title": "Palestine, nuisance écologique",
+        "date": "2024-12-23",
+        "excerpt": "L’Autorité palestinienne est accusée de mener une politique délibérée de dégradation environnementale dans les territoires qu’elle administre.",
+        "url": "https://israelvalley.com/2024/12/23/terrorisme-environnemental-raphael-jerusalmy-a-publie-un-article-detonnant/",
+        "category": "Environnement",
+        "subtitle": "Accusation de sabotage écologique par l’Autorité palestinienne",
+        "description": "Raphaël Jerusalmy détaille comment les politiques de l’Autorité palestinienne — déversement d’eaux usées, décharges illicites, combustion de pneus et déchets électroniques — constituent un« terrorisme environnemental » violant les accords d’Oslo et menaçant la santé publique.",
+        "image": "https://israelvalley.com/wp-content/uploads/2024/12/Climatech-Investment-Opportunities-in-Emerging-Markets.webp",
+        "readTime": "4 min de lecture",
+        "slug": "palestine-nuisance-ecologique",
+        "content": "La protection de l’environnement n’est pas une simple question civile, mais une question de sécurité. Dans cet article percutant, Raphaël Jerusalmy révèle comment l’Autorité palestinienne, par sa gestion irresponsable des déchets et des ressources naturelles, commet une forme de terrorisme écologique.\n\nLe déversement incontrôlé d’eaux usées dans la vallée du Jourdain, les décharges sauvages près des nappes phréatiques et la combustion illégale de pneus et d’appareils électroniques libèrent des polluants cancérigènes dans l’air et les eaux. Des décennies de négligence ont transformé des terres fertiles en zones contaminées.\n\nLes populations locales souffrent de maladies respiratoires et d’infections. Des hôpitaux sous-équipés peinent à traiter la recrudescence de cas liés à ces pollutions. Pourtant, ces pratiques violent clairement les clauses environnementales des accords d’Oslo, restés lettre morte.\n\nJerusalmy appelle la communauté internationale à conditionner toute aide future à la mise en place d’un cadre de surveillance et de sanctions écologiques. Sans responsabilité, ce sabotage lent mais sûr continuera d’exposer la région à des crises sanitaires et sécuritaires majeures."
+      },
+      {
+        "id": 4,
+        "title": "Pauvre Liban",
+        "date": "2024-10-13",
+        "excerpt": "Il est regrettable d’abandonner le seul pays du Moyen-Orient, à part Israël, autant proche de la mentalité et de la culture occidentales.",
+        "url": "https://www.tribunejuive.info/2024/10/14/pauvre-liban-par-raphael-jerusalmy/",
+        "category": "Géopolitique",
+        "subtitle": "Appel au soutien international pour sauver le Liban de l’isolement",
+        "description": "Raphaël Jerusalmy plaide pour que le Liban, l’un des rares pays du Moyen-Orient culturellement alignés avec l’Occident, utilise l’axe franco-américain et le récent accord gazier maritime avec Israël pour sortir de la crise et renforcer sa souveraineté.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2024/10/Image-7-5.jpeg",
+        "readTime": "6 min de lecture",
+        "slug": "pauvre-liban",
+        "content": "Le Liban, jadis carrefour culturel entre Orient et Occident, se trouve aujourd’hui au bord de l’effondrement. La paralysie politique, la corruption endémique et la mainmise du Hezbollah ont plongé le pays dans la plus grave crise de son histoire moderne.\n\nLe port de Beyrouth, autrefois animé, est réduit à un champ de ruines. Les coupures d’électricité et la pénurie de carburant rythment désormais le quotidien. Des familles entières ont vu leur niveau de vie s’effondrer.\n\nDans cet article, Raphaël Jerusalmy exhorte la France et les États-Unis à exploiter l’opportunité offerte par le nouvel accord gazier maritime avec Israël. En échange d’une aide financière conditionnée à des réformes structurelles, l’axe franco-américain peut contraindre les milices à rendre le pouvoir à l’État.\n\nLe temps presse : sans action concertée, le Liban pourrait basculer dans l’instabilité totale, devenant un sanctuaire pour l’extrémisme qui menacerait tout le Moyen-Orient. Soutenir le Liban n’est pas seulement un acte de solidarité, c’est un impératif stratégique."
+      },
+      {
+        "id": 5,
+        "title": "7 octobre… un an après",
+        "date": "2024-10-06",
+        "excerpt": "Un an plus tard, l’équilibre des forces a changé. D’ici le 7 octobre 2025, le Moyen-Orient aura été complètement remodelé.",
+        "url": "https://www.tribunejuive.info/2024/10/07/7-octobre-un-an-apres-par-raphael-jerusalmy/",
+        "category": "Géopolitique",
+        "subtitle": "Bilan des dynamiques de pouvoir et perspectives régionales",
+        "description": "Raphaël Jerusalmy revient sur la manière dont, un an après le 7 octobre 2023, Israël a renforcé ses capacités militaires et diplomatiques, tout en soulignant les défis à venir en matière d’unité nationale et de coopération internationale.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2024/10/Image-7-2.jpeg",
+        "readTime": "5 min de lecture",
+        "slug": "7-octobre-un-an-apres",
+        "content": "Un an s’est écoulé depuis l’attaque du 7 octobre 2023 : le paysage géopolitique du Moyen-Orient en porte déjà les marques. Dans cet essai, Raphaël Jerusalmy analyse l’évolution des rapports de force.\n\nLes services de renseignement israéliens ont reconstruit leurs réseaux cybernétiques et leurs forces spéciales. Toutefois, sur le plan intérieur, le débat sur les réformes judiciaires a fragilisé l’unité nationale.\n\nSur la scène diplomatique, d’anciens adversaires coopèrent désormais sur des questions de sécurité, tandis que des puissances régionales misent sur la stabilité à long terme plutôt que sur la confrontation. Jerusalmy souligne qu’un équilibre délicat doit être préservé entre pression militaire et ouverture politique.\n\nEn regardant vers le 7 octobre 2025, l’auteur insiste sur le fait que l’avenir dépendra du choix des dirigeants : privilégieront-ils le dialogue ou la division, la reconstruction ou la rétorsion ? Ces décisions façonneront la région pour les décennies à venir."
+      },
+      {
+        "id": 6,
+        "title": "Antisémites, souriez vous êtes filmés",
+        "date": "2024-09-22",
+        "excerpt": "À l’ère numérique, la surveillance technologique devient un outil de lutte contre l’antisémitisme.",
+        "url": "https://www.tribunejuive.info/2024/09/22/antisemites-souriez-vous-etes-filmes-par-raphael-jerusalmy/",
+        "category": "Société",
+        "subtitle": "Usage de la surveillance numérique et des objets connectés pour déjouer les menaces antisémites",
+        "description": "Raphaël Jerusalmy met en lumière comment des unités spécialisées du Mossad exploitent le big data, la surveillance de mots-clés et des dispositifs IoT pour repérer et suivre les individus antisémites à travers le monde, tout en soulevant les enjeux juridiques et éthiques de cette démarche.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2024/09/image-91.png",
+        "readTime": "5 min de lecture",
+        "slug": "antisemites-souriez-vous-etes-filmes",
+        "content": "Autrefois cantonné à la prose d’idéologues marginaux, l’antisémitisme prolifère aujourd’hui en ligne et dans les rues des grandes villes. Dans cette enquête, Raphaël Jerusalmy dévoile comment la technologie devient l’arme principale pour le combattre.\n\nLes équipes cyber du Mossad scrutent des millions de publications sur les réseaux sociaux, détectant les messages haineux grâce à des algorithmes de traitement du langage naturel. Simultanément, des caméras connectées dans l’espace public alimentent des IA capables de repérer instantanément slogans et tags antisémites.\n\nCes dispositifs ont déjà permis d’interpeller plusieurs groupes avant qu’ils ne passent à l’action. Mais à quel prix ? La protection de la vie privée, l’encadrement juridique et la transparence sont au cœur du débat.\n\nJerusalmy plaide pour un contrôle parlementaire strict, la nomination d’un médiateur indépendant et des règles claires sur la conservation des données : seuls ainsi ces outils pourront protéger sans menacer les libertés fondamentales."
+      },
+      {
+        "id": 7,
+        "title": "Israël, protecteur de l’Europe",
+        "date": "2024-09-05",
+        "excerpt": "Ceux qui envisagent des embargos sur les armes ou interdisent l’accès des Israéliens à Eurosatory se tirent une balle dans le pied. Israël protège l’Europe.",
+        "url": "https://www.tribunejuive.info/2024/09/05/israel-le-protecteur-de-leurope-par-raphael-jerusalmy/",
+        "category": "Géopolitique",
+        "subtitle": "Comment les partenariats de défense israéliens renforcent la sécurité européenne",
+        "description": "Raphaël Jerusalmy explore trois défis sécuritaires pour l’Europe — rivalités géostratégiques, expansion de l’islamisme, montée des extrémismes internes — et montre comment la coopération israélienne, de l’OTAN aux systèmes antimissiles Arrow-3 et Dôme de fer, constitue un pilier essentiel.",
+        "image": "https://www.tribunejuive.info/wp-content/uploads/2024/09/Image-17.jpeg",
+        "readTime": "5 min de lecture",
+        "slug": "israel-protecteur-de-leurope",
+        "content": "L’Europe se trouve face à trois défis majeurs : la concurrence des grandes puissances à ses frontières, la montée de l’islamisme dans ses voisins et l’émergence de mouvements extrémistes en son sein. Dans tous ces domaines, la coopération avec Israël s’avère cruciale.\n\nMembre du partenariat OTAN « Partnership for Peace », Israël partage en temps réel ses analyses sur les cybermenaces et les réseaux terroristes. Des exercices conjoints renforcent la réactivité le long du flanc sud européen.\n\nSur le plan technologique, des démonstrations de l’Arrow-3 et du Dôme de fer ont convaincu plusieurs ministres de la Défense européens de la pertinence d’une co-production ou d’un achat groupé. Ces boucliers antimissiles ne protègent pas qu’Israël ; ils peuvent défendre toute capitale européenne.\n\nJerusalmy conclut que lever les embargos sur les armes et approfondir la collaboration n’est pas seulement légitime, c’est indispensable. En soutenant Israël, l’Europe consolide sa propre architecture de sécurité face aux dangers de demain."
+      },
+      {
+        "id": 8,
+        "title": "Interview RTS : In Absentia, l’imaginaire contre la Shoah",
+        "date": "2022-05-16",
+        "excerpt": "Interview radio de 30 minutes sur le roman In Absentia et l’importance de l’imaginaire face à l’horreur.",
+        "url": "https://www.rts.ch/info/culture/livres/13090696-in-absentia-de-raphael-jerusalmy-limaginaire-contre-la-shoah.html",
+        "category": "Littérature",
+        "subtitle": "Comment l’imaginaire affronte le traumatisme historique",
+        "description": "Dans cette interview pour RTS Culture, Raphaël Jerusalmy évoque son roman *In Absentia*, montrant comment fiction et imaginaire sont essentiels pour témoigner de la Shoah, préserver la mémoire et honorer la résilience des victimes.",
+        "image": "https://www.autourdunlivre.com/post/in-abstentia-sz-raphael-jerusalmy.jpg",
+        "readTime": "3 min de lecture",
+        "slug": "interview-rts-in-absentia-imaginaire-contre-la-shoah",
+        "content": "Dans cette interview intimiste pour RTS Culture, Raphaël Jerusalmy revient sur la genèse de son roman *In Absentia*. Parti de la volonté de donner voix à ceux qu’on n’entend plus, il explique comment la fiction saisit les nuances de la souffrance qu’un simple compte rendu historique ne peut transmettre.\n\nL’auteur aborde la responsabilité morale de l’écrivain : témoigner, préserver la mémoire et inviter le lecteur à imaginer la réalité derrière les chiffres. Il raconte des rencontres avec des survivants, dont le récit, bien que difficile à entendre, réclame d’être porté à l’écrit.\n\nÀ travers des personnages profondément humains, le roman tisse un pont entre passé et présent, montrant comment les répercussions de la Shoah résonnent encore aujourd’hui. Jerusalmy défend l’idée que l’imaginaire est la meilleure garde-fou contre l’oubli collectif.\n\nLes auditeurs découvrent son travail de recherche : visites d’archives, témoignages oraux et l’art délicat de mêler faits et empathie narrative. L’échange se termine sur une note d’espoir : l’art, quand il est sincère, peut raviver le souvenir et inspirer la reconstruction."
+      }
+    ]
   },
   "contactPage": {
     "header": {
-      "title": "Envoyez un message"
+      "title": "Envoyer un message"
     },
     "form": {
       "fields": {
@@ -375,31 +512,31 @@
         "email": "Adresse email",
         "inquiryType": {
           "label": "Type de demande",
-          "placeholder": "Sélectionnez le type de demande"
+          "placeholder": "Sélectionner le type de demande"
         },
         "subject": {
           "label": "Sujet",
-          "placeholder": "Objet de votre message"
+          "placeholder": "Sujet de votre message"
         },
         "message": {
           "label": "Votre message",
-          "placeholder": "Écrivez votre message ici…"
+          "placeholder": "Écrivez votre message ici..."
         }
       },
-      "buttonLabel": "Envoyer"
+      "buttonLabel": "Envoyer le message"
     },
     "info": {
       "title": "Informations de contact",
-      "email": "Courriel",
+      "email": "E-mail",
       "phone": "Numéro de téléphone",
       "agency": {
-        "name": "Literary Representation Inc.",
-        "address": "123 Book Street, Suite 456\nNew York, NY 10001"
+        "name": "Représentation littéraire",
+        "address": "Actes Sud\n123 Avenue de la République\n13200 Arles, France"
       }
     },
     "responseTime": {
       "title": "Délai de réponse",
-      "text": "Nous nous efforçons de répondre à toutes les demandes sous 2–3 jours ouvrables. Pour les urgences, merci de l’indiquer dans l’objet."
+      "text": "Nous nous efforçons de répondre à toutes les demandes dans un délai de 2 à 3 jours ouvrables. Pour les questions urgentes, veuillez l'indiquer dans l'objet de votre message."
     }
   }
 }

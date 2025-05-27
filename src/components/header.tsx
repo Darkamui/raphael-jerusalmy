@@ -61,7 +61,9 @@ export default function Header() {
             <Link href="/newsletter">{t("newsletter")}</Link>
           </Button>*/}
           <Button className="hidden lg:flex" size="sm" asChild>
-            <Link href="/books">Le Manuel Bleu</Link>
+            <Link href="https://manuelbleu.com" target="_blank">
+              Le Manuel Bleu
+            </Link>
           </Button>
           <Button
             variant="ghost"

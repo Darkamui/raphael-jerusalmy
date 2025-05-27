@@ -74,7 +74,7 @@ export default function BookPage(props: { params: Params }) {
                 </motion.div>
                 <div className="mt-6 space-y-4">
                   <Button
-                    className="w-full glass group transition-all duration-300 water-drop"
+                    className="w-full glass group transition-all duration-300 water-drop  cursor-pointer"
                     size="lg"
                     variant="outline"
                   >

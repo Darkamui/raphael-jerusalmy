@@ -16,7 +16,7 @@ type Event = {
 const UpcomingEvents = () => {
   const t = useTranslations("homepage.upcomingEvents");
   const y = useTranslations("eventsPage");
-  const events = y.raw("items") as Event[];
+  const events = (y.raw("items") as Event[]).slice(0, 2);
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -45,7 +45,7 @@ const UpcomingEvents = () => {
               viewport={{ once: true }}
               key={id}
             >
-              <Card>
+              <Card className="min-h-[225px]">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <Calendar className="h-10 w-10 text-primary flex-shrink-0" />

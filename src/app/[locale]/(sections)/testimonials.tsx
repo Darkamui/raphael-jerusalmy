@@ -11,7 +11,7 @@ type Testimonial = {
 
 const Testimonials = () => {
   const t = useTranslations("homepage.testimonials");
-  const testimonials = t.raw("items") as Testimonial[];
+  const testimonials = (t.raw("items") as Testimonial[]).slice(0, 3);
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
