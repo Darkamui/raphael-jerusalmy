@@ -403,6 +403,7 @@
       "title": "Articles and Analysis",
       "subtitle": "Reflections on writing, geopolitics and current affairs"
     },
+    "cta": "Read Full Post",
     "items": [
       {
         "id": 1,
@@ -539,7 +540,9 @@
           "placeholder": "Write your message here..."
         }
       },
-      "buttonLabel": "Send Message"
+      "buttonLabel": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "An error has occured."
     },
     "info": {
       "title": "Contact Information",

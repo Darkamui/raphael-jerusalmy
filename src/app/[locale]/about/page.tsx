@@ -6,12 +6,7 @@ import Image from "next/image";
 // import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-
-type Timeline = {
-  year: string;
-  title: string;
-  location: string;
-};
+import { Timeline } from "@/lib/types";
 
 export default function AboutPage() {
   const t = useTranslations("aboutPage");

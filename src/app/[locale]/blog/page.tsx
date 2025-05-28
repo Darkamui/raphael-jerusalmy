@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ExternalLink,
-  Search,
   Calendar,
   Clock,
   ChevronDown,
@@ -14,50 +13,30 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useTranslations } from "next-intl";
-
-type Blog = {
-  id: number;
-  title: string;
-  date: string;
-  excerpt: string;
-  url: string;
-  category: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  readTime: string;
-  slug: string;
-};
+import { Blog } from "@/lib/types";
 
 // Categories for filtering
-const categories = [
-  "All Categories",
-  "Writing Craft",
-  "Research",
-  "Behind the Scenes",
-  "Literary World",
-  "Publishing",
-];
+// const categories = [
+//   "All Categories",
+//   "Writing Craft",
+//   "Research",
+//   "Behind the Scenes",
+//   "Literary World",
+//   "Publishing",
+// ];
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [sortOrder, setSortOrder] = useState("newest");
+  const [sortOrder] = useState("newest");
   const [expandedPost, setExpandedPost] = useState<number | null>(null);
 
   const t = useTranslations("blog");
   const blogPosts = t.raw("items") as Blog[];
+  const cta = t("cta");
   // Filter and sort posts
   const filteredPosts = blogPosts
     .filter((post) => {
@@ -99,17 +78,16 @@ export default function BlogPage() {
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">
-                Author&apos;s Blog
+                {t("header.title")}
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Thoughts, insights, and behind-the-scenes looks at the writing
-                process and literary world.
+                {t("header.subtitle")}
               </p>
             </div>
           </motion.div>
 
           {/* Filters */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-12">
+          {/* <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-12">
             <div className="relative w-full md:w-96">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
@@ -146,7 +124,7 @@ export default function BlogPage() {
                 </SelectContent>
               </Select>
             </div>
-          </div>
+          </div> */}
 
           {/* Blog Posts */}
           <div className="space-y-8">
@@ -162,6 +140,7 @@ export default function BlogPage() {
                     post={post}
                     isExpanded={expandedPost === post.id}
                     onToggle={toggleExpand}
+                    cta={cta}
                   />
                 </motion.div>
               ))
@@ -192,9 +171,10 @@ interface BlogPostCardProps {
   post: Blog;
   isExpanded: boolean;
   onToggle: (id: number) => void;
+  cta: string;
 }
 
-function BlogPostCard({ post, isExpanded, onToggle }: BlogPostCardProps) {
+function BlogPostCard({ post, isExpanded, onToggle, cta }: BlogPostCardProps) {
   return (
     <Card className="glass-card overflow-hidden">
       <CardContent className="p-0">
@@ -253,39 +233,40 @@ function BlogPostCard({ post, isExpanded, onToggle }: BlogPostCardProps) {
                 asChild
               >
                 <Link href={`/blog/${post.slug}`} className="flex items-center">
-                  Read Full Post <ChevronRight className="ml-2 h-3 w-3" />
+                  {cta} <ChevronRight className="ml-2 h-3 w-3" />
                 </Link>
               </Button>
-
-              {post.url && (
-                <Button variant="ghost" size="sm" asChild>
-                  <a
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-muted-foreground"
-                  >
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </Button>
-              )}
-
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => onToggle(post.id)}
-                className="flex items-center text-muted-foreground"
-              >
-                {isExpanded ? (
-                  <>
-                    Less <ChevronUp className="ml-1 h-4 w-4" />
-                  </>
-                ) : (
-                  <>
-                    More <ChevronDown className="ml-1 h-4 w-4" />
-                  </>
+              <div className="flex">
+                {post.url && (
+                  <Button variant="ghost" size="sm" asChild>
+                    <a
+                      href={post.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-muted-foreground"
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
                 )}
-              </Button>
+
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => onToggle(post.id)}
+                  className="flex items-center text-muted-foreground"
+                >
+                  {isExpanded ? (
+                    <>
+                      Less <ChevronUp className="ml-1 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      More <ChevronDown className="ml-1 h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

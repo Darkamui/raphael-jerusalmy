@@ -12,22 +12,25 @@ export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const y = useTranslations("contactPage");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setEmail("");
-      toast("Event has been created", {
-        description: "Sunday, December 03, 2023 at 9:00 AM",
-        action: {
-          label: "Undo",
-          onClick: () => console.log("Undo"),
-        },
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(email),
       });
-    }, 1000);
+      if (res.ok) {
+        toast.success(y("form.success"));
+        setEmail("");
+      } else throw new Error();
+    } catch {
+      toast.error(y("form.error"));
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const t = useTranslations("homepage.newsletter");
@@ -41,9 +44,14 @@ export default function NewsletterSignup() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="bg-primary-foreground"
+          className="bg-primary-foreground text-foreground placeholder:text-foreground/60"
         />
-        <Button type="submit" variant="secondary" disabled={isLoading}>
+        <Button
+          type="submit"
+          variant="secondary"
+          disabled={isLoading}
+          className="cursor-pointer"
+        >
           {isLoading ? "Subscribing..." : t("form.buttonLabel")}
         </Button>
       </div>

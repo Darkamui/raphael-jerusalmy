@@ -21,23 +21,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
+import { Blog } from "@/lib/types";
 
 type Params = Promise<{ slug: string }>;
-
-type Blog = {
-  id: number;
-  title: string;
-  date: string;
-  excerpt: string;
-  url: string;
-  category: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  readTime: string;
-  slug: string;
-  content: string;
-};
 
 export default function BlogPostPage(props: { params: Params }) {
   const [isBookmarked, setIsBookmarked] = useState(false);
@@ -271,7 +257,10 @@ export default function BlogPostPage(props: { params: Params }) {
 
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
-                <div className="glass-card p-8">{post.content}</div>
+                <div
+                  className="glass-card p-8"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
               </div>
 
               {/* Tags */}

@@ -17,15 +17,7 @@ import {
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-
-type Event = {
-  title: string;
-  subtitle: string;
-  location: string;
-  date: string;
-  id: number;
-  link: string;
-};
+import { Event } from "@/lib/types";
 
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState<number | null>(null);

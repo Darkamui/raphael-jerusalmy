@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 const Newsletter = () => {
   const t = useTranslations("homepage.newsletter");
+
   return (
     <section className="w-full py-12 md:py-24 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">

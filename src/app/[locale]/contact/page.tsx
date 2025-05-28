@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageSquare, AtSign } from "lucide-react";
+import { Send, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -45,19 +45,27 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast.success("Your message has been sent! We'll get back to you soon.");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        inquiryType: "",
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+      if (res.ok) {
+        toast.success(t("form.success"));
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+          inquiryType: "",
+        });
+      } else throw new Error();
+    } catch {
+      toast.error(t("form.error"));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -71,7 +79,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
           ></motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:max-w-[800px] mx-auto">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -199,14 +207,14 @@ export default function ContactPage() {
               </Card>
             </motion.div>
 
-            {/* Contact Info */}
+            {/* Contact Info
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="space-y-24"
             >
-              {/* Contact Cards */}
+              {/* Contact Cards
               <Card className="glass-card overflow-hidden">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
@@ -256,7 +264,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              {/* Response Time */}
+              {/* Response Time 
               <Card className="glass-card overflow-hidden wave-bg">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-2">
@@ -267,7 +275,7 @@ export default function ContactPage() {
                   </p>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* FAQ Section */}

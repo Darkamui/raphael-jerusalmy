@@ -11,15 +11,7 @@ import { motion } from "framer-motion";
 // import { Skeleton } from "@/components/ui/skeleton";
 import { useTranslations } from "next-intl";
 import BookCard from "@/components/book-card";
-
-type Book = {
-  slug: string;
-  coverImg: string;
-  title: string;
-  subtitle: string;
-  year: string;
-  type: string;
-};
+import { Book } from "@/lib/types";
 
 export default function BooksPage() {
   const t = useTranslations("booksPage");
