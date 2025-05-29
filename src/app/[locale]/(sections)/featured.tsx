@@ -6,7 +6,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { Book } from "../books/[slug]/page";
+import { Book } from "@/lib/types";
 
 const Featured = () => {
   const t = useTranslations("homepage");
