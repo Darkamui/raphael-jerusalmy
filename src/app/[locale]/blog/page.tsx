@@ -35,7 +35,7 @@ export default function BlogPage() {
   const [expandedPost, setExpandedPost] = useState<number | null>(null);
 
   const t = useTranslations("blog");
-  const blogPosts = t.raw("items") as Blog[];
+  const blogPosts = (t.raw("items") as Blog[]).slice(0, 3);
   const cta = t("cta");
   // Filter and sort posts
   const filteredPosts = blogPosts
@@ -254,7 +254,7 @@ function BlogPostCard({ post, isExpanded, onToggle, cta }: BlogPostCardProps) {
                   variant="ghost"
                   size="sm"
                   onClick={() => onToggle(post.id)}
-                  className="flex items-center text-muted-foreground"
+                  className="flex items-center text-muted-foreground cursor-pointer"
                 >
                   {isExpanded ? (
                     <>

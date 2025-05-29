@@ -377,3 +377,6 @@
 .water-drop:hover::before {
   opacity: 1;
 }
+.font-dancing-script {
+  font-family: var(--font-dancing-script), cursive;
+}

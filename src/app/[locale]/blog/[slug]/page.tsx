@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState } from "react";
+import { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ import {
   Calendar,
   Clock,
   ExternalLink,
-  Bookmark,
+  // Bookmark,
   Twitter,
   Facebook,
   Linkedin,
@@ -26,12 +26,13 @@ import { Blog } from "@/lib/types";
 type Params = Promise<{ slug: string }>;
 
 export default function BlogPostPage(props: { params: Params }) {
-  const [isBookmarked, setIsBookmarked] = useState(false);
+  // const [isBookmarked, setIsBookmarked] = useState(false);
   const { slug } = use(props.params);
 
   const posts = useTranslations().raw("blog.items") as Blog[];
   const post = posts.find((b) => b.slug === slug) ?? posts[0];
-
+  const filteredPost = posts.filter((item) => item.id !== post.id).slice(0, 3);
+  const newsletterTexts = useTranslations("homepage.newsletter");
   if (!post) {
     return (
       <div className="flex flex-col min-h-screen items-center justify-center">
@@ -85,12 +86,12 @@ export default function BlogPostPage(props: { params: Params }) {
     }
   };
 
-  const toggleBookmark = () => {
-    setIsBookmarked(!isBookmarked);
-    toast.success(
-      isBookmarked ? "Removed from bookmarks" : "Added to bookmarks"
-    );
-  };
+  // const toggleBookmark = () => {
+  //   setIsBookmarked(!isBookmarked);
+  //   toast.success(
+  //     isBookmarked ? "Removed from bookmarks" : "Added to bookmarks"
+  //   );
+  // };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -133,23 +134,7 @@ export default function BlogPostPage(props: { params: Params }) {
               </p>
 
               {/* Social Actions */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="glass water-drop"
-                    onClick={toggleBookmark}
-                  >
-                    <Bookmark
-                      className={`h-4 w-4 mr-2 ${
-                        isBookmarked ? "fill-current" : ""
-                      }`}
-                    />
-                    {isBookmarked ? "Bookmarked" : "Bookmark"}
-                  </Button>
-                </div>
-
+              <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-muted-foreground mr-2">
                     Share:
@@ -182,6 +167,21 @@ export default function BlogPostPage(props: { params: Params }) {
                   >
                     <Copy className="h-4 w-4" />
                   </Button>
+                </div>
+                <div className="flex items-center gap-2">
+                  {/* <Button
+                    variant="outline"
+                    size="sm"
+                    className="glass water-drop"
+                    onClick={toggleBookmark}
+                  >
+                    <Bookmark
+                      className={`h-4 w-4 mr-2 ${
+                        isBookmarked ? "fill-current" : ""
+                      }`}
+                    />
+                    {isBookmarked ? "Bookmarked" : "Bookmark"}
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -387,45 +387,24 @@ export default function BlogPostPage(props: { params: Params }) {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-4">Related Posts</h3>
                   <div className="space-y-4">
-                    <div className="border-b border-border/50 pb-4">
-                      <h4 className="font-medium mb-1">
-                        <Link
-                          href="/blog/writing-voice"
-                          className="hover:text-primary"
-                        >
-                          Finding Your Voice as a Writer
-                        </Link>
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        Developing your unique writing style and perspective
-                      </p>
-                    </div>
-                    <div className="border-b border-border/50 pb-4">
-                      <h4 className="font-medium mb-1">
-                        <Link
-                          href="/blog/historical-research"
-                          className="hover:text-primary"
-                        >
-                          Research Methods for Historical Fiction
-                        </Link>
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        How to bring authenticity to your historical settings
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-1">
-                        <Link
-                          href="/blog/silent-echo-journey"
-                          className="hover:text-primary"
-                        >
-                          Behind the Scenes: The Silent Echo
-                        </Link>
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        The inspiration and journey behind my latest novel
-                      </p>
-                    </div>
+                    {filteredPost.map((relatedPost, index) => (
+                      <div
+                        key={index}
+                        className="border-b border-border/50 pb-4"
+                      >
+                        <h4 className="font-medium mb-1">
+                          <Link
+                            href={`/blog/${relatedPost.slug}`}
+                            className="hover:text-primary"
+                          >
+                            {relatedPost.title}
+                          </Link>
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {relatedPost.subtitle}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -433,12 +412,16 @@ export default function BlogPostPage(props: { params: Params }) {
               {/* Newsletter Signup */}
               <Card className="glass-card wave-bg">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {newsletterTexts("header.title")}
+                  </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Get notified when new blog posts are published.
+                    {newsletterTexts("header.subtitle")}
                   </p>
                   <Button className="w-full water-drop" asChild>
-                    <Link href="/newsletter">Subscribe to Newsletter</Link>
+                    <Link href="/newsletter">
+                      {newsletterTexts("form.buttonLabel")}
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

@@ -29,10 +29,18 @@ export type Event = {
 };
 
 export type Book = {
+  publisher: string;
+  pages: string;
+  year: string;
+  isbn: string;
+  subtitle: string;
+  excerpt: string;
+  quotes: string[];
   slug: string;
   coverImg: string;
-  title: string;
-  subtitle: string;
-  year: string;
   type: string;
+  title: string;
+  reviews: string[];
+  purchaseUrl: string;
+  summary: string;
 };

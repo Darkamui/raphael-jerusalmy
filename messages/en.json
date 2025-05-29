@@ -62,7 +62,8 @@
       "header": {
         "title": "Upcoming Events",
         "subtitle": "Meet the author and join the conversation at these upcoming events",
-        "ctaLabel": "Learn more"
+        "ctaLabel": "Learn more",
+        "viewAll": "View All Events"
       },
       "items": [
         {
@@ -162,6 +163,12 @@
       "title": "Books",
       "subtitle": "Explore the complete collection of novels spanning various genres and time periods."
     },
+    "excerpt": "Excerpt",
+    "year": "Year",
+    "publisher": "Publisher",
+    "back": "Back",
+    "buy": "Purchase Book",
+    "critical": "Critical Acclaim",
     "items": [
       {
         "slug": "shalom-tsahal",
@@ -171,59 +178,62 @@
         "year": 2002,
         "pages": 394,
         "isbn": "2-913973-27-2",
-        "subtitle": "Part memoir, part strategic essay, this debut pulls back the curtain on Israeli intelligence operations.",
-        "excerpt": "Intelligence is never a matter of facts alone; it is a wager on human nature.",
+        "subtitle": "Part memoir, part strategic essay, this first book unveils Israeli intelligence operations.",
+        "excerpt": "\"Intelligence is never just a matter of facts; it's a wager on human nature.\"",
         "coverImg": "/tsahal.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/books/shalom-tsahal-confessions-d-un-lieutenant-raphael-jerusalmy-9782913973275.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "Don't expect to emerge unscathed from this book. It bears the audacity of a gentleman, a senior officer, and the very idea of the Jewish people.<br/><br/>These memoirs, rejected by all publishers, finally see the light of day, even as these authentic and turbulent adventures embarrass every establishment.<br/><br/>Regarding Tsahal, forget your prejudices and passionately follow the tumultuous journey of an exceptional provocateur.<br/><br/>Jérusalmy pushes the boundaries of noir fiction into political intrigue a la James Ellroy or Jean-Patrick Manchette.<br/><br/>His momentum and the stakes of a conflict that engulfs both humanity and the Middle East lie at the very heart of this millennium's modernity.<br/><br/>From École Normale Supérieure to the Sinai borders, including humanitarian missions in Rwanda, Jérusalmy sows doubt with brilliance.<br/><br/>After his passage, neither war nor peace retains the same meaning.<br/><br/>Did you hold certainties about the Jews and Israel? Forget them!<br/><br/>The Jew who twice saved Arafat’s life finally explains himself.<br/><br/>Raphaël Jérusalmy has arrived.<br/><br/>An exceptional author takes you to task."
       },
       {
         "slug": "sauver-mozart",
-        "title": "Sauver Mozart",
+        "title": "Saving Mozart",
         "type": "Novel",
         "publisher": "Actes Sud",
         "year": 2012,
         "pages": 148,
         "isbn": "978-2-330-00516-0",
         "subtitle": "Otto J. Steiner, dying of tuberculosis, plots to sabotage a Nazi-controlled Mozart festival.",
-        "excerpt": "Music, my only remaining lung, fills the cavities that disease hollowed out.",
+        "excerpt": "\"Music, my only remaining lung, fills the cavities carved out by disease.\"",
         "coverImg": "/mozart.png?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/sauver-mozart-le-journal-d-otto-raphael-jerusalmy-9782330005160.html",
         "quotes": [],
         "reviews": [],
         "awards": [
-          "Prix Emmanuel-Roblès (2013)",
-          "Prix littéraire de l'ENS Cachan (2013)"
-        ]
+          "Emmanuel Roblès Prize (2013)",
+          "ENS Cachan Literary Prize (2013)"
+        ],
+        "summary": "This is the story of a musical assassination. Summer 1939, in the wake of the Anschluss, Otto J. Steiner marks his days in a Salzburg sanatorium as History bares its fangs outside.<br/><br/>Austrian, Jewish (to some extent), utterly alone, he clings only to music—and tuberculosis devours him as relentlessly as the humiliation of illness and the privations that push him to the margins of the world. A dissonant realm to his ears as a music lover, an existential lapse in taste for this free spirit, a privileged and unwilling witness to the breakdown of a certain vision of humanity.<br/><br/>Everything seems decided, when an unexpected event brings him to the brink of altering the century. But if there was nothing left to save—except Mozart?<br/><br/>A debut novel fiercely subversive, driven by chilling wit, precise cruelty, and mischievous gravity."
       },
       {
         "slug": "confrerie",
-        "title": "La Confrérie des chasseurs de livres",
+        "title": "The Brotherhood of Book Hunters",
         "type": "Historical Novel",
         "publisher": "Actes Sud",
         "year": 2013,
         "pages": 320,
         "isbn": "978-2-330-02261-7",
-        "subtitle": "Poet-thief François Villon is enlisted to secure a subversive Gutenberg print before it reshapes Europe.",
-        "excerpt": "The scent of ink is the scent of revolt.",
+        "subtitle": "The poet-thief François Villon is recruited to secure a subversive Gutenberg printing before it reshapes Europe.",
+        "excerpt": "\"The smell of ink is the smell of revolt.\"",
         "coverImg": "/confrerie.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/la-confrerie-des-chasseurs-de-livres-raphael-jerusalmy-9782330051181.html",
         "quotes": [
-          "An exuberant adventure novel brimming with energy, mischief and erudition. – L'Express"
+          "\"An exuberant adventure novel brimming with energy, mischief, and erudition.\" – L'Express"
         ],
-        "reviews": []
+        "reviews": [],
+        "summary": "Raphaël Jérusalmy's novel begins where history books stall.<br/><br/>François Villon, the first modern poet and notorious brigand, languishes in the dungeons of Louis XI awaiting execution when he receives a visit from a royal emissary. Rebellious and wary, he nonetheless strikes a deal with the Bishop of Paris to embark on a secret mission: first to persuade a Mainz bookseller-printer to relocate to Paris. A treacherous first step that will lead our poet, accompanied by his loyal accomplice Master Colin, into the most fantastical depths of the underworld of Jerusalem, amid a vast web of alliances, conspiracies, and counterplots..<br/><br/>As playful as he is scholarly, Jérusalmy brings to life a vivid and intrepid François Villon who champions the power of the mind over the might of dogma and arms, to see humanism and freedom prevail."
       },
       {
         "slug": "diderot-non-a-lignorance",
-        "title": "Denis Diderot, non à l'ignorance",
-        "type": "Young Adult",
+        "title": "Denis Diderot: Say No to Ignorance",
+        "type": "Youth",
         "publisher": "Actes Sud Junior",
         "year": 2015,
         "pages": 96,
         "isbn": "978-2-330-04885-3",
-        "subtitle": "Portrait of the Enlightenment philosopher for young readers.",
-        "excerpt": "Diderot teaches us that knowledge is the most beautiful of adventures.",
+        "subtitle": "A portrait of the Enlightenment philosopher for young readers.",
+        "excerpt": "\"Diderot teaches us that knowledge is the greatest adventure.\"",
         "coverImg": "/diderot.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/denis-diderot-non-a-l-ignorance-raphael-jerusalmy-9782330039264.html",
         "quotes": [],
@@ -231,80 +241,85 @@
       },
       {
         "slug": "obus",
-        "title": "Les obus jouaient à pigeon vole",
+        "title": "The Shells Played Pigeon-Vole",
         "type": "Novel",
         "publisher": "Éditions Bruno Doucey",
         "year": 2016,
         "pages": 177,
         "isbn": "978-2362290947",
         "subtitle": "A lyrical reconstruction of the day Apollinaire was wounded on the Western Front.",
-        "excerpt": "Shells drew invisible calligraphy above the trench-line.",
+        "excerpt": "\"The shells traced an invisible calligraphy above the trench line.\"",
         "coverImg": "/obus.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/les-obus-jouaient-a-pigeon-vole-raphael-jerusalmy-9782362290947.html",
         "quotes": [],
         "reviews": [],
-        "awards": ["Prix du Salon du Livre de Chaumont (2016)"]
+        "awards": ["Chaumont Book Fair Prize (2016)"],
+        "summary": "1916: a first-line trench at a place called Bois des Buttes. On March 17, around four in the afternoon, Second Lieutenant Kostrowitzky—nicknamed Guillaume Apollinaire—is struck in the temple by a shell fragment. A ruthless countdown retraces the twenty-four hours leading up to the impact.<br/><br/>Comradeship, fear, fleeting moments of calm, the music of bombs, a scent rising in the dusk, hunger, the awaited peace, death hovering, memories of love—this is the strange alchemy captured in Jérusalmy's narrative, showing Apollinaire as artist, fighter, soldier of art, tracing poetry even amid battle.<br/><br/>War could at least serve this purpose: living each minute as if there were no tomorrow, writing each line as if it were the last."
       },
       {
         "slug": "evacuation",
         "title": "Evacuation",
-        "type": "Novella",
+        "type": "Short Story",
         "publisher": "Actes Sud",
         "year": 2017,
         "pages": 128,
         "isbn": "978-2-330-07572-9",
-        "subtitle": "Under relentless rocket fire, Tel Aviv is abandoned – except for the children who reclaim its ruins.",
-        "excerpt": "In the silence after the sirens, imagination became our only architecture.",
+        "subtitle": "Under incessant rocket fire, Tel Aviv is abandoned—except by the children who reclaim its ruins.",
+        "excerpt": "\"In the silence after the sirens, imagination became our only architecture.\"",
         "coverImg": "/evac.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/evacuation-raphael-jerusalmy-9782330075729.html",
         "quotes": [],
         "reviews": [],
-        "awards": ["Prix Amerigo-Vespucci (2017)"]
+        "awards": ["Amerigo Vespucci Prize (2017)"],
+        "summary": "War has come. The entire population of Tel Aviv is evacuated. Except at the last minute, Saba—the grandfather of Naor—steps off the bus, drawing the young man and his girlfriend Yaël into a clandestine drift through the now-deserted city.<br/><br/>A high-stakes survival experience amplified by three: three souls whose bonds erase generations—Saba, the Beckettian survivor with forgotten ambitions; Yaël, the gifted artist with unbroken ideals; and Naor, the wide-eyed film student.<br/><br/>In a bombarded city turned playground, a paradoxical cocoon for reinvented innocence, Evacuation is a tale without moralizing, a bubble of poetry ripped from the entrails of present history, an urban ode to the desire for life and peace."
       },
       {
         "slug": "rose-de-saragosse",
-        "title": "La Rose de Saragosse",
+        "title": "The Rose of Zaragoza",
         "type": "Novel",
         "publisher": "Actes Sud",
         "year": 2018,
         "pages": 192,
         "isbn": "978-2-330-09054-8",
-        "subtitle": "A secret Judeo-Christian romance blooms against the terror of the Inquisition.",
-        "excerpt": "Love, like heresy, spreads by whispered syllables.",
+        "subtitle": "A secret Judeo-Christian romance blossoms against the terror of the Inquisition.",
+        "excerpt": "\"Love, like heresy, spreads by whispered syllables.\"",
         "coverImg": "/rose.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/la-rose-de-saragosse-raphael-jerusalmy-9782330119966.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "1495. The notables of Zaragoza attempt to flee as the city falls under the terror orchestrated by the Spanish Inquisition. Angel de la Cruz is a mercenary in the pay of the highest bidder. Yet he cannot remain indifferent to the refinement of the noble Léa Ménassé de Montesa."
       },
       {
         "slug": "manuel-bleu-contre-lantisemitisme-et-la-desinformation",
-        "title": "Manuel bleu contre l'antisémitisme et la désinformation",
+        "title": "Blue Handbook Against Antisemitism and Disinformation",
         "type": "Essay",
         "publisher": "Éditions Valensin",
         "year": 2019,
         "pages": 180,
         "isbn": "978-2374260389",
         "subtitle": "A practical guide to understanding and combating contemporary antisemitism.",
-        "excerpt": "In the face of disinformation, historical truth remains our best weapon.",
+        "excerpt": "\"In the face of disinformation, historical truth remains our best weapon.\"",
         "coverImg": "/bleu.png?height=400&width=250",
         "purchaseUrl": "https://manuelbleu.com",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "Against the backdrop of disinformation and constant attacks targeting the Jewish people, it is imperative to speak out and take action.<br/><br/>To assert your rights, you must first know them.<br/><br/>Better knowledge, better understanding, for better defense—this is the principle of this brochure."
       },
       {
         "slug": "des-sex-pistols-a-lintifada",
-        "title": "Des Sex Pistols à l'Intifada : Confidences d'un officier israélien du renseignement",
+        "title": "From Sex Pistols to the Intifada: Confidences of an Israeli Intelligence Officer",
         "type": "Memoir/Essay",
         "publisher": "Balland",
         "year": 2021,
         "pages": 258,
         "isbn": "978-2940632640",
-        "subtitle": "Personal memoirs of a unique journey through the secret services.",
-        "excerpt": "Between punk rock and geopolitics, my generation navigated between two worlds.",
+        "subtitle": "Personal memoirs of a singular journey within the intelligence services.",
+        "excerpt": "\"Between punk rock and geopolitics, my generation navigated between two worlds.\"",
         "coverImg": "/sex-pistols.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/des-sex-pistols-a-l-intifada-raphael-jerusalmy-9782940632640.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "An autobiographical testimony in which the author recounts his military career in the IDF and shares personal reflections on his era."
       },
       {
         "slug": "in-absentia",
@@ -314,15 +329,16 @@
         "year": 2022,
         "pages": 176,
         "isbn": "978-2330164362",
-        "subtitle": "Two doomed prisoners – a Parisian art collector and a communist writer – cross paths inside the Struthof camp's sinister 'Jewish skeleton' project.",
-        "excerpt": "Saül Bernstein inhaled art like oxygen, unaware that horror was already breathing down his neck.",
+        "subtitle": "Two condemned prisoners—a Parisian art collector and a communist writer—cross paths in the sinister Nazi “Jewish skeletons” project at Struthof camp.",
+        "excerpt": "\"Saül Bernstein breathed art as if it were oxygen, unaware that horror was already breathing down his neck.\"",
         "coverImg": "/inabsentia.png?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/in-absentia-raphael-jerusalmy-9782330164362.html",
         "quotes": [
-          "Somber and heart-rending. – Le Monde",
-          "Resurrects a forgotten atrocity with relentless grace. – Livres Hebdo"
+          "\"Dark and heart-wrenching.\" – Le Monde",
+          "\"Resurrects a forgotten episode of atrocity with relentless grace.\" – Livres Hebdo"
         ],
-        "reviews": []
+        "reviews": [],
+        "summary": "At the Nazi Struthof concentration camp, Pierre Delmain, a deported political writer, attempts to escape the horror by taking refuge in his dreams. In the camp, he is assigned the grim task of finishing off by hand those prisoners too weak for scientific experiments. In Paris, art collector Saül Berstein hesitates to recognize the danger awaiting him."
       }
     ]
   },
@@ -401,7 +417,8 @@
   "blog": {
     "header": {
       "title": "Articles and Analysis",
-      "subtitle": "Reflections on writing, geopolitics and current affairs"
+      "subtitle": "Reflections on writing, geopolitics and current affairs",
+      "cta": "View All Articles"
     },
     "cta": "Read Full Post",
     "items": [
@@ -417,7 +434,7 @@
         "image": "https://www.tribunejuive.info/wp-content/uploads/2025/02/Image-19-2.jpeg",
         "readTime": "5 min read",
         "slug": "an-incredible-self-control",
-        "content": "The most striking aspect of Israel’s response to the October 7, 2023 massacres is how its people preserved perfect self-control. Despite the initial shock and the prolonged combat that followed, at no point did the population succumb to despair. They never mirrored the barbarism of their attackers, holding fast to their moral dignity even in those dark, harrowing weeks.\n\nJewish communities in Israel and the diaspora are reliving painful echoes of a past not so distant. Yet as the ugliness of antisemitism rears its head anew, the resilience with which the Jewish people face it is more admirable than ever. Outrageous statements from certain UN bodies, biased media outlets, or spiteful politicians crash again and again against the rock-solid perseverance of Jewish continuity. Hatred may rise and fall through the centuries, but Israel endures—and its spirit remains unbroken.\n\nThe staged theatrics of Hamas during hostage releases, the shameful pro-jihad rallies in free democracies, the spurious accusations, countless boycotts, and the intellectual slurs hurled by celebrities and establishments alike all ultimately disgrace their perpetrators. In contrast, the Jewish people emerge ennobled, strengthened, and proud to preserve their identity and self-respect amid the torrent of hatred.\n\nOf course, Israelis suffer and mourn. Every day brings new names of soldiers killed or wounded, fresh missile alerts, and the agonizing task of explaining violence to young children without instilling terror. Yet each dawn, Israel confronts these challenges—and overcomes them. Though wounded in body and spirit, it refuses to yield an inch. Instead, it forges ahead: creating, inventing, and building—while many nations regress toward darker times.\n\nThis struggle demands constant vigilance over anger, resentment, and grief. It calls for immense inner strength to support our families, comfort the bereaved, and stand by the brave hostages and soldiers at the front. I am proud to stand among you. Thanks to your unwavering resilience, we have achieved the only victory that truly matters—the victory of integrity, determination, and tenacity that has sustained us through the ages."
+        "content": "<b>The most striking aspect of Israel’s response to the October 7, 2023 massacres is how its people preserved perfect self-control.</b><br/><br/>Despite the initial shock and the prolonged combat that followed, at no point did the population succumb to despair. They never mirrored the barbarism of their attackers, holding fast to their moral dignity even in those dark, harrowing weeks.<br/><br/>Jewish communities in Israel and the diaspora are reliving painful echoes of a past not so distant. Yet as the ugliness of antisemitism rears its head anew, the resilience with which the Jewish people face it is more admirable than ever. Outrageous statements from certain UN bodies, biased media outlets, or spiteful politicians crash again and again against the rock-solid perseverance of Jewish continuity. Hatred may rise and fall through the centuries, but Israel endures—and its spirit remains unbroken.<br/><br/>The staged theatrics of Hamas during hostage releases, the shameful pro-jihad rallies in free democracies, the spurious accusations, countless boycotts, and the intellectual slurs hurled by celebrities and establishments alike all ultimately disgrace their perpetrators. In contrast, the Jewish people emerge ennobled, strengthened, and proud to preserve their identity and self-respect amid the torrent of hatred.<br/><br/>Of course, Israelis suffer and mourn. Every day brings new names of soldiers killed or wounded, fresh missile alerts, and the agonizing task of explaining violence to young children without instilling terror. Yet each dawn, Israel confronts these challenges—and overcomes them. Though wounded in body and spirit, it refuses to yield an inch. Instead, it forges ahead: creating, inventing, and building—while many nations regress toward darker times.<br/><br/>This struggle demands constant vigilance over anger, resentment, and grief. It calls for immense inner strength to support our families, comfort the bereaved, and stand by the brave hostages and soldiers at the front. I am proud to stand among you. Thanks to your unwavering resilience, we have achieved the only victory that truly matters—the victory of integrity, determination, and tenacity that has sustained us through the ages."
       },
       {
         "id": 2,
@@ -431,7 +448,7 @@
         "image": "https://www.tribunejuive.info/wp-content/uploads/2025/01/Image-12-7.jpeg",
         "readTime": "5 min read",
         "slug": "israels-true-victory",
-        "content": "Negotiating with a terrorist organization always carries heavy political and psychological costs—but Israel’s recent exchanges with Hamas over hostage release have achieved something far greater than any battlefield gain. By placing the value of human life above all else, Israel has demonstrated that moral courage can outshine military might.\n\nFrom the outset, officials insisted that every effort be made to bring every man, woman, and child home. This unwavering commitment to negotiation—even under the most trying international scrutiny—sent a clear message: no strategic objective justifies abandoning our own.\n\nCritics decry concessions, but they miss the deeper victory: restoring hope to families held hostage, reaffirming national unity, and reminding the world that Israel’s core strength lies not only in its army, but in its compassion. Each successful release chip­ped away at Hamas’s leverage and bolstered Israel’s moral standing.\n\nThe repercussions extend beyond the immediate hostages. By choosing dialogue backed by decisive readiness for action, Israel sets a precedent for how democracies can respond to terror without sacrificing their soul. In the end, this moral triumph may yet prove more enduring than any territorial achievement."
+        "content": "<b>Negotiating with a terrorist organization always carries heavy political and psychological costs—but Israel’s recent exchanges with Hamas over hostage release have achieved something far greater than any battlefield gain.</b><br/><br/>By placing the value of human life above all else, Israel has demonstrated that moral courage can outshine military might.<br/><br/>From the outset, officials insisted that every effort be made to bring every man, woman, and child home. This unwavering commitment to negotiation—even under the most trying international scrutiny—sent a clear message: no strategic objective justifies abandoning our own.<br/><br/>Critics decry concessions, but they miss the deeper victory: restoring hope to families held hostage, reaffirming national unity, and reminding the world that Israel’s core strength lies not only in its army, but in its compassion. Each successful release chip­ped away at Hamas’s leverage and bolstered Israel’s moral standing.<br/><br/>The repercussions extend beyond the immediate hostages. By choosing dialogue backed by decisive readiness for action, Israel sets a precedent for how democracies can respond to terror without sacrificing their soul. In the end, this moral triumph may yet prove more enduring than any territorial achievement."
       },
       {
         "id": 3,
@@ -445,7 +462,7 @@
         "image": "https://israelvalley.com/wp-content/uploads/2024/12/Climatech-Investment-Opportunities-in-Emerging-Markets.webp",
         "readTime": "4 min read",
         "slug": "palestine-ecological-nuisance",
-        "content": "Environmental protection is not merely a civil concern—it is a matter of security. In this explosive exposé, Raphaël Jerusalmy lays bare how the Palestinian Authority’s systematic mismanagement of waste and natural resources amounts to a form of ecological terrorism.\n\nFrom the unchecked dumping of raw sewage into the Jordan Valley, to sprawling illegal landfills near delicate aquifers, the damage is both immediate and long-term. Nations that signed the Oslo Accords pledged to uphold environmental standards; instead, vast swathes of farmland and residential areas have been contaminated.\n\nWorse still, the deliberate burning of tires and electronic refuse releases carcinogenic toxins into the air, threatening neighboring communities in both the West Bank and Israel. Years of neglect have transformed once-fertile valleys into blighted zones, forcing local populations to seek costly treatment for respiratory and water-borne diseases.\n\nJerusalmy calls on international bodies to enforce strict environmental oversight as part of any future agreements. Without accountability, this slow-motion assault on Mother Nature will escalate—eroding not only ecosystems, but the fragile foundations of peace itself."
+        "content": "Environmental protection is not merely a civil concern—it is a matter of security. In this explosive exposé, Raphaël Jerusalmy lays bare how the Palestinian Authority’s systematic mismanagement of waste and natural resources amounts to a form of ecological terrorism.<br/><br/>From the unchecked dumping of raw sewage into the Jordan Valley, to sprawling illegal landfills near delicate aquifers, the damage is both immediate and long-term. Nations that signed the Oslo Accords pledged to uphold environmental standards; instead, vast swathes of farmland and residential areas have been contaminated.<br/><br/>Worse still, the deliberate burning of tires and electronic refuse releases carcinogenic toxins into the air, threatening neighboring communities in both the West Bank and Israel. Years of neglect have transformed once-fertile valleys into blighted zones, forcing local populations to seek costly treatment for respiratory and water-borne diseases.<br/><br/>Jerusalmy calls on international bodies to enforce strict environmental oversight as part of any future agreements. Without accountability, this slow-motion assault on Mother Nature will escalate—eroding not only ecosystems, but the fragile foundations of peace itself."
       },
       {
         "id": 4,

@@ -62,7 +62,8 @@
       "header": {
         "title": "Événements à venir",
         "subtitle": "Rencontrez l'auteur et rejoignez la conversation lors de ces événements à venir",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "En savoir plus",
+        "viewAll": "Voir tous les événements"
       }
     },
     "newsletter": {
@@ -148,6 +149,12 @@
       "title": "Livres",
       "subtitle": "Explorez la collection complète de romans couvrant divers genres et périodes historiques."
     },
+    "excerpt": "Extrait",
+    "year": "Année",
+    "publisher": "Éditeur",
+    "back": "Retour",
+    "buy": "Acheter",
+    "critical": "Acclamé par la critique",
     "items": [
       {
         "slug": "shalom-tsahal",
@@ -162,7 +169,8 @@
         "coverImg": "/tsahal.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/books/shalom-tsahal-confessions-d-un-lieutenant-raphael-jerusalmy-9782913973275.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "Ne comptez pas sortir indemne de ce livre. Il y va de l'audace d'un gentleman, d'un officier supérieur et de l'idée même du peuple juif.<br/><br/>Ces mémoires refusées par tous les éditeurs paraissent enfin alors que ces aventures authentiques et mouvementées gênent tous les establishments.<br/><br/>A propos de Tsahal, oubliez vos préjugés et suivez avec passion le parcours tumultueux d'un provocateur d'exception.<br/><br/>Jérusalmy déplace les limites du roman noir en prise sur les intrigues politiques façon James Ellroy ou Jean-Patrick Manchette.<br/><br/>Son souffle et les enjeux d'un conflit qui embrasent l'homme et le Proche-Orient, se situent au cœur même de la modernité de ce millénaire.<br/><br/>De Normale Sup aux frontières du Sinaï en passant par les missions humanitaires au Rwanda, Jérusalmy sème le doute avec brio.<br/><br/>Après son passage, ni les guerres ni la paix ne conservent le même sens.<br/><br/>Vous possédiez des certitudes sur les Juifs et Israël ? Oubliez-les !<br/><br/>Le juif qui par deux fois a sauvé la vie d'Arafat s'explique enfin.<br/><br/>Raphaël Jérusalmy est arrivé.<br/><br/>Un auteur d'exception vous prend à partie."
       },
       {
         "slug": "sauver-mozart",
@@ -181,7 +189,8 @@
         "awards": [
           "Prix Emmanuel-Roblès (2013)",
           "Prix littéraire de l'ENS Cachan (2013)"
-        ]
+        ],
+        "summary": "C'est l'histoire d'un attentat musical. Eté 1939, au lendemain de l'Anschluss, Otto J. Steiner égrène ses jours dans un sanatorium de Salzbourg tandis qu'au-dehors l'Histoire montre les crocs.<br/><br/>Autrichien, juif (un peu), seul (complètement), il n'aime plus que la musique - et la tuberculose le ronge autant que l'humiliation d'être malade, ou les privations qui achèvent de le pousser à la marge du monde. Un monde dissonant à son oreille de mélomane, une faute de goût existentielle pour cette âme libre, témoin privilégié et involontaire du délitement d'une certaine idée de l'homme.<br/><br/>Tout semble joué, quand un événement inattendu le conduit à deux doigts de faire basculer le siècle. Mais s'il ne restait plus rien à sauver - sauf Mozart ?<br/><br/>Un premier roman farouchement subversif, conduit avec un humour glaçant, une cruauté précise et une gravité malicieuse."
       },
       {
         "slug": "confrerie",
@@ -198,7 +207,8 @@
         "quotes": [
           "« Un roman d'aventure exubérant débordant d'énergie, de malice et d'érudition. » – L'Express"
         ],
-        "reviews": []
+        "reviews": [],
+        "summary": "Le roman de Raphaël Jerusalmy commence là où calent les livres d'histoire.<br/><br/>François Villon, premier poète des temps modernes et brigand notoire, croupit dans les geôles de Louis XI en attendant son exécution quand il reçoit la visite d'un émissaire du roi.<br/>Rebelle, méfiant, il passe pourtant un marché avec l'évêque de Paris et accepte une mission secrète qui consiste d'abord à convaincre un libraire et imprimeur de Mayence de venir s'installer à Paris. Un premier pas sur un chemin escarpé qui mènera notre poète, flanqué de son fidèle acolyte coquillard maître Colin, jusqu'aux entrailles les plus fantasmatiques de la Jérusalem d'en bas, dans un vaste jeu d'alliances, de complots et de contre-complots..<br/><br/>Aussi joueur qu'érudit, Raphaël Jerusalmy met en scène un François Villon vif et intrépide, qui impose les forces de l'esprit contre la toute-puissance des dogmes et des armes, pour faire triompher l'humanisme et la liberté.."
       },
       {
         "slug": "diderot-non-a-lignorance",
@@ -229,7 +239,8 @@
         "purchaseUrl": "https://www.leslibraires.ca/livres/les-obus-jouaient-a-pigeon-vole-raphael-jerusalmy-9782362290947.html",
         "quotes": [],
         "reviews": [],
-        "awards": ["Prix du Salon du Livre de Chaumont (2016)"]
+        "awards": ["Prix du Salon du Livre de Chaumont (2016)"],
+        "summary": "1916 : tranchée de première ligne, au lieu dit le Bois des Buttes. Le 17 mars, vers seize heures, le sous-lieutenant Kostrowitzky, dit Guillaume Apollinaire, engagé volontaire surnommé Cointreau-whisky, est atteint à la tempe par un éclat d'obus. Un cruel compte à rebours retrace les vingt-quatre heures précédant l'impact.<br/><br/>La camaraderie, la trouille, les infimes moments de calme, la musique des bombes, une odeur qui surgit dans le soir, la faim, la paix qu'on attend, la mort qui vague, le souvenir de l'amour... - c'est cette curieuse alchimie que saisit le récit de Raphaël Jerusalmy, montrant Apollinaire, l'artiste, le combattant, le soldat de l'art, traquant la poésie jusque dans la bataille.<br/><br/>La guerre pourrait au moins servir à ça : vivre chaque minute comme si demain n'existait pas, écrire chaque ligne comme si c'était la dernière."
       },
       {
         "slug": "evacuation",
@@ -245,7 +256,8 @@
         "purchaseUrl": "https://www.leslibraires.ca/livres/evacuation-raphael-jerusalmy-9782330075729.html",
         "quotes": [],
         "reviews": [],
-        "awards": ["Prix Amerigo-Vespucci (2017)"]
+        "awards": ["Prix Amerigo-Vespucci (2017)"],
+        "summary": "C'est la guerre. L'ensemble de la population de Tel-Aviv est évacué. Sauf qu'à la dernière minute, Saba, le grand-père de Naor, descend du bus, entraînant le jeune homme et sa petite amie Yaël dans une dérive clandestine au coeur de la cité désertée désormais toute à eux.<br/><br/>Une expérience de sur-vie à hauts risques, à l'intensité démultipliée par trois - trois âmes dont la fraternité efface les générations, trois grands enfants éperdus : Saba, le rescapé beckettien aux velléités oubliées, Yaël, la belle artiste aux idéaux intacts, et Naor, l'étudiant en cinéma aux yeux grands ouverts.<br/><br/>Dans une ville bombardée devenue terrain de jeu, cocon paradoxal pour une innocence réinventée, Évacuation est un conte sans morale, une bulle de poésie arrachée aux entrailles de l'histoire au présent, une ode urbaine au désir de vivre, et de paix."
       },
       {
         "slug": "rose-de-saragosse",
@@ -260,7 +272,8 @@
         "coverImg": "/rose.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/la-rose-de-saragosse-raphael-jerusalmy-9782330119966.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "1495. Les notables tentent de fuir Saragosse, soumise à la terreur orchestrée par l'Inquisition espagnole. Angel de la Cruz est un mercenaire à la solde du plus offrant. Pourtant, il n'est pas insensible au raffinement de la noble Léa Ménassé de Montesa."
       },
       {
         "slug": "manuel-bleu-contre-lantisemitisme-et-la-desinformation",
@@ -275,7 +288,8 @@
         "coverImg": "/bleu.png?height=400&width=250",
         "purchaseUrl": "https://manuelbleu.com",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "Face à la désinformation et aux attaques constantes dont le peuple juif est la cible, il est impératif de parler et réagir.<br/><br/>Pour faire valoir vos droits, encore faut-il les connaître.<br/><br/>Mieux savoir, mieux comprendre, pour mieux se défendre. Tel est le principe de cette brochure."
       },
       {
         "slug": "des-sex-pistols-a-lintifada",
@@ -290,7 +304,8 @@
         "coverImg": "/sex-pistols.jpg?height=400&width=250",
         "purchaseUrl": "https://www.leslibraires.ca/livres/des-sex-pistols-a-l-intifada-raphael-jerusalmy-9782940632640.html",
         "quotes": [],
-        "reviews": []
+        "reviews": [],
+        "summary": "Un témoignage autobiographique dans lequel l'auteur aborde son parcours militaire au sein de Tsahal et partage des réflexions personnelles sur son époque."
       },
       {
         "slug": "in-absentia",
@@ -308,7 +323,8 @@
           "« Sombre et déchirant. » – Le Monde",
           "« Ressuscite un épisode oublié d'atrocité avec une grâce implacable. » – Livres Hebdo"
         ],
-        "reviews": []
+        "reviews": [],
+        "summary": "Au camp de concentration nazi de Struthof, Pierre Delmain, un écrivain déporté politique, tente d'échapper à l'horreur en se réfugiant dans ses rêves. Dans le camp, il a pour mission d'achever à mains nues les déportés devenus trop faibles pour participer aux expérimentations scientifiques. A Paris, le collectionneur d'art Saül Berstein tarde à reconnaître le danger qui le guette."
       }
     ]
   },
@@ -388,7 +404,8 @@
   "blog": {
     "header": {
       "title": "Articles et analyses",
-      "subtitle": "Réflexions sur l'écriture, la géopolitique et l'actualité"
+      "subtitle": "Réflexions sur l'écriture, la géopolitique et l'actualité",
+      "cta": "Consulter tous les articles"
     },
     "cta": "Consulter l'article",
     "items": [
@@ -418,7 +435,7 @@
         "image": "https://www.tribunejuive.info/wp-content/uploads/2025/01/Image-12-7.jpeg",
         "readTime": "5 min de lecture",
         "slug": "la-vraie-victoire-disrael",
-        "content": "Négocier avec une organisation terroriste entraîne toujours un lourd coût politique et psychologique : et pourtant, les récents échanges d’otages entre Israël et le Hamas ont permis une réussite bien plus grande que tout gain territorial. En plaçant la valeur de chaque vie humaine au-dessus de toute autre considération, Israël a prouvé que le courage moral peut surpasser la force militaire.<br/><br/> Dès le départ, les autorités ont affirmé que tous les efforts seraient déployés pour ramener chaque personne enlevée. Cette détermination, même sous la pression internationale la plus intense, a envoyé un message fort : aucun objectif stratégique ne justifie l’abandon de nos compatriotes.<br/><br/> Certains dénoncent des « concessions », mais ils négligent la victoire plus profonde : redonner espoir aux familles des otages, renforcer l’unité nationale, et rappeler au monde que la véritable force d’Israël réside aussi dans sa compassion. Chaque libération a érodé le pouvoir du Hamas et renforcé sa légitimité morale.<br/><br/> Les répercussions vont bien au-delà des seuls otages. En associant dialogue et capacité de réponse rapide, Israël montre la voie d’une démocratie qui peut faire face au terrorisme sans se renier. Cette victoire morale pourrait bien s’avérer plus durable que n’importe quelle conquête militaire."
+        "content": "<i>Négocier avec une organisation terroriste entraîne toujours un lourd coût politique et psychologique : et pourtant, les récents échanges d'otages entre Israël et le Hamas ont permis une réussite bien plus grande que tout gain territorial.</i><br/><br/>En plaçant la valeur de chaque vie humaine au-dessus de toute autre considération, Israël a prouvé que le courage moral peut surpasser la force militaire.<br/><br/> Dès le départ, les autorités ont affirmé que tous les efforts seraient déployés pour ramener chaque personne enlevée. Cette détermination, même sous la pression internationale la plus intense, a envoyé un message fort : aucun objectif stratégique ne justifie l’abandon de nos compatriotes.<br/><br/> Certains dénoncent des « concessions », mais ils négligent la victoire plus profonde : redonner espoir aux familles des otages, renforcer l’unité nationale, et rappeler au monde que la véritable force d’Israël réside aussi dans sa compassion. Chaque libération a érodé le pouvoir du Hamas et renforcé sa légitimité morale.<br/><br/> Les répercussions vont bien au-delà des seuls otages. En associant dialogue et capacité de réponse rapide, Israël montre la voie d’une démocratie qui peut faire face au terrorisme sans se renier. Cette victoire morale pourrait bien s’avérer plus durable que n’importe quelle conquête militaire."
       },
       {
         "id": 3,

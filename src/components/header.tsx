@@ -35,9 +35,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-6  flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Book className="h-6 w-6" />
-          <span className="font-bold hidden md:inline-block">
+        <Link href="/" className="flex items-center space-x-2 group">
+          <Book className="h-6 w-6 transition-transform group-hover:scale-110" />
+          <span className="font-dancing-script text-2xl font-bold">
             Raphaël Jerusalmy
           </span>
           <span className="font-bold md:hidden ">RJ</span>

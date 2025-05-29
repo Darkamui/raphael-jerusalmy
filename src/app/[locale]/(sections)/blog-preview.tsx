@@ -62,6 +62,13 @@ const BlogPreview = () => {
             </motion.div>
           ))}
         </div>
+        <div className="flex justify-center mt-10">
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/blog">
+              {t("header.cta")} <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

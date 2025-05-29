@@ -37,7 +37,7 @@ const UpcomingEvents = () => {
             </p>
           </div>
         </motion.div>
-        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2">
           {events.map((event, id) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -46,8 +46,8 @@ const UpcomingEvents = () => {
               viewport={{ once: true }}
               key={id}
             >
-              <Card className="lg:min-h-[300px]">
-                <CardContent className="p-6">
+              <Card className="">
+                <CardContent className="p-6 ">
                   <div className="flex items-start space-x-4">
                     <Calendar className="h-10 w-10 text-primary flex-shrink-0" />
                     <div>
@@ -56,7 +56,7 @@ const UpcomingEvents = () => {
                         {event.location}
                       </p>
                       <p className="text-muted-foreground mt-1">{event.date}</p>
-                      <p className="mt-6">{event.subtitle}</p>
+                      {/* <p className="mt-6">{event.subtitle}</p> */}
                       <Button
                         variant="link"
                         className="p-0 h-auto mt-6"
@@ -73,6 +73,13 @@ const UpcomingEvents = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/events">
+              {t("header.viewAll")} <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

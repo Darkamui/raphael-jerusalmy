@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   ArrowLeft,
-  Star,
+  // Star,
   ShoppingCart,
   // BookOpen,
   // Download,
@@ -18,32 +18,15 @@ import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { use } from "react";
 import { useTranslations } from "next-intl";
+import { Book } from "@/lib/types";
 
 type Params = Promise<{ slug: string }>;
 
-export type Book = {
-  publisher: string;
-  pages: string;
-  year: string;
-  isbn: string;
-  subtitle: string;
-  excerpt: string;
-  quotes: string[];
-  slug: string;
-  coverImg: string;
-  type: string;
-  title: string;
-  reviews: string[];
-  purchaseUrl: string;
-};
-
 export default function BookPage(props: { params: Params }) {
-  // unwrap the async params
   const { slug } = use(props.params);
 
   const books = useTranslations().raw("booksPage.items") as Book[];
-
-  // In a real app you’d fetch; here we read from the local array
+  const text = useTranslations("booksPage");
   const book = books.find((b) => b.slug === slug) ?? books[0];
 
   return (
@@ -82,7 +65,7 @@ export default function BookPage(props: { params: Params }) {
                   >
                     <Link href={book.purchaseUrl} target="_blank">
                       <ShoppingCart className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
-                      <span>Purchase Book</span>
+                      <span>{text("buy")}</span>
                     </Link>
                   </Button>
                   {/* <div className="flex gap-2">
@@ -107,7 +90,7 @@ export default function BookPage(props: { params: Params }) {
                     asChild
                   >
                     <Link href="/books">
-                      <ArrowLeft className="mr-2 h-4 w-4" /> Back to Books
+                      <ArrowLeft className="mr-2 h-4 w-4" /> {text("back")}
                     </Link>
                   </Button>
                 </div>
@@ -136,7 +119,7 @@ export default function BookPage(props: { params: Params }) {
               <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="flex flex-col glass-card p-4">
                   <span className="text-sm text-muted-foreground">
-                    Publisher
+                    {text("publisher")}
                   </span>
                   <span className="font-medium">{book.publisher}</span>
                 </div>
@@ -145,7 +128,9 @@ export default function BookPage(props: { params: Params }) {
                   <span className="font-medium">{book.pages}</span>
                 </div>
                 <div className="flex flex-col glass-card p-4">
-                  <span className="text-sm text-muted-foreground">Year</span>
+                  <span className="text-sm text-muted-foreground">
+                    {text("year")}
+                  </span>
                   <span className="font-medium">{book.year}</span>
                 </div>
                 <div className="flex flex-col glass-card p-4">
@@ -162,13 +147,13 @@ export default function BookPage(props: { params: Params }) {
                     Synopsis
                   </h2>
                   <p className="text-muted-foreground glass-card p-6">
-                    {book.subtitle}
+                    <div dangerouslySetInnerHTML={{ __html: book.summary }} />
                   </p>
                 </div>
 
                 <div>
                   <h2 className="text-2xl font-bold mb-4 gradient-text">
-                    Excerpt
+                    {text("excerpt")}
                   </h2>
                   <Card className="glass-card overflow-hidden">
                     <CardContent className="p-6 italic">
@@ -177,9 +162,9 @@ export default function BookPage(props: { params: Params }) {
                   </Card>
                 </div>
 
-                <div>
+                {/* <div>
                   <h2 className="text-2xl font-bold mb-4 gradient-text">
-                    Critical Acclaim
+                    {text("critical")}
                   </h2>
                   <div className="grid gap-4 md:grid-cols-2">
                     {book.reviews.map((review, index) => (
@@ -203,16 +188,16 @@ export default function BookPage(props: { params: Params }) {
                                 />
                               ))}
                             </div>
-                            {/* <p className="italic mb-2">{review.text}</p> */}
+                             <p className="italic mb-2">{review.text}</p> 
                             <p className="text-sm font-semibold gradient-text">
-                              {/* — {review.author} */}
+                               — {review.author} 
                             </p>
                           </CardContent>
                         </Card>
                       </motion.div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>
