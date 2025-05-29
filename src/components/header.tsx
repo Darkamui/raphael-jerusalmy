@@ -37,7 +37,7 @@ export default function Header() {
       <div className="container mx-auto px-6  flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 group">
           <Book className="h-6 w-6 transition-transform group-hover:scale-110" />
-          <span className="font-dancing-script text-2xl font-bold">
+          <span className="font-dancing-script text-2xl font-bold hidden md:inline-block">
             Raphaël Jerusalmy
           </span>
           <span className="font-bold md:hidden ">RJ</span>
@@ -113,7 +113,9 @@ export default function Header() {
                     onClick={() => setIsOpen(false)}
                   >
                     <Book className="h-6 w-6" />
-                    <span className="font-bold">Raphaël Jerusalmy</span>
+                    <span className="font-dancing-script text-2xl font-bold">
+                      Raphaël Jerusalmy
+                    </span>
                   </Link>
                   <Button
                     variant="ghost"
