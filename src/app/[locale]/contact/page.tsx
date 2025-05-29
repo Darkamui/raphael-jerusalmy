@@ -72,19 +72,12 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          ></motion.div>
-
           <div className="grid lg:max-w-[800px] mx-auto">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, x: -100, y: 50 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <Card className="glass-card overflow-hidden">
                 <CardContent className="p-6 md:p-8">

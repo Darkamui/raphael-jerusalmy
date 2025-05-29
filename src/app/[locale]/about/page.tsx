@@ -18,9 +18,9 @@ export default function AboutPage() {
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
             <motion.div
               className="flex flex-col justify-center space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: -120, y: 30 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
             >
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -32,9 +32,9 @@ export default function AboutPage() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, x: 120, scale: 0.8, rotate: 3 }}
+              animate={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
               className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
             >
               <Image
@@ -51,13 +51,12 @@ export default function AboutPage() {
 
       {/* Biography */}
       <section className="w-full px-6 md:px-0 py-12 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 mx-auto">
           <motion.div
             className="max-w-3xl mx-auto space-y-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h2 className="text-3xl font-bold tracking-tighter">
               {t("biography.title")}
@@ -71,13 +70,13 @@ export default function AboutPage() {
 
       {/* Career Timeline */}
       <section className="w-full py-12 md:py-24 bg-muted">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 mx-auto">
           <motion.div
-            className="max-w-3xl mx-auto space-y-6 pl-6 md:pl-0"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            className="max-w-3xl mx-auto space-y-6"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-3xl font-bold tracking-tighter">
               {t("timeline.title")}
@@ -102,10 +101,10 @@ export default function AboutPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <motion.div
               className="space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -80, y: 40 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <h2 className="text-3xl font-bold tracking-tighter">
                 {t("writingPhilosophy.title")}
@@ -116,10 +115,10 @@ export default function AboutPage() {
             </motion.div>
             <motion.div
               className="space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 80, y: 40 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <h2 className="text-3xl font-bold tracking-tighter">
                 Influences & Inspiration
@@ -229,10 +228,10 @@ function TimelineItem({
   return (
     <motion.div
       className="relative"
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0, x: -60, scale: 0.9 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-50px" }}
     >
       <div className="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border border-primary bg-primary"></div>
       <div className="mb-1 text-lg font-bold">{year}</div>

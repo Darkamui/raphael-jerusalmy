@@ -102,7 +102,7 @@
     },
     "biography": {
       "title": "Biography",
-      "text": "Raphaël Jerusalmy was born in Montmartre in 1954. After graduating from both the École Normale Supérieure and the Sorbonne, he served fifteen years in Israeli military intelligence before turning to humanitarian work and, eventually, to the trade of rare books in Tel Aviv. Writing, however, became the through-line of his life: since his explosive 2002 debut *Shalom Tsahal*, he has produced a body of fiction that blends erudition, moral urgency and narrative daring. Of Sephardic origin through his paternal grandmother Sultana, most of whose family members were exterminated at Auschwitz, he is also Russian Ashkenazi through his father, a dealer, craftsman, bookbinder and gilder."
+      "text": "Raphaël Jerusalmy was born in Montmartre in 1954. After graduating from both the École Normale Supérieure and the Sorbonne, he served fifteen years in Israeli military intelligence before turning to humanitarian work and, eventually, to the trade of rare books in Tel Aviv. Writing, however, became the through-line of his life: since his explosive 2002 debut Shalom Tsahal, he has produced a body of fiction that blends erudition, moral urgency and narrative daring. Of Sephardic origin through his paternal grandmother Sultana, most of whose family members were exterminated at Auschwitz, he is also Russian Ashkenazi through his father, a dealer, craftsman, bookbinder and gilder."
     },
     "timeline": {
       "title": "Life Timeline",
@@ -126,7 +126,7 @@
         {
           "year": 2002,
           "title": "First book published",
-          "location": "*Shalom Tsahal*"
+          "location": "Shalom Tsahal"
         },
         {
           "year": 2012,

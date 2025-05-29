@@ -23,10 +23,10 @@ const UpcomingEvents = () => {
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -38,13 +38,21 @@ const UpcomingEvents = () => {
           </div>
         </motion.div>
         <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2">
-          {events.map((event, id) => (
+          {events.map((event, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              key={id}
+              key={index}
+              initial={{
+                opacity: 0,
+                x: index % 2 === 0 ? -120 : 120,
+                scale: 0.9,
+              }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, margin: "-50px" }}
             >
               <Card className="">
                 <CardContent className="p-6 ">

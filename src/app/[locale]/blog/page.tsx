@@ -72,9 +72,9 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: -80, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">
@@ -131,10 +131,19 @@ export default function BlogPage() {
             {filteredPosts.length > 0 ? (
               filteredPosts.map((post, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  key={post.id}
+                  initial={{
+                    opacity: 0,
+                    x: index % 2 === 0 ? -120 : 120,
+                    y: 50,
+                    scale: 0.95,
+                  }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.15,
+                    ease: "easeOut",
+                  }}
                 >
                   <BlogPostCard
                     post={post}

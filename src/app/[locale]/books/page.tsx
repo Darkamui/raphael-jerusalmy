@@ -22,9 +22,9 @@ export default function BooksPage() {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: -60, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">
@@ -83,7 +83,7 @@ export default function BooksPage() {
       <section className="w-full py-12 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {books.map((book) => (
+            {books.map((book, index) => (
               <BookCard
                 key={book.slug}
                 title={book.title}
@@ -92,6 +92,7 @@ export default function BooksPage() {
                 year={book.year}
                 subtitle={book.subtitle}
                 slug={book.slug}
+                index={index}
               />
             ))}
           </div>

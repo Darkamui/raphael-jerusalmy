@@ -30,9 +30,9 @@ export default function EventsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: -100, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-5xl gradient-text">
@@ -93,19 +93,22 @@ function TimelineEvent({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      initial={{ opacity: 0, y: 100, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
       viewport={{ once: true, margin: "-100px" }}
       className={`flex flex-col ${
         isEven ? "md:flex-row" : "md:flex-row-reverse"
-      } items-center gap-16`}
+      } items-center gap-8`}
     >
       {/* Timeline Dot */}
       <motion.div
         className="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-primary transform md:-translate-x-1/2 z-10"
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.3 }}
         whileTap={{ scale: 0.9 }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
         onClick={onToggle}
       >
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-20"></span>
@@ -118,7 +121,7 @@ function TimelineEvent({
         }`}
       >
         <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, x: isEven ? -10 : 10 }}
           className="inline-block glass-card px-4 py-2 water-drop"
         >
           <Calendar className="inline-block mr-2 h-4 w-4 text-primary" />
@@ -134,8 +137,14 @@ function TimelineEvent({
       >
         <motion.div
           className="glass-card overflow-hidden"
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.03, y: -5 }}
           transition={{ type: "spring", stiffness: 300 }}
+          initial={{
+            opacity: 0,
+            x: isEven ? -100 : 100,
+            rotate: isEven ? -2 : 2,
+          }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           onClick={onToggle}
         >
           <div className="p-6 cursor-pointer">

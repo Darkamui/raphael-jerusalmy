@@ -18,7 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { Blog } from "@/lib/types";
@@ -99,9 +99,9 @@ export default function BlogPostPage(props: { params: Params }) {
       <section className="w-full py-8 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: -60, x: -30 }}
+            animate={{ opacity: 1, y: 0, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Button variant="ghost" className="mb-6" asChild>
               <Link href="/blog">
@@ -194,9 +194,9 @@ export default function BlogPostPage(props: { params: Params }) {
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.9, y: 60 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-8">
               <Image
@@ -218,9 +218,9 @@ export default function BlogPostPage(props: { params: Params }) {
           <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
             {/* Main Content */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              initial={{ opacity: 0, x: -80, y: 40 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
               {/* External URL Reference */}
               {post.url && (
@@ -275,7 +275,7 @@ export default function BlogPostPage(props: { params: Params }) {
                 </div>
               </div> */}
 
-              <Separator className="my-8" />
+              {/* <Separator className="my-8" /> */}
 
               {/* Author Bio */}
               {/* <Card className="glass-card">
@@ -319,9 +319,9 @@ export default function BlogPostPage(props: { params: Params }) {
             {/* Sidebar */}
             <motion.div
               className="space-y-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              initial={{ opacity: 0, x: 100, y: 40 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             >
               {/* Table of Contents */}
               {/* <Card className="glass-card">

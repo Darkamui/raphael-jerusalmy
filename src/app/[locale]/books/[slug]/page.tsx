@@ -36,9 +36,9 @@ export default function BookPage(props: { params: Params }) {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <motion.div
               className="w-full md:w-1/3 lg:w-1/4"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: -120, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
             >
               <div className="sticky top-24">
                 <motion.div
@@ -98,9 +98,9 @@ export default function BookPage(props: { params: Params }) {
             </motion.div>
             <motion.div
               className="flex-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: 100, y: 30 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             >
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -146,9 +146,10 @@ export default function BookPage(props: { params: Params }) {
                   <h2 className="text-2xl font-bold mb-4 gradient-text">
                     Synopsis
                   </h2>
-                  <p className="text-muted-foreground glass-card p-6">
-                    <div dangerouslySetInnerHTML={{ __html: book.summary }} />
-                  </p>
+                  <div
+                    className="text-muted-foreground glass-card p-6"
+                    dangerouslySetInnerHTML={{ __html: book.summary }}
+                  />
                 </div>
 
                 <div>
