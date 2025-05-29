@@ -62,7 +62,7 @@ const BlogPreview = () => {
                   <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
                   <p className="text-muted-foreground">{blog.subtitle}</p>
                   <Button variant="link" className="p-0 h-auto mt-4" asChild>
-                    <Link href="#">
+                    <Link href={`/blog/${blog.slug}`}>
                       {t("cta")} <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
