@@ -70,7 +70,6 @@ const UpcomingEvents = () => {
                   </div>
                   <h3 className="text-xl font-bold gradient-text">
                     {events[0].title}
-                    Tribunes de guerre, 2023-2025
                   </h3>
                   <p className="text-muted-foreground flex-1">
                     {events[0].subtitle}
