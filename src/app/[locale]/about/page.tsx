@@ -6,11 +6,11 @@ import Image from "next/image";
 // import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Timeline } from "@/lib/types";
+// import { Timeline } from "@/lib/types";
 
 export default function AboutPage() {
   const t = useTranslations("aboutPage");
-  const timeline = t.raw("timeline.items") as Timeline[];
+  // const timeline = t.raw("timeline.items") as Timeline[];
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
@@ -50,7 +50,7 @@ export default function AboutPage() {
       </section>
 
       {/* Biography */}
-      <section className="w-full px-6 md:px-0 py-12 md:py-24 bg-background">
+      <section className="w-full px-6 md:px-0 py-12 md:py-24 bg-background ">
         <div className="container px-4 mx-auto">
           <motion.div
             className="max-w-3xl mx-auto space-y-6"
@@ -61,15 +61,16 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold tracking-tighter">
               {t("biography.title")}
             </h2>
-            <div className="space-y-4 tracking-wide leading-7 text-muted-foreground">
-              <p>{t("biography.text")}</p>
-            </div>
+            <div
+              className="space-y-4 tracking-wide leading-7 text-muted-foreground"
+              dangerouslySetInnerHTML={{ __html: t("biography.text") }}
+            />
           </motion.div>
         </div>
       </section>
 
       {/* Career Timeline */}
-      <section className="w-full py-12 md:py-24 bg-muted">
+      {/* <section className="w-full py-12 md:py-24 bg-muted">
         <div className="container px-4 mx-auto">
           <motion.div
             className="max-w-3xl mx-auto space-y-6"
@@ -93,10 +94,10 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Writing Philosophy */}
-      <section className="w-full py-12 md:py-24 bg-background">
+      {/* <section className="w-full py-12 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6 xl:px-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <motion.div
@@ -129,7 +130,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Information */}
       {/* <section className="w-full py-12 md:py-24 bg-muted">
@@ -216,27 +217,27 @@ export default function AboutPage() {
   );
 }
 
-function TimelineItem({
-  year,
-  title,
-  location,
-}: {
-  year: string;
-  title: string;
-  location: string;
-}) {
-  return (
-    <motion.div
-      className="relative"
-      initial={{ opacity: 0, x: -60, scale: 0.9 }}
-      whileInView={{ opacity: 1, x: 0, scale: 1 }}
-      transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-      viewport={{ once: true, margin: "-50px" }}
-    >
-      <div className="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border border-primary bg-primary"></div>
-      <div className="mb-1 text-lg font-bold">{year}</div>
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-muted-foreground">{location}</p>
-    </motion.div>
-  );
-}
+// function TimelineItem({
+//   year,
+//   title,
+//   location,
+// }: {
+//   year: string;
+//   title: string;
+//   location: string;
+// }) {
+//   return (
+//     <motion.div
+//       className="relative"
+//       initial={{ opacity: 0, x: -60, scale: 0.9 }}
+//       whileInView={{ opacity: 1, x: 0, scale: 1 }}
+//       transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+//       viewport={{ once: true, margin: "-50px" }}
+//     >
+//       <div className="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border border-primary bg-primary"></div>
+//       <div className="mb-1 text-lg font-bold">{year}</div>
+//       <h3 className="text-xl font-semibold">{title}</h3>
+//       <p className="mt-2 text-muted-foreground">{location}</p>
+//     </motion.div>
+//   );
+// }

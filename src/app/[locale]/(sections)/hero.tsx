@@ -45,7 +45,7 @@ const Hero = () => {
             className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
           >
             <Image
-              src="/about.jpeg?height=600&width=400"
+              src="/images/tribunes.jpg?height=600&width=400"
               alt="Author with books"
               fill
               className="object-cover"

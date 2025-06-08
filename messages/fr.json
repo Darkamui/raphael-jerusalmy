@@ -2,11 +2,11 @@
   "navigation": {
     "home": "Accueil",
     "about": "À propos",
-    "books": "Livres",
+    "books": "Bibliographie",
     "events": "Événements",
     "blog": "Blog",
     "contact": "Contact",
-    "explore": "Explorer les livres",
+    "explore": "Liste des parutions",
     "newsletter": "Newsletter",
     "theme": {
       "light": "Clair",
@@ -22,13 +22,13 @@
       "title": "Tribunes de Guerre",
       "tagline": "Le nouveau roman bouleversant de Raphaël Jerusalmy révélant un épisode oublié de la Shoah",
       "description": "À travers une série de tribunes incisives, Raphaël Jerusalmy donne une voix à ceux qui cherchent à comprendre, à se défendre intellectuellement et à résister à la haine.",
-      "ctaPrimary": "Explorer les livres",
+      "ctaPrimary": "Liste des parutions",
       "ctaSecondary": "À propos de l'auteur",
       "comingSoon": "Nouvelle Parution - Juin 2025"
     },
     "featuredBooks": {
       "header": {
-        "title": "Livres en vedette",
+        "title": "Parutions en vedette",
         "subtitle": "Découvrez les histoires qui ont captivé les lecteurs du monde entier.",
         "ctaLabel": "Voir tous les livres",
         "detailsLabel": "Voir les détails"
@@ -37,7 +37,7 @@
     "testimonials": {
       "header": {
         "title": "Témoignages de lecteurs",
-        "subtitle": "Ce que disent les critiques et les lecteurs des livres."
+        "subtitle": "Ce que disent les critiques et les lecteurs des parutions."
       },
       "items": [
         {
@@ -63,8 +63,23 @@
         "title": "Événements à venir",
         "subtitle": "Rencontrez l'auteur et rejoignez la conversation lors de ces événements à venir",
         "ctaLabel": "En savoir plus",
-        "viewAll": "Voir tous les événements"
-      }
+        "viewAll": "Voir tous les événements",
+        "reserve": "Réservez votre place"
+      },
+      "events": [
+        {
+          "date": "Mardi 10 juin 2025 • 16h00",
+          "location": "Hall Zeev Segal<br/>Faculté des sciences sociales de l’Université de Tel Aviv",
+          "title": "Tribunes de guerre, 2023–2025",
+          "subtitle": "Aperçu de la période et des défis actuels – Une présentation académique explorant les tribunaux de guerre contemporains et leur impact sur la société moderne."
+        },
+        {
+          "date": "Lundi 16 juin 2025 • 20h00",
+          "location": "Centre communautaire Beth Aharon<br/>18 rue Roque de Fillol, Puteaux, France",
+          "title": "Conférence et dédicace",
+          "subtitle": "Rejoignez Raphaël Jerusalmy pour une conférence en soirée suivie d’une séance de dédicace. Avec les interventions de Mohamed Sifaoui et des présentations spéciales."
+        }
+      ]
     },
     "newsletter": {
       "header": {
@@ -88,7 +103,7 @@
     },
     "biography": {
       "title": "Biographie",
-      "text": "Raphaël Jerusalmy est né à Montmartre en 1954. Diplômé de l'École Normale Supérieure et de la Sorbonne, il a servi quinze ans dans les renseignements militaires israéliens avant de se tourner vers le travail humanitaire et, finalement, vers le commerce de livres rares à Tel Aviv. L'écriture est cependant devenue le fil conducteur de sa vie : depuis ses débuts explosifs en 2002 avec Shalom Tsahal, il a produit une œuvre littéraire qui mélange érudition, urgence morale et audace narrative. D'origine séfarade par sa grand-mère paternelle Sultana, dont les membres de la famille ont, pour la plupart, été exterminés à Auschwitz, il est aussi russe ashkénaze par son père, brocanteur, artisan, relieur et doreur."
+      "text": "Raphaël Jerusalmy est un écrivain franco-israélien.<br/><br/>D’origine séfarade par sa grand-mère paternelle dont les membres de la famille ont, pour la plupart, été exterminés à Auschwitz, il est aussi russe ashkénaze par son père, brocanteur, artisan et relieur-doreur. Après une khâgne à 15 ans au lycée Henri IV, il rejoint l’École Normale Supérieure de l’Enseignement Technique et la Sorbonne.<br/><br/>Après ses études, il s'engage dans l'armée israélienne, au sein de laquelle il évolue rapidement vers le service de renseignement. Officier de liaison, surtout en Amérique latine, il rencontre Augusto Pinochet et Yasser Arafat. Après une quinzaine d'années, il prend sa retraite de l'armée et mène des actions éducatives et humanitaires, puis devient négociant en livres anciens à Tel Aviv. Il est également expert sur la chaîne de télévision I24news.<br/><br/>Il publie un premier roman très remarqué en 2012, « Sauvez Mozart », pour lequel il a reçu le prix Emmanuel Roblès 2013 et le prix littéraire de l'ENS Cachan. Auteur de romans à succès : « La Confrérie des chasseurs de livres » (Actes Sud, 2013), « Denis Diderot, non à l’ignorance » (Actes Sud junior, 2014), son roman « Les obus jouaient à pigeon vole », paru en février 2016 dans la collection Sur le fil aux Éditions Bruno Doucey, a été couronné par le Prix Coup de cœur des lecteurs des Rendez-vous de l’histoire de Blois 2016. Il obtient le prix Amerigo-Vespucci 2017 pour « Évacuation » (Actes Sud).<br/><br/>En 2018, il signe « La rose de Saragosse », un roman palpitant dans lequel il revient sur la persécution des Juifs d’Espagne par l’Inquisition au XVe siècle."
     },
     "timeline": {
       "title": "Chronologie de vie",

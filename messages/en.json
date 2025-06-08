@@ -63,8 +63,23 @@
         "title": "Upcoming Events",
         "subtitle": "Meet the author and join the conversation at these upcoming events",
         "ctaLabel": "Learn more",
-        "viewAll": "View All Events"
+        "viewAll": "View All Events",
+        "reserve": "Reserve Seats"
       },
+      "events": [
+        {
+          "date": "Tuesday, June 10, 2025 • 4:00 PM",
+          "location": "Hall Zeev Segal, Tel Aviv University Faculty of Social Sciences",
+          "title": "War Tribunals, 2023–2025",
+          "subtitle": "Overview of the period and current challenges – An academic presentation exploring contemporary war tribunals and their impact on modern society."
+        },
+        {
+          "date": "Monday, June 16, 2025 • 8:00 PM",
+          "location": "Beth Aharon Community Center, 18 Rue Roque de Fillol, Puteaux, France",
+          "title": "Conference & Book Dedication",
+          "subtitle": "Join Raphaël Jerusalmy for an evening conference followed by a book dedication ceremony. Featuring commentary by Mohamed Sifaoui and special presentations."
+        }
+      ],
       "items": [
         {
           "title": "Middle East Geopolitical Analysis",
@@ -102,7 +117,7 @@
     },
     "biography": {
       "title": "Biography",
-      "text": "Raphaël Jerusalmy was born in Montmartre in 1954. After graduating from both the École Normale Supérieure and the Sorbonne, he served fifteen years in Israeli military intelligence before turning to humanitarian work and, eventually, to the trade of rare books in Tel Aviv. Writing, however, became the through-line of his life: since his explosive 2002 debut Shalom Tsahal, he has produced a body of fiction that blends erudition, moral urgency and narrative daring. Of Sephardic origin through his paternal grandmother Sultana, most of whose family members were exterminated at Auschwitz, he is also Russian Ashkenazi through his father, a dealer, craftsman, bookbinder and gilder."
+      "text": "Raphaël Jerusalmy is a French-Israeli writer.<br/><br/>Of Sephardic origin through his paternal grandmother, whose family members were for the most part exterminated at Auschwitz, he is also of Russian Ashkenazi heritage on his father’s side—an antiques dealer, craftsman, and bookbinder-gilder. After attending khâgne at Lycée Henri IV at age fifteen, he entered the École Normale Supérieure for Technical Education and the Sorbonne.<br/><br/>After his studies, he enlisted in the Israeli army, where he quickly moved into the intelligence service. Serving as a liaison officer—especially in Latin America—he met Augusto Pinochet and Yasser Arafat. After about fifteen years, he retired from the army and carried out educational and humanitarian work, then became a dealer in rare books in Tel Aviv. He is also a commentator on the I24news television channel.<br/><br/>He published his first highly acclaimed novel in 2012, “Sauvez Mozart,” for which he received the 2013 Emmanuel Roblès Prize and the ENS Cachan Literary Prize. The author of best-selling novels such as “La confrérie des chasseurs de livres” (Actes Sud, 2013) and “Denis Diderot, non à l’ignorance” (Actes Sud junior, 2014), his novel “Les obus jouaient à pigeon vole,” released in February 2016 in the Sur le fil collection by Éditions Bruno Doucey, was awarded the Readers’ Choice Prize at the Rendez-vous de l’histoire de Blois 2016. He won the 2017 Amerigo-Vespucci Prize for “Évacuation” (Actes Sud).<br/><br/>In 2018, he released “La rose de Saragosse,” a thrilling novel in which he revisits the persecution of Spain’s Jews by the Inquisition in the 15th century."
     },
     "timeline": {
       "title": "Life Timeline",
