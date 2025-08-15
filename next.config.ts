@@ -3,7 +3,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   // Enable standalone output for Docker optimization
-  ...(process.env.NODE_ENV === "production" && { output: "standalone" }),
+  output: "standalone",
 
   // Experimental features for better performance
   experimental: {

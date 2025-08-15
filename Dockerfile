@@ -1,23 +1,23 @@
 # ----- DEPENDENCIES STAGE -----
-FROM node:20-alpine AS deps
+FROM node:24-alpine AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* ./
 RUN \
-  if [ -f package-lock.json ]; then npm ci --only=production; \
+  if [ -f package-lock.json ]; then npm ci --only=production --legacy-peer-deps --ignore-scripts; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
 # ----- BUILD STAGE -----
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 WORKDIR /app
 
 # Copy package files
 COPY package.json package-lock.json* ./
 
-# Install all dependencies (including devDependencies)
-RUN npm ci
+# Install all dependencies (including devDependencies) without running postinstall scripts
+RUN npm ci --ignore-scripts --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -30,7 +30,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # ----- PRODUCTION STAGE -----
-FROM node:20-alpine AS runner
+FROM node:24-alpine AS runner
 WORKDIR /app
 
 # Create non-root user for security
@@ -65,6 +65,6 @@ ENV PORT=3002
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
   CMD node healthcheck.js
 
-# Start the application
-CMD ["npm", "start"]
+# Start the application using standalone server
+CMD ["node", "server.js"]
     
