@@ -25,7 +25,8 @@ COPY . .
 # Set NODE_ENV for build optimization
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-
+ARG DATABASE_URL=postgresql://dummy:dummy@dummy:5432/dummy
+ENV DATABASE_URL=$DATABASE_URL
 # Build application
 RUN npm run build
 
