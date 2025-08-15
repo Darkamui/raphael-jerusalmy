@@ -3,15 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-
-type Testimonial = {
-  quote: string;
-  source: string;
-};
+import { ClientDataService } from "@/lib/services/client-data.service";
 
 const Testimonials = () => {
   const t = useTranslations("homepage.testimonials");
-  const testimonials = (t.raw("items") as Testimonial[]).slice(0, 3);
+  const dataService = new ClientDataService(useTranslations());
+  const testimonials = dataService.getTestimonials(3);
   return (
     <section className="w-full py-12 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">

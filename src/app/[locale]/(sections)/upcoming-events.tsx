@@ -9,9 +9,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
-const UpcomingEvents = () => {
+interface UpcomingEventsProps {
+  events: Event[];
+}
+
+const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
   const t = useTranslations("homepage.upcomingEvents");
-  const events = t.raw("events") as Event[];
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -60,19 +63,19 @@ const UpcomingEvents = () => {
                 <div className="space-y-3 flex-1">
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Calendar className="mr-2 h-4 w-4 text-primary" />
-                    {events[0].date}
+                    {events[0]?.date}
                   </div>
                   <div className="flex items-start text-sm text-muted-foreground">
                     <MapPin className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                     <span
-                      dangerouslySetInnerHTML={{ __html: events[0].location }}
+                      dangerouslySetInnerHTML={{ __html: events[0]?.location || '' }}
                     />
                   </div>
                   <h3 className="text-xl font-bold gradient-text">
-                    {events[0].title}
+                    {events[0]?.title}
                   </h3>
                   <p className="text-muted-foreground flex-1">
-                    {events[0].subtitle}
+                    {events[0]?.subtitle}
                   </p>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-auto">
@@ -120,20 +123,20 @@ const UpcomingEvents = () => {
                 <div className="space-y-3 flex-1">
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Calendar className="mr-2 h-4 w-4 text-primary" />
-                    {events[1].date}
+                    {events[1]?.date}
                   </div>
                   <div className="flex items-start text-sm text-muted-foreground">
                     <MapPin className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
 
                     <span
-                      dangerouslySetInnerHTML={{ __html: events[1].location }}
+                      dangerouslySetInnerHTML={{ __html: events[1]?.location || '' }}
                     />
                   </div>
                   <h3 className="text-xl font-bold gradient-text">
-                    {events[1].title}
+                    {events[1]?.title}
                   </h3>
                   <p className="text-muted-foreground flex-1">
-                    {events[1].subtitle}
+                    {events[1]?.subtitle}
                   </p>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-auto">

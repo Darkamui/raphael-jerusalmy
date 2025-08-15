@@ -8,12 +8,12 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Book } from "@/lib/types";
 
-const Featured = () => {
+interface FeaturedProps {
+  books: Book[];
+}
+
+const Featured = ({ books }: FeaturedProps) => {
   const t = useTranslations("homepage");
-  const featured = (useTranslations().raw("booksPage.items") as Book[]).slice(
-    0,
-    3
-  );
   return (
     <section className="w-full py-12 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
@@ -34,9 +34,9 @@ const Featured = () => {
           </div>
         </motion.div>
         <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((book, index) => (
+          {books.map((book, index) => (
             <motion.div
-              key={index}
+              key={book.slug}
               initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80, y: 30 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               transition={{
@@ -50,7 +50,7 @@ const Featured = () => {
                 title={book.title}
                 coverImg={book.coverImg}
                 type={book.type}
-                year={book.year.toString()}
+                year={book.year}
                 subtitle={book.subtitle}
                 slug={book.slug}
                 index={index}

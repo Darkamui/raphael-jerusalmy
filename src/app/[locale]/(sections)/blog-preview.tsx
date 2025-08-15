@@ -9,9 +9,13 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Blog } from "@/lib/types";
-const BlogPreview = () => {
+
+interface BlogPreviewProps {
+  blogPosts: Blog[];
+}
+
+const BlogPreview = ({ blogPosts }: BlogPreviewProps) => {
   const t = useTranslations("blog");
-  const blogPosts = (t.raw("items") as Blog[]).slice(0, 3);
   return (
     <section className="w-full py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -31,9 +35,10 @@ const BlogPreview = () => {
             </p>
           </div>
         </motion.div>
-        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3 ">
           {blogPosts.map((blog, index) => (
             <motion.div
+              className=""
               key={index}
               initial={{
                 opacity: 0,
@@ -49,7 +54,7 @@ const BlogPreview = () => {
               }}
               viewport={{ once: true, margin: "-50px" }}
             >
-              <Card>
+              <Card className="min-h-[475px]">
                 <Image
                   src={blog.image}
                   alt="Blog post"

@@ -1,40 +1,70 @@
-# ----- STEP 1: Build stage -----
+# ----- DEPENDENCIES STAGE -----
+FROM node:20-alpine AS deps
+WORKDIR /app
 
-    FROM node:18-alpine AS builder
-    WORKDIR /app
+# Install dependencies based on the preferred package manager
+COPY package.json package-lock.json* ./
+RUN \
+  if [ -f package-lock.json ]; then npm ci --only=production; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-    #ARG DATABASE_URL
-    #ENV DATABASE_URL=${DATABASE_URL}
-    
-    # Install deps
-    COPY package.json package-lock.json ./
-    RUN npm install
-    
-    # Copy all files
-    COPY . .
-    
-    # Build the Next.js app
-    RUN npm run build
-    
-    # ----- STEP 2: Production image -----
-    FROM node:18-alpine AS runner
-    WORKDIR /app
+# ----- BUILD STAGE -----
+FROM node:20-alpine AS builder
+WORKDIR /app
 
-    #ARG DATABASE_URL
-    #ENV DATABASE_URL=${DATABASE_URL}
-    
-    # Install only production deps
-    COPY package.json package-lock.json ./
-    RUN npm install --omit=dev
-    
-    # Copy built app
-    COPY --from=builder /app/.next ./.next
-    COPY --from=builder /app/public ./public
-    COPY --from=builder /app/next.config.ts ./next.config.ts
-    COPY --from=builder /app/package.json ./package.json
-    COPY --from=builder /app/node_modules ./node_modules
-    
-    
-    EXPOSE 3002
-    CMD ["npm", "start"]
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install all dependencies (including devDependencies)
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Set NODE_ENV for build optimization
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Build application
+RUN npm run build
+
+# ----- PRODUCTION STAGE -----
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+# Create non-root user for security
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Copy public assets
+COPY --from=builder /app/public ./public
+
+# Copy built application
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Copy production dependencies
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+# Switch to non-root user
+USER nextjs
+
+# Expose port
+EXPOSE 3002
+
+# Set port environment variable
+ENV PORT=3002
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+  CMD node healthcheck.js
+
+# Start the application
+CMD ["npm", "start"]
     
