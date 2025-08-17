@@ -3,16 +3,32 @@ import { DataService } from '@/lib/services/data.service';
 import { APP_CONFIG } from '@/lib/constants';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const dataService = DataService.getInstance();
   const baseUrl = APP_CONFIG.url;
   
-  // Get all content from database
-  const [enBooks, frBooks, enBlogs, frBlogs] = await Promise.all([
-    dataService.getBooks('en'),
-    dataService.getBooks('fr'),
-    dataService.getBlogs('en'),
-    dataService.getBlogs('fr'),
-  ]);
+  // Get all content from database with fallback for build errors
+  let enBooks: any[] = [];
+  let frBooks: any[] = [];
+  let enBlogs: any[] = [];
+  let frBlogs: any[] = [];
+  
+  try {
+    // Check if we're in build mode with dummy database URL
+    const databaseUrl = process.env.DATABASE_URL || '';
+    const isDummyDatabase = databaseUrl.includes('dummy');
+    
+    if (!isDummyDatabase) {
+      const dataService = DataService.getInstance();
+      [enBooks, frBooks, enBlogs, frBlogs] = await Promise.all([
+        dataService.getBooks('en'),
+        dataService.getBooks('fr'),
+        dataService.getBlogs('en'),
+        dataService.getBlogs('fr'),
+      ]);
+    }
+  } catch (error) {
+    console.warn('Failed to fetch dynamic content for sitemap:', error);
+    // Continue with static sitemap generation
+  }
 
   const sitemap: MetadataRoute.Sitemap = [
     // Static pages
