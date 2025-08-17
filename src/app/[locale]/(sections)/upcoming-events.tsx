@@ -54,7 +54,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 {/* <Badge className="absolute top-4 left-4 bg-accent text-accent-foreground">
                   Academic Conference
                 </Badge> */}
@@ -114,7 +114,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 {/* <Badge className="absolute top-4 left-4 bg-accent text-accent-foreground">
                   Book Presentation
                 </Badge> */}

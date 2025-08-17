@@ -13,6 +13,8 @@ import { ErrorBoundary } from "@/components/ui/error-boundary";
 import { APP_CONFIG } from "@/lib/constants";
 import { Locale } from "@/lib/types";
 import { Providers } from "@/lib/providers";
+import { generatePersonSchema, generateWebsiteSchema } from "@/lib/utils/structured-data";
+import { WebVitalsTracker } from "@/components/web-vitals-tracker";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -68,8 +70,22 @@ export default async function RootLayout({
     notFound();
   }
 
+  // Generate structured data for the website
+  const personSchema = generatePersonSchema();
+  const websiteSchema = generateWebsiteSchema();
+
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
         <Providers>
           <ErrorBoundary>
@@ -98,6 +114,9 @@ export default async function RootLayout({
             </NextIntlClientProvider>
           </ErrorBoundary>
         </Providers>
+        
+        {/* Web Vitals tracking component */}
+        <WebVitalsTracker />
       </body>
     </html>
   );

@@ -156,5 +156,10 @@
       "title": "Response Time",
       "text": "We aim to respond to all inquiries within 2–3 business days. For urgent matters, please indicate this in your subject line."
     }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for doesn't exist.",
+    "backHome": "Back to Home"
   }
 }

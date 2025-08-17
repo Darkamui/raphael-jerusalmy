@@ -13,11 +13,10 @@ export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   const dataService = DataService.getInstance();
 
-  // Fetch data from database
+  // Fetch data from database in parallel for optimal performance
   const [featuredBooks, recentBlogs] = await Promise.all([
     dataService.getFeaturedBooks(locale, 3),
     dataService.getRecentBlogs(locale, 3),
-    dataService.getUpcomingEvents(locale, 3),
   ]);
 
   return (

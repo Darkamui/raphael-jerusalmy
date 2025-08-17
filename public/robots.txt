@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Disallow admin pages
+Disallow: /*/admin/
+Disallow: /admin/
+
+# Disallow API routes from indexing
+Disallow: /api/
+
+# Allow important pages
+Allow: /en/
+Allow: /fr/
+Allow: /en/books/
+Allow: /fr/books/
+Allow: /en/blog/
+Allow: /fr/blog/
+Allow: /en/events/
+Allow: /fr/events/
+Allow: /en/about/
+Allow: /fr/about/
+Allow: /en/contact/
+Allow: /fr/contact/
+
+# Sitemap
+Sitemap: https://raphaeljerusalmy.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

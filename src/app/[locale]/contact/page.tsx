@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, MessageSquare } from "lucide-react";

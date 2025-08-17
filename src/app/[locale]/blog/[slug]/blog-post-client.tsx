@@ -32,7 +32,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   const handleShare = async (platform: string) => {
     const url = window.location.href;
     const title = post.title;
-    const text = post.subtitle;
+    const text = post.subtitle || "";
 
     switch (platform) {
       case "twitter":
@@ -167,7 +167,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 z-10" />
             </div>
           </motion.div>
         </div>

@@ -1,16 +1,18 @@
 "use client";
 import Image from "next/image";
-// import { Link } from "@/i18n/navigation";
-// import { ArrowRight, Award, BookOpen, Mail, MapPin } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-// import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-// import { Timeline } from "@/lib/types";
+import { generateImageUrl } from "@/lib/utils";
+import { IMAGE_SIZES } from "@/lib/constants";
 
 export default function AboutPage() {
   const t = useTranslations("aboutPage");
-  // const timeline = t.raw("timeline.items") as Timeline[];
+  
+  const authorImageUrl = generateImageUrl(
+    "/bio2.jfif",
+    IMAGE_SIZES.hero.width,
+    IMAGE_SIZES.hero.height
+  );
   return (
     <div className="flex flex-col min-h-screen">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
@@ -38,10 +40,11 @@ export default function AboutPage() {
               className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-xl"
             >
               <Image
-                src="/bio2.jfif?height=600&width=400"
-                alt="Author portrait"
+                src={authorImageUrl}
+                alt="Author portrait - Raphaël Jerusalmy"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 500px"
                 priority
               />
             </motion.div>

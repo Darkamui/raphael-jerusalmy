@@ -79,19 +79,39 @@ const nextConfig: NextConfig = {
         ...config.optimization,
         splitChunks: {
           chunks: "all",
+          minSize: 20000,
+          maxSize: 200000,
           cacheGroups: {
             default: false,
             vendors: false,
-            vendor: {
+            // Framework libraries
+            react: {
+              name: "react",
               chunks: "all",
-              test: /node_modules/,
-              name: "vendor",
+              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+              priority: 30,
             },
+            // UI Libraries
+            ui: {
+              name: "ui",
+              chunks: "all", 
+              test: /[\\/]node_modules[\\/](@radix-ui|lucide-react|framer-motion)[\\/]/,
+              priority: 25,
+            },
+            // Vendor libraries
+            vendor: {
+              name: "vendor",
+              chunks: "all",
+              test: /[\\/]node_modules[\\/]/,
+              priority: 10,
+            },
+            // Common code
             common: {
               name: "common",
               minChunks: 2,
               chunks: "all",
               enforce: true,
+              priority: 5,
             },
           },
         },

@@ -39,7 +39,7 @@ export function BookDetail({ book }: BookDetailProps) {
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="absolute inset-0 z-10"></div>
+                  <div className="absolute inset-0 z-10" />
                   <Image
                     src={book.coverImg || "/placeholder.svg"}
                     alt={book.title}
@@ -47,7 +47,7 @@ export function BookDetail({ book }: BookDetailProps) {
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent z-20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent z-20" />
                 </motion.div>
                 <div className="mt-6 space-y-4">
                   <Button

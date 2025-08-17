@@ -5,6 +5,8 @@ import { eq, and, desc, asc } from "drizzle-orm";
 
 export class DataService {
   private static instance: DataService;
+  private cache: Map<string, { data: unknown; timestamp: number }> = new Map();
+  private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
   public static getInstance(): DataService {
     if (!DataService.instance) {
@@ -15,17 +17,85 @@ export class DataService {
 
   private constructor() {}
 
-  async getBooks(locale: string = "en"): Promise<Book[]> {
-    const result = await db
-      .select()
-      .from(books)
-      .where(eq(books.locale, locale));
+  private getCacheKey(method: string, ...args: unknown[]): string {
+    return `${method}:${JSON.stringify(args)}`;
+  }
+
+  private getFromCache<T>(key: string): T | null {
+    const cached = this.cache.get(key);
+    if (cached && Date.now() - cached.timestamp < this.CACHE_TTL) {
+      return cached.data as T;
+    }
+    return null;
+  }
+
+  private setCache<T>(key: string, data: T): void {
+    this.cache.set(key, { data, timestamp: Date.now() });
+  }
+
+  private async retry<T>(
+    operation: () => Promise<T>,
+    maxRetries: number = 3,
+    baseDelay: number = 1000
+  ): Promise<T> {
+    let lastError: Error | undefined;
     
-    return result.map(book => ({
-      ...book,
-      quotes: JSON.parse(book.quotes || '[]'),
-      reviews: JSON.parse(book.reviews || '[]'),
-    })) as Book[];
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      try {
+        return await operation();
+      } catch (error) {
+        lastError = error as Error;
+        
+        if (attempt === maxRetries) {
+          console.error(`Operation failed after ${maxRetries + 1} attempts:`, lastError);
+          throw lastError;
+        }
+        
+        // Exponential backoff
+        const delay = baseDelay * Math.pow(2, attempt);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
+    
+    throw lastError || new Error('Unknown error occurred');
+  }
+
+  private async executeWithCache<T>(
+    key: string,
+    operation: () => Promise<T>
+  ): Promise<T> {
+    // Check cache first
+    const cached = this.getFromCache<T>(key);
+    if (cached) {
+      return cached;
+    }
+
+    // Execute with retry logic
+    try {
+      const result = await this.retry(operation);
+      this.setCache(key, result);
+      return result;
+    } catch (error) {
+      console.error(`Database operation failed for key ${key}:`, error);
+      throw error;
+    }
+  }
+
+  async getBooks(locale: string = "en"): Promise<Book[]> {
+    const cacheKey = this.getCacheKey('getBooks', locale);
+    
+    return this.executeWithCache(cacheKey, async () => {
+      const result = await db
+        .select()
+        .from(books)
+        .where(eq(books.locale, locale));
+      
+      return result.map(book => ({
+        ...book,
+        quotes: JSON.parse(book.quotes || '[]'),
+        reviews: JSON.parse(book.reviews || '[]'),
+      })) as Book[];
+    });
   }
 
   async getBookBySlug(slug: string, locale: string = "en"): Promise<Book | null> {
@@ -59,7 +129,7 @@ export class DataService {
 
   async getBlogBySlug(slug: string, locale: string = "en"): Promise<Blog | null> {
     // First try to find the blog post in the requested locale
-    let result = await db
+    const result = await db
       .select()
       .from(blogs)
       .where(and(eq(blogs.slug, slug), eq(blogs.locale, locale), eq(blogs.published, true)))

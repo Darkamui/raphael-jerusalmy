@@ -60,10 +60,7 @@ export default function EditBlogPage() {
   });
 
   useEffect(() => {
-    fetchBlogData();
-  }, [id]);
-
-  const fetchBlogData = async () => {
+    const fetchBlogData = async () => {
     try {
       const response = await fetch(`/api/admin/blogs/${id}`);
       if (response.ok) {
@@ -94,7 +91,10 @@ export default function EditBlogPage() {
     } catch (error) {
       console.error('Error fetching blog:', error);
     }
-  };
+    };
+
+    fetchBlogData();
+  }, [id]);
 
   const generateSlug = (title: string) => {
     return title

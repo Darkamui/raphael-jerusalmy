@@ -56,7 +56,7 @@ const BlogPreview = ({ blogPosts }: BlogPreviewProps) => {
             >
               <Card className="min-h-[475px]">
                 <Image
-                  src={blog.image}
+                  src={blog.image || "/placeholder.svg"}
                   alt="Blog post"
                   width={400}
                   height={200}

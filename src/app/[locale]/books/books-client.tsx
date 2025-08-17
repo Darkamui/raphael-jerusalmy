@@ -52,10 +52,10 @@ export function BooksClient({ books }: BooksClientProps) {
                 <BookCard
                   key={book.slug}
                   title={book.title}
-                  coverImg={book.coverImg}
-                  type={book.type}
-                  year={book.year}
-                  subtitle={book.subtitle}
+                  coverImg={book.coverImg || "/placeholder.svg"}
+                  type={book.type || ""}
+                  year={book.year || ""}
+                  subtitle={book.subtitle || ""}
                   slug={book.slug}
                   index={index}
                 />

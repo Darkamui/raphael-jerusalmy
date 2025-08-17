@@ -1,17 +1,20 @@
 export interface Blog {
   readonly id: number;
-  readonly originalId?: number;
+  readonly originalId?: number | null;
   readonly title: string;
   readonly date: string;
-  readonly excerpt: string;
-  readonly url: string;
+  readonly excerpt: string | null;
+  readonly url: string | null;
   readonly category: string;
-  readonly subtitle: string;
-  readonly description: string;
-  readonly image: string;
+  readonly subtitle: string | null;
+  readonly description: string | null;
+  readonly image: string | null;
   readonly readTime: string;
   readonly slug: string;
-  readonly content: string;
+  readonly content: string | null;
+  readonly updatedAt?: string | Date | null;
+  readonly locale: string;
+  readonly published: boolean;
 }
 
 export interface Timeline {
@@ -35,20 +38,28 @@ export interface Event {
 }
 
 export interface Book {
-  readonly publisher: string;
-  readonly pages: string;
-  readonly year: string;
-  readonly isbn: string;
-  readonly subtitle: string;
-  readonly excerpt: string;
+  readonly id: number;
+  readonly publisher: string | null;
+  readonly pages: string | null;
+  readonly year: string | null;
+  readonly isbn: string | null;
+  readonly subtitle: string | null;
+  readonly excerpt: string | null;
   readonly quotes: readonly string[];
   readonly slug: string;
-  readonly coverImg: string;
-  readonly type: string;
+  readonly coverImg: string | null;
+  readonly cover?: string | null;
+  readonly type: string | null;
   readonly title: string;
   readonly reviews: readonly string[];
-  readonly purchaseUrl: string;
-  readonly summary: string;
+  readonly purchaseUrl: string | null;
+  readonly summary: string | null;
+  readonly author?: string | null;
+  readonly description?: string | null;
+  readonly synopsis?: string | null;
+  readonly genre?: string | null;
+  readonly updatedAt?: string | Date | null;
+  readonly locale: string;
 }
 
 // Component prop types

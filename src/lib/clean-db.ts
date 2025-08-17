@@ -5,7 +5,7 @@ import { db } from "./db";
 import { books, blogs, events, timelines } from "./schema";
 
 async function cleanDb() {
-  console.log("Cleaning database tables...");
+  console.warn("Cleaning database tables...");
   
   try {
     await db.delete(books);
@@ -13,7 +13,7 @@ async function cleanDb() {
     await db.delete(events);
     await db.delete(timelines);
     
-    console.log("Database cleaned successfully!");
+    console.warn("Database cleaned successfully!");
   } catch (error) {
     console.error("Error cleaning database:", error);
   }

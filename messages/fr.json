@@ -156,5 +156,10 @@
       "title": "Délai de réponse",
       "text": "Nous nous efforçons de répondre à toutes les demandes dans un délai de 2 à 3 jours ouvrables. Pour les questions urgentes, veuillez l'indiquer dans l'objet de votre message."
     }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas.",
+    "backHome": "Retour à l'accueil"
   }
 }

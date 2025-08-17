@@ -43,7 +43,7 @@ export function EventsClient({ events }: EventsClientProps) {
 
           <div className="relative max-w-4xl mx-auto">
             {/* Timeline Line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50 transform md:-translate-x-1/2"></div>
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50 transform md:-translate-x-1/2" />
 
             {/* Timeline Events */}
             <div className="space-y-12 relative">
@@ -101,7 +101,7 @@ function TimelineEvent({
         transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
         onClick={onToggle}
       >
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-20"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-20" />
       </motion.div>
 
       {/* Date */}
