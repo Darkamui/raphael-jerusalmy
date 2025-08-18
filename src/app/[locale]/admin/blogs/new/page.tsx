@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import { blogFormSchema, sanitizeSlug, type BlogFormData } from '@/lib/validations/blog';
+import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -11,6 +13,7 @@ import { RichTextEditor } from '@/components/admin/rich-text-editor';
 import { ArrowLeft, Save } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { FormField } from '@/components/admin/form-field';
 
 export default function NewBlogPage() {
   const router = useRouter();
@@ -18,7 +21,8 @@ export default function NewBlogPage() {
   const locale = params.locale as string;
 
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+  const [formData, setFormData] = useState<BlogFormData>({
     title: '',
     subtitle: '',
     slug: '',
@@ -26,11 +30,12 @@ export default function NewBlogPage() {
     content: '',
     description: '',
     image: '',
+    url: '',
     category: '',
-    readTime: '',
-    date: new Date().toISOString().split('T')[0],
+    readTime: '5 min read',
+    date: new Date().toISOString().split('T')[0] || '',
     published: true,
-    // Both locales
+    // French versions
     titleFr: '',
     subtitleFr: '',
     slugFr: '',
@@ -40,10 +45,7 @@ export default function NewBlogPage() {
   });
 
   const generateSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)/g, '');
+    return sanitizeSlug(title);
   };
 
   const handleTitleChange = (field: 'title' | 'titleFr', value: string) => {
@@ -53,10 +55,51 @@ export default function NewBlogPage() {
       [field]: value,
       [slugField]: generateSlug(value)
     }));
+    
+    // Clear validation error for this field
+    if (validationErrors[field]) {
+      setValidationErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[field];
+        delete newErrors[slugField];
+        return newErrors;
+      });
+    }
+  };
+
+  const handleFieldChange = (field: keyof BlogFormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Clear validation error for this field
+    if (validationErrors[field]) {
+      setValidationErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[field];
+        return newErrors;
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form data
+    try {
+      blogFormSchema.parse(formData);
+      setValidationErrors({});
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const errors: Record<string, string> = {};
+        error.issues.forEach((err) => {
+          if (err.path.length > 0) {
+            errors[err.path[0] as string] = err.message;
+          }
+        });
+        setValidationErrors(errors);
+        return;
+      }
+    }
+    
     setIsLoading(true);
 
     try {
@@ -74,6 +117,7 @@ export default function NewBlogPage() {
           content: formData.content,
           description: formData.description,
           image: formData.image,
+          url: formData.url,
           category: formData.category,
           readTime: formData.readTime,
           date: formData.date,
@@ -100,6 +144,7 @@ export default function NewBlogPage() {
           content: formData.contentFr,
           description: formData.descriptionFr,
           image: formData.image,
+          url: formData.url,
           category: formData.category,
           readTime: formData.readTime,
           date: formData.date,
@@ -143,24 +188,34 @@ export default function NewBlogPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="category">Category</Label>
+                <FormField 
+                  id="category" 
+                  label="Category" 
+                  error={validationErrors.category}
+                  required
+                >
                   <Input
                     id="category"
                     value={formData.category}
-                    onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value }))}
+                    onChange={(e) => handleFieldChange('category', e.target.value)}
                     placeholder="Technology, Personal, etc."
+                    className={validationErrors.category ? 'border-red-500' : ''}
                   />
-                </div>
-                <div>
-                  <Label htmlFor="readTime">Read Time</Label>
+                </FormField>
+                <FormField 
+                  id="readTime" 
+                  label="Read Time" 
+                  error={validationErrors.readTime}
+                  required
+                >
                   <Input
                     id="readTime"
                     value={formData.readTime}
-                    onChange={(e) => setFormData(prev => ({ ...prev, readTime: e.target.value }))}
+                    onChange={(e) => handleFieldChange('readTime', e.target.value)}
                     placeholder="5 min read"
+                    className={validationErrors.readTime ? 'border-red-500' : ''}
                   />
-                </div>
+                </FormField>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -173,16 +228,34 @@ export default function NewBlogPage() {
                     onChange={(e) => setFormData(prev => ({ ...prev, date: e.target.value }))}
                   />
                 </div>
-                <div>
-                  <Label htmlFor="image">Featured Image URL</Label>
+                <FormField 
+                  id="image" 
+                  label="Featured Image URL" 
+                  error={validationErrors.image}
+                >
                   <Input
                     id="image"
                     value={formData.image}
-                    onChange={(e) => setFormData(prev => ({ ...prev, image: e.target.value }))}
+                    onChange={(e) => handleFieldChange('image', e.target.value)}
                     placeholder="https://example.com/image.jpg"
+                    className={validationErrors.image ? 'border-red-500' : ''}
                   />
-                </div>
+                </FormField>
               </div>
+
+              <FormField 
+                id="url" 
+                label="Blog Post URL" 
+                error={validationErrors.url}
+              >
+                <Input
+                  id="url"
+                  value={formData.url}
+                  onChange={(e) => handleFieldChange('url', e.target.value)}
+                  placeholder="https://example.com/blog-post"
+                  className={validationErrors.url ? 'border-red-500' : ''}
+                />
+              </FormField>
 
               <div className="flex items-center space-x-2">
                 <Switch
@@ -201,16 +274,20 @@ export default function NewBlogPage() {
               <CardTitle>English Version</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div>
-                <Label htmlFor="title">Title *</Label>
+              <FormField 
+                id="title" 
+                label="Title" 
+                error={validationErrors.title}
+                required
+              >
                 <Input
                   id="title"
                   value={formData.title}
                   onChange={(e) => handleTitleChange('title', e.target.value)}
                   placeholder="Enter blog post title"
-                  required
+                  className={validationErrors.title ? 'border-red-500' : ''}
                 />
-              </div>
+              </FormField>
 
               <div>
                 <Label htmlFor="slug">Slug</Label>
@@ -254,14 +331,18 @@ export default function NewBlogPage() {
                 />
               </div>
 
-              <div>
-                <Label>Content *</Label>
+              <FormField 
+                id="content" 
+                label="Content" 
+                error={validationErrors.content}
+                required
+              >
                 <RichTextEditor
                   content={formData.content}
-                  onChange={(content) => setFormData(prev => ({ ...prev, content }))}
+                  onChange={(content) => handleFieldChange('content', content)}
                   placeholder="Write your blog post content..."
                 />
-              </div>
+              </FormField>
             </CardContent>
           </Card>
 
@@ -271,16 +352,20 @@ export default function NewBlogPage() {
               <CardTitle>French Version</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div>
-                <Label htmlFor="titleFr">Title (French) *</Label>
+              <FormField 
+                id="titleFr" 
+                label="Title (French)" 
+                error={validationErrors.titleFr}
+                required
+              >
                 <Input
                   id="titleFr"
                   value={formData.titleFr}
                   onChange={(e) => handleTitleChange('titleFr', e.target.value)}
                   placeholder="Entrez le titre du blog"
-                  required
+                  className={validationErrors.titleFr ? 'border-red-500' : ''}
                 />
-              </div>
+              </FormField>
 
               <div>
                 <Label htmlFor="slugFr">Slug (French)</Label>
@@ -324,14 +409,18 @@ export default function NewBlogPage() {
                 />
               </div>
 
-              <div>
-                <Label>Content (French) *</Label>
+              <FormField 
+                id="contentFr" 
+                label="Content (French)" 
+                error={validationErrors.contentFr}
+                required
+              >
                 <RichTextEditor
                   content={formData.contentFr}
-                  onChange={(content) => setFormData(prev => ({ ...prev, contentFr: content }))}
+                  onChange={(content) => handleFieldChange('contentFr', content)}
                   placeholder="Écrivez le contenu de votre article de blog..."
                 />
-              </div>
+              </FormField>
             </CardContent>
           </Card>
 

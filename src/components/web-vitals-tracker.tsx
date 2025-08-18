@@ -1,18 +1,31 @@
 'use client';
 
 import { useEffect } from 'react';
+import { getPerformanceMonitor } from '@/lib/utils/performance-monitor';
+
+interface Metric {
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  delta: number;
+  id: string;
+}
 
 export function WebVitalsTracker() {
   useEffect(() => {
     // Only run in the browser
     if (typeof window === 'undefined') return;
 
+    const performanceMonitor = getPerformanceMonitor();
+
     // Track Web Vitals
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-      function sendToAnalytics(metric: any) {
+      function sendToAnalytics(metric: Metric) {
+        // Evaluate against performance budget first
+        performanceMonitor.evaluateMetric(metric.name, metric.value);
         // Log to console in development
         if (process.env.NODE_ENV === 'development') {
-          console.log('🔥 Web Vital:', {
+          console.warn('🔥 Web Vital:', {
             name: metric.name,
             value: metric.value,
             rating: metric.rating,
@@ -54,7 +67,13 @@ export function WebVitalsTracker() {
       onLCP(sendToAnalytics);
       onTTFB(sendToAnalytics);
 
-      console.log('✅ Web Vitals tracking initialized');
+      console.warn('✅ Web Vitals tracking initialized');
+      
+      // Monitor resource count after page load
+      setTimeout(() => {
+        performanceMonitor.checkResourceCount();
+      }, 3000);
+      
     }).catch((error) => {
       console.warn('Web Vitals tracking failed:', error);
     });

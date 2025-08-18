@@ -21,6 +21,7 @@ interface BlogPost {
   content: string | null;
   description: string | null;
   image: string | null;
+  url: string | null;
   category: string | null;
   readTime: string | null;
   date: string;
@@ -46,6 +47,7 @@ export default function EditBlogPage() {
     content: '',
     description: '',
     image: '',
+    url: '',
     category: '',
     readTime: '',
     date: '',
@@ -76,6 +78,7 @@ export default function EditBlogPage() {
           content: blogData.blog.content || '',
           description: blogData.blog.description || '',
           image: blogData.blog.image || '',
+          url: blogData.blog.url || '',
           category: blogData.blog.category || '',
           readTime: blogData.blog.readTime || '',
           date: blogData.blog.date || '',
@@ -138,6 +141,7 @@ export default function EditBlogPage() {
           content: formData.content,
           description: formData.description,
           image: formData.image,
+          url: formData.url,
           category: formData.category,
           readTime: formData.readTime,
           date: formData.date,
@@ -162,6 +166,7 @@ export default function EditBlogPage() {
             content: formData.relatedContent,
             description: formData.relatedDescription,
             image: formData.image,
+            url: formData.url,
             category: formData.category,
             readTime: formData.readTime,
             date: formData.date,
@@ -251,6 +256,16 @@ export default function EditBlogPage() {
                     placeholder="https://example.com/image.jpg"
                   />
                 </div>
+              </div>
+
+              <div>
+                <Label htmlFor="url">Blog Post URL</Label>
+                <Input
+                  id="url"
+                  value={formData.url}
+                  onChange={(e) => setFormData(prev => ({ ...prev, url: e.target.value }))}
+                  placeholder="https://example.com/blog-post"
+                />
               </div>
 
               <div className="flex items-center space-x-2">

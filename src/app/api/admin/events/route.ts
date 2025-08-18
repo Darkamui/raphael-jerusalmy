@@ -40,6 +40,7 @@ export async function POST(request: NextRequest) {
         location: data.location || null,
         date: data.date,
         link: data.link || null,
+        featuredImage: data.featuredImage || null,
         locale: data.locale,
         published: data.published ?? true,
       })

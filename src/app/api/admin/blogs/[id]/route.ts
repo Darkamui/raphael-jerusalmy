@@ -78,6 +78,7 @@ export async function PUT(
         content: data.content || null,
         description: data.description || null,
         image: data.image || null,
+        url: data.url || null,
         category: data.category || null,
         slug: data.slug,
         readTime: data.readTime || null,

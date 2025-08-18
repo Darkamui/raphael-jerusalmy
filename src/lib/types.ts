@@ -35,6 +35,7 @@ export interface Event {
   readonly date: string;
   readonly id: number;
   readonly link: string;
+  readonly featuredImage: string | null;
 }
 
 export interface Book {

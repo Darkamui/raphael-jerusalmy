@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { eventFormSchema, type EventFormData } from '@/lib/validations/event';
 import { z } from 'zod';
@@ -13,13 +13,31 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FormField } from '@/components/admin/form-field';
 
-export default function NewEventPage() {
+interface Event {
+  id: number;
+  title: string;
+  subtitle: string | null;
+  location: string | null;
+  date: string;
+  link: string | null;
+  featuredImage: string | null;
+  locale: string;
+  published: boolean;
+}
+
+export default function EditEventPage() {
   const router = useRouter();
   const params = useParams();
   const locale = params.locale as string;
+  const eventId = params.id as string;
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingEvent, setIsLoadingEvent] = useState(true);
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+  const [events, setEvents] = useState<{ en: Event | null; fr: Event | null }>({
+    en: null,
+    fr: null,
+  });
   const [formData, setFormData] = useState<EventFormData>({
     title: '',
     subtitle: '',
@@ -33,6 +51,44 @@ export default function NewEventPage() {
     subtitleFr: '',
     locationFr: '',
   });
+
+  useEffect(() => {
+    fetchEvents();
+  }, [eventId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const fetchEvents = async () => {
+    try {
+      // Fetch both English and French versions
+      const [enResponse, frResponse] = await Promise.all([
+        fetch(`/api/admin/events/${eventId}?locale=en`),
+        fetch(`/api/admin/events/${eventId}?locale=fr`),
+      ]);
+
+      const enEvent = enResponse.ok ? await enResponse.json() : null;
+      const frEvent = frResponse.ok ? await frResponse.json() : null;
+
+      setEvents({ en: enEvent, fr: frEvent });
+
+      // Populate form data
+      setFormData({
+        title: enEvent?.title || '',
+        subtitle: enEvent?.subtitle || '',
+        location: enEvent?.location || '',
+        date: enEvent?.date || '',
+        link: enEvent?.link || '',
+        featuredImage: enEvent?.featuredImage || '',
+        published: enEvent?.published ?? true,
+        titleFr: frEvent?.title || '',
+        subtitleFr: frEvent?.subtitle || '',
+        locationFr: frEvent?.location || '',
+      });
+    } catch (error) {
+      console.error('Error fetching events:', error);
+      alert('Failed to load event data');
+    } finally {
+      setIsLoadingEvent(false);
+    }
+  };
 
   const handleFieldChange = (field: keyof EventFormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -70,54 +126,60 @@ export default function NewEventPage() {
     setIsLoading(true);
 
     try {
-      // Create English version
-      const enResponse = await fetch('/api/admin/events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          title: formData.title,
-          subtitle: formData.subtitle,
-          location: formData.location,
-          date: formData.date,
-          link: formData.link,
-          featuredImage: formData.featuredImage,
-          locale: 'en',
-          published: formData.published,
-        }),
-      });
+      // Update English version
+      if (events.en) {
+        const enResponse = await fetch(`/api/admin/events/${events.en.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            title: formData.title,
+            subtitle: formData.subtitle,
+            location: formData.location,
+            date: formData.date,
+            link: formData.link,
+            featuredImage: formData.featuredImage,
+            published: formData.published,
+          }),
+        });
 
-      if (!enResponse.ok) throw new Error('Failed to create English version');
+        if (!enResponse.ok) throw new Error('Failed to update English version');
+      }
 
-      // Create French version
-      const frResponse = await fetch('/api/admin/events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          title: formData.titleFr,
-          subtitle: formData.subtitleFr,
-          location: formData.locationFr,
-          date: formData.date,
-          link: formData.link,
-          featuredImage: formData.featuredImage,
-          locale: 'fr',
-          published: formData.published,
-        }),
-      });
+      // Update French version
+      if (events.fr) {
+        const frResponse = await fetch(`/api/admin/events/${events.fr.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            title: formData.titleFr,
+            subtitle: formData.subtitleFr,
+            location: formData.locationFr,
+            date: formData.date,
+            link: formData.link,
+            featuredImage: formData.featuredImage,
+            published: formData.published,
+          }),
+        });
 
-      if (!frResponse.ok) throw new Error('Failed to create French version');
+        if (!frResponse.ok) throw new Error('Failed to update French version');
+      }
 
       router.push(`/${locale}/admin/events`);
     } catch (error) {
-      console.error('Error creating event:', error);
-      alert('Failed to create event');
+      console.error('Error updating event:', error);
+      alert('Failed to update event');
     } finally {
       setIsLoading(false);
     }
   };
+
+  if (isLoadingEvent) {
+    return <div className="p-8 text-center">Loading event...</div>;
+  }
 
   return (
     <div className="p-8">
@@ -130,8 +192,8 @@ export default function NewEventPage() {
             </Button>
           </Link>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">New Event</h1>
-            <p className="text-gray-600 mt-1">Create a new event in both languages</p>
+            <h1 className="text-3xl font-bold text-gray-900">Edit Event</h1>
+            <p className="text-gray-600 mt-1">Update event in both languages</p>
           </div>
         </div>
 
@@ -308,7 +370,7 @@ export default function NewEventPage() {
             </Link>
             <Button type="submit" disabled={isLoading}>
               <Save className="w-4 h-4 mr-2" />
-              {isLoading ? 'Creating...' : 'Create Event'}
+              {isLoading ? 'Updating...' : 'Update Event'}
             </Button>
           </div>
         </form>

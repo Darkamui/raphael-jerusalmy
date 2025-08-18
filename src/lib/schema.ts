@@ -63,6 +63,7 @@ export const events = pgTable("events", {
   location: text("location"),
   date: text("date").notNull(),
   link: text("link"),
+  featuredImage: text("featured_image"),
   locale: text("locale").notNull().default("en"),
   published: boolean("published").default(true),
   createdAt: timestamp("created_at").defaultNow(),

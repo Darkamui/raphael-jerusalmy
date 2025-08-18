@@ -2,11 +2,12 @@ import { Book, Blog, Event, Timeline } from "@/lib/types";
 import { db } from "@/lib/db";
 import { books, blogs, events, timelines } from "@/lib/schema";
 import { eq, and, desc, asc } from "drizzle-orm";
+import { getCacheService, CacheService } from "./redis-cache.service";
 
 export class DataService {
   private static instance: DataService;
-  private cache: Map<string, { data: unknown; timestamp: number }> = new Map();
-  private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+  private cacheService: CacheService;
+  private readonly CACHE_TTL_SECONDS = 5 * 60; // 5 minutes in seconds
 
   public static getInstance(): DataService {
     if (!DataService.instance) {
@@ -15,22 +16,12 @@ export class DataService {
     return DataService.instance;
   }
 
-  private constructor() {}
+  private constructor() {
+    this.cacheService = getCacheService();
+  }
 
   private getCacheKey(method: string, ...args: unknown[]): string {
-    return `${method}:${JSON.stringify(args)}`;
-  }
-
-  private getFromCache<T>(key: string): T | null {
-    const cached = this.cache.get(key);
-    if (cached && Date.now() - cached.timestamp < this.CACHE_TTL) {
-      return cached.data as T;
-    }
-    return null;
-  }
-
-  private setCache<T>(key: string, data: T): void {
-    this.cache.set(key, { data, timestamp: Date.now() });
+    return `data:${method}:${JSON.stringify(args)}`;
   }
 
   private async retry<T>(
@@ -64,16 +55,19 @@ export class DataService {
     key: string,
     operation: () => Promise<T>
   ): Promise<T> {
-    // Check cache first
-    const cached = this.getFromCache<T>(key);
-    if (cached) {
-      return cached;
-    }
-
-    // Execute with retry logic
     try {
+      // Check cache first
+      const cached = await this.cacheService.get<T>(key);
+      if (cached !== null) {
+        return cached;
+      }
+
+      // Execute with retry logic
       const result = await this.retry(operation);
-      this.setCache(key, result);
+      
+      // Cache the result
+      await this.cacheService.set(key, result, this.CACHE_TTL_SECONDS);
+      
       return result;
     } catch (error) {
       console.error(`Database operation failed for key ${key}:`, error);
@@ -99,82 +93,98 @@ export class DataService {
   }
 
   async getBookBySlug(slug: string, locale: string = "en"): Promise<Book | null> {
-    const result = await db
-      .select()
-      .from(books)
-      .where(and(eq(books.slug, slug), eq(books.locale, locale)))
-      .limit(1);
-
-    if (result.length === 0) return null;
-
-    const book = result[0];
-    if (!book) return null;
+    const cacheKey = this.getCacheKey('getBookBySlug', slug, locale);
     
-    return {
-      ...book,
-      quotes: JSON.parse(book.quotes || '[]'),
-      reviews: JSON.parse(book.reviews || '[]'),
-    } as Book;
+    return this.executeWithCache(cacheKey, async () => {
+      const result = await db
+        .select()
+        .from(books)
+        .where(and(eq(books.slug, slug), eq(books.locale, locale)))
+        .limit(1);
+
+      if (result.length === 0) return null;
+
+      const book = result[0];
+      if (!book) return null;
+      
+      return {
+        ...book,
+        quotes: JSON.parse(book.quotes || '[]'),
+        reviews: JSON.parse(book.reviews || '[]'),
+      } as Book;
+    });
   }
 
   async getBlogs(locale: string = "en"): Promise<Blog[]> {
-    const result = await db
-      .select()
-      .from(blogs)
-      .where(and(eq(blogs.locale, locale), eq(blogs.published, true)))
-      .orderBy(desc(blogs.date));
+    const cacheKey = this.getCacheKey('getBlogs', locale);
     
-    return result as Blog[];
+    return this.executeWithCache(cacheKey, async () => {
+      const result = await db
+        .select()
+        .from(blogs)
+        .where(and(eq(blogs.locale, locale), eq(blogs.published, true)))
+        .orderBy(desc(blogs.date));
+      
+      return result as Blog[];
+    });
   }
 
   async getBlogBySlug(slug: string, locale: string = "en"): Promise<Blog | null> {
-    // First try to find the blog post in the requested locale
-    const result = await db
-      .select()
-      .from(blogs)
-      .where(and(eq(blogs.slug, slug), eq(blogs.locale, locale), eq(blogs.published, true)))
-      .limit(1);
+    const cacheKey = this.getCacheKey('getBlogBySlug', slug, locale);
+    
+    return this.executeWithCache(cacheKey, async () => {
+      // First try to find the blog post in the requested locale
+      const result = await db
+        .select()
+        .from(blogs)
+        .where(and(eq(blogs.slug, slug), eq(blogs.locale, locale), eq(blogs.published, true)))
+        .limit(1);
 
-    if (result.length > 0) {
-      return result[0] as Blog;
-    }
+      if (result.length > 0) {
+        return result[0] as Blog;
+      }
 
-    // If not found, try to find a blog post with the same ID in the other locale
-    // and then find its equivalent in the requested locale
-    const otherLocale = locale === "en" ? "fr" : "en";
-    const otherResult = await db
-      .select()
-      .from(blogs)
-      .where(and(eq(blogs.slug, slug), eq(blogs.locale, otherLocale), eq(blogs.published, true)))
-      .limit(1);
+      // If not found, try to find a blog post with the same ID in the other locale
+      // and then find its equivalent in the requested locale
+      const otherLocale = locale === "en" ? "fr" : "en";
+      const otherResult = await db
+        .select()
+        .from(blogs)
+        .where(and(eq(blogs.slug, slug), eq(blogs.locale, otherLocale), eq(blogs.published, true)))
+        .limit(1);
 
-    if (otherResult.length > 0) {
-      const originalId = otherResult[0]?.originalId;
-      if (originalId) {
-        // Try to find the blog with the same originalId in the requested locale
-        const translationResult = await db
-          .select()
-          .from(blogs)
-          .where(and(eq(blogs.originalId, originalId), eq(blogs.locale, locale), eq(blogs.published, true)))
-          .limit(1);
+      if (otherResult.length > 0) {
+        const originalId = otherResult[0]?.originalId;
+        if (originalId) {
+          // Try to find the blog with the same originalId in the requested locale
+          const translationResult = await db
+            .select()
+            .from(blogs)
+            .where(and(eq(blogs.originalId, originalId), eq(blogs.locale, locale), eq(blogs.published, true)))
+            .limit(1);
 
-        if (translationResult.length > 0) {
-          return translationResult[0] as Blog;
+          if (translationResult.length > 0) {
+            return translationResult[0] as Blog;
+          }
         }
       }
-    }
 
-    return null;
+      return null;
+    });
   }
 
   async getEvents(locale: string = "en"): Promise<Event[]> {
-    const result = await db
-      .select()
-      .from(events)
-      .where(and(eq(events.locale, locale), eq(events.published, true)))
-      .orderBy(asc(events.date));
+    const cacheKey = this.getCacheKey('getEvents', locale);
     
-    return result as Event[];
+    return this.executeWithCache(cacheKey, async () => {
+      const result = await db
+        .select()
+        .from(events)
+        .where(and(eq(events.locale, locale), eq(events.published, true)))
+        .orderBy(asc(events.date));
+      
+      return result as Event[];
+    });
   }
 
   async getUpcomingEvents(locale: string = "en", limit: number = 3): Promise<Event[]> {
@@ -186,13 +196,17 @@ export class DataService {
   }
 
   async getTimeline(locale: string = "en"): Promise<Timeline[]> {
-    const result = await db
-      .select()
-      .from(timelines)
-      .where(eq(timelines.locale, locale))
-      .orderBy(asc(timelines.year));
+    const cacheKey = this.getCacheKey('getTimeline', locale);
     
-    return result as Timeline[];
+    return this.executeWithCache(cacheKey, async () => {
+      const result = await db
+        .select()
+        .from(timelines)
+        .where(eq(timelines.locale, locale))
+        .orderBy(asc(timelines.year));
+      
+      return result as Timeline[];
+    });
   }
 
   async getFeaturedBooks(locale: string = "en", limit: number = 3): Promise<Book[]> {
@@ -232,5 +246,39 @@ export class DataService {
     }
 
     return null;
+  }
+
+  /**
+   * Clear all cached data
+   */
+  async clearCache(): Promise<void> {
+    await this.cacheService.clear();
+  }
+
+  /**
+   * Get cache statistics and health information
+   */
+  getCacheStats(): { redisConnected: boolean; memoryEntries: number; cacheType: string } {
+    return this.cacheService.getStats();
+  }
+
+  /**
+   * Invalidate specific cache entries by pattern
+   */
+  async invalidateCache(method?: string, locale?: string): Promise<void> {
+    try {
+      if (method && locale) {
+        const key = this.getCacheKey(method, locale);
+        await this.cacheService.del(key);
+      } else if (method) {
+        // For now, just clear all cache - could be enhanced to support pattern matching
+        console.warn(`Clearing all cache due to method ${method} invalidation`);
+        await this.clearCache();
+      } else {
+        await this.clearCache();
+      }
+    } catch (error) {
+      console.warn('Cache invalidation error:', error);
+    }
   }
 }

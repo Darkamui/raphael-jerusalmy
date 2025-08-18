@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { events } from '@/lib/schema';
-import { eq } from 'drizzle-orm';
+import { eq, and } from 'drizzle-orm';
 
 export async function GET(
   request: NextRequest,
@@ -16,11 +16,21 @@ export async function GET(
     }
 
     const id = parseInt(params.id);
+    const { searchParams } = new URL(request.url);
+    const locale = searchParams.get('locale');
+    
+    let whereCondition;
+    
+    if (locale) {
+      whereCondition = and(eq(events.id, id), eq(events.locale, locale));
+    } else {
+      whereCondition = eq(events.id, id);
+    }
     
     const event = await db
       .select()
       .from(events)
-      .where(eq(events.id, id))
+      .where(whereCondition)
       .limit(1);
 
     if (!event[0]) {
@@ -55,6 +65,7 @@ export async function PUT(
         location: data.location || null,
         date: data.date,
         link: data.link || null,
+        featuredImage: data.featuredImage || null,
         published: data.published ?? true,
         updatedAt: new Date(),
       })

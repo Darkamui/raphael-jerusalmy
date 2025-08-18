@@ -16,6 +16,7 @@ interface Event {
   location: string | null;
   published: boolean | null;
   link: string | null;
+  featuredImage: string | null;
 }
 
 export default function EventsPage() {
